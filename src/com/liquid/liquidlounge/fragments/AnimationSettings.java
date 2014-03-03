@@ -17,21 +17,32 @@
 package com.liquid.liquidlounge.fragments;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.os.SystemProperties;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
-import android.provider.Settings;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
+import android.widget.Toast;
 
-import com.android.internal.logging.nano.MetricsProto; 
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.nano.MetricsProto; 
 
 import com.liquid.liquidlounge.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AnimationSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -39,8 +50,12 @@ public class AnimationSettings extends SettingsPreferenceFragment
     public static final String TAG = "AnimationSettings";
 
     private static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private ListPreference mScreenOffAnimation;
+    private ListPreference mToastAnimation;
+
+    Toast mToast;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +64,7 @@ public class AnimationSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.animation_settings);
 
         final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
         // Screen uff animation
         mScreenOffAnimation = (ListPreference) findPreference(SCREEN_OFF_ANIMATION);
@@ -57,6 +73,19 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mScreenOffAnimation.setValue(String.valueOf(screenOffStyle));
         mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
         mScreenOffAnimation.setOnPreferenceChangeListener(this);
+
+        // Toast animation
+        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
+        int toastanimation = Settings.System.getInt(resolver,
+                Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValue(String.valueOf(toastanimation));
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        mToastAnimation.setOnPreferenceChangeListener(this);
+
+        if (mToast != null) {
+            mToast.cancel();
+            mToast = null;
+        }
     }
 
     @Override
@@ -68,6 +97,19 @@ public class AnimationSettings extends SettingsPreferenceFragment
             int valueIndex = mScreenOffAnimation.findIndexOfValue((String) newValue); 
             mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[valueIndex]); 
             return true;
+        } else if (preference == mToastAnimation) {
+            int value = Integer.parseInt((String) newValue);
+            int index = mToastAnimation.findIndexOfValue((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.TOAST_ANIMATION, value);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            if (mToast != null) {
+                mToast.cancel();
+            }
+            mToast = Toast.makeText(getActivity(), "Toast Test",
+                    Toast.LENGTH_SHORT);
+            mToast.show();
+            return true;
         }
         return false;
     }
@@ -76,6 +118,8 @@ public class AnimationSettings extends SettingsPreferenceFragment
         ContentResolver resolver = mContext.getContentResolver();
         Settings.System.putInt(resolver,
                 Settings.System.SCREEN_OFF_ANIMATION, 0);
+        Settings.System.putInt(resolver,
+                Settings.System.TOAST_ANIMATION, 1);
 
         Animations.reset(mContext);
     }
