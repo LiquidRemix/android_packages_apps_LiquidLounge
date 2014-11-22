@@ -127,6 +127,15 @@
             android:defaultValue="true"
             android:dependency="enable_hw_keys" />
 
+        <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
+            android:key="long_press_kill_delay"
+            android:title="@string/long_press_kill_delay"
+            android:max="2000"
+            settings:min="100"
+            settings:units=""
+            android:persistent="false"
+            android:dependency="enable_hw_keys" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -58,6 +58,7 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
     private static final String KEY_ENABLE_HW_KEYS = "enable_hw_keys";
+    private static final String LONG_PRESS_KILL_DELAY = "long_press_kill_delay";
 
     // category keys
     private static final String CATEGORY_HOME = "home_key";
@@ -95,6 +96,7 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mButtonBrightness;
     private SwitchPreference mButtonBrightness_sw;
     private SwitchPreference mEnableHwKeys;
+    private CustomSeekBarPreference mLongpressKillDelay;
 
     private Handler mHandler;
 
@@ -225,6 +227,13 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mBacklightTimeout);
             prefScreen.removePreference(mEnableHwKeys);
         }
+
+        // kill-app long press back delay
+        mLongpressKillDelay = (CustomSeekBarPreference) findPreference(LONG_PRESS_KILL_DELAY);
+        int killconf = Settings.System.getInt(getContentResolver(),
+                Settings.System.LONG_PRESS_KILL_DELAY, 1000);
+        mLongpressKillDelay.setValue(killconf);
+        mLongpressKillDelay.setOnPreferenceChangeListener(this);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -285,6 +294,11 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.ENABLE_HW_KEYS, value ? 1 : 0);
+            return true;
+        } else if (preference == mLongpressKillDelay) {
+            int killconf = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LONG_PRESS_KILL_DELAY, killconf);
             return true;
         }
         return false;
