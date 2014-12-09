@@ -16,11 +16,6 @@
 -->
 <resources>
 
-    <color name="switchBarBackgroundActivatedColor">@*android:color/accent_device_default_light</color>
-    <color name="floating_action_button_touch_tint">#80ffffff</color>
-    <color name="ga_gesture_color">@*android:color/accent_material_dark</color>
+    <item type="id" name="drag_handle" />
 
-    <!-- DSLV colors -->
-    <color name="dslv_icon_dark">#ff009688</color>
-    <color name="dslv_float_cackground_color">#ffe1e1e0</color>
 </resources>
