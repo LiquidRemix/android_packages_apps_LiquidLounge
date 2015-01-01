@@ -648,4 +648,8 @@
     <string name="systemui_theme_style_light">Light style</string>
     <string name="systemui_theme_style_dark">Dark style</string>
 
+    <!-- QS haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
+
 </resources>
