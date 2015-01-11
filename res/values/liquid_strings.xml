@@ -488,4 +488,8 @@
     <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
     <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
 
+    <!-- Hide brightness slider -->
+    <string name="brightness_slider_title">Brightness slider</string>
+    <string name="brightness_slider_summary">Show the brightness slider underneath quick settings</string>
+
 </resources>
