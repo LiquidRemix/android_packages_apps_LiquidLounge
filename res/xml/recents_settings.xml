@@ -45,6 +45,12 @@
             android:defaultValue="3"
             android:dependency="show_clear_all_recents" />
 
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+            android:key="systemui_recents_mem_display" 
+            android:title="@string/systemui_recents_mem_display_title" 
+            android:summary="@string/systemui_recents_mem_display_summary" 
+            android:defaultValue="false" /> 
+
     </PreferenceCategory>
 
     <PreferenceCategory
