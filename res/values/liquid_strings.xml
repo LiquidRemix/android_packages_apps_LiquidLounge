@@ -328,10 +328,6 @@
     <string name="qs_footer_warnings_title">QS footer warnings</string>
     <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
 
-    <!-- Power menu on secure lockscreen -->
-    <string name="powermenu_lockscreen_title">Lockscreen visibility</string>
-    <string name="powermenu_lockscreen_summary">Enable the ability to show and use the power menu dialog while on the lockscreen</string>
-
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
@@ -487,5 +483,9 @@
     <!-- Pin ripple -->
     <string name="lockscreen_pin_ripple_title">Pin Ripple</string>
     <string name="lockscreen_pin_ripple_summary">Disable to remove ripple when entering pin numbers</string>
+
+    <!-- Power menu on lockscreen -->
+    <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
+    <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
 
 </resources>
