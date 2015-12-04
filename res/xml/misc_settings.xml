@@ -35,6 +35,12 @@
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />	
 
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
+
 	<com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="system_default_animation"
         android:title="@string/system_default_animation_title"
