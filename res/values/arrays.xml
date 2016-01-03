@@ -17,26 +17,26 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Clear all recents location -->
-    <string-array name="recents_clear_all_location_entries" translatable="false">
+   <!-- Clear all recents location -->
+   <string-array name="recents_clear_all_location_entries" translatable="false">
         <item>@string/recents_clear_all_location_top_right</item>
         <item>@string/recents_clear_all_location_top_left</item>
         <item>@string/recents_clear_all_location_top_center</item>
         <item>@string/recents_clear_all_location_bottom_right</item>
         <item>@string/recents_clear_all_location_bottom_left</item>
         <item>@string/recents_clear_all_location_bottom_center</item>
-    </string-array>
+   </string-array>
 
-    <string-array name="recents_clear_all_location_values" translatable="false">
+   <string-array name="recents_clear_all_location_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
-    </string-array>
-	
-	<!-- Carrier Label -->
+   </string-array>
+
+   <!-- Carrier Label -->
    <string-array name="carrier_label_entries">
        <item>@string/show_carrier_disabled</item>
        <item>@string/show_carrier_keyguard</item>
@@ -494,6 +494,37 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <!-- Lock Clock Fonts -->
+    <string-array name="lock_clock_fonts_entries">
+        <item>@string/lock_clock_font_stock</item>
+        <item>@string/lock_clock_font_bold</item>
+        <item>@string/lock_clock_font_italic</item>
+        <item>@string/lock_clock_font_bold_italic</item>
+        <item>@string/lock_clock_font_light_italic</item>
+        <item>@string/lock_clock_font_thin_italic</item>
+        <item>@string/lock_clock_font_condensed_normal</item>
+        <item>@string/lock_clock_font_condensed_italic</item>
+        <item>@string/lock_clock_font_condensed_bold</item>
+        <item>@string/lock_clock_font_condensed_bold_italic</item>
+        <item>@string/lock_clock_font_medium_normal</item>
+        <item>@string/lock_clock_font_medium_italic</item>
+    </string-array>
+
+    <string-array name="lock_clock_fonts_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
     </string-array>
 
 </resources>
