@@ -20,10 +20,6 @@
     <!-- App title -->
     <string name="app_settings_title">Liquid Lounge</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">Buttons</string>
-    <string name="buttons_summary">Use your device hardware keys to perform actions</string>
-
     <!-- Gestures -->
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Quick gestures to perform actions on your device</string>
@@ -61,7 +57,9 @@
     <string name="statusbar_summary">Hide or show system icons and network traffic</string>
 
     <!-- Other categories -->
+    <string name="buttons_title">Buttons</string>
     <string name="heads_up_title">Heads up</string>
+    <string name="misc_short_title">Misc</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

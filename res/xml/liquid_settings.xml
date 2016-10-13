@@ -20,21 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/app_settings_title">
 
-    <!-- Buttons -->
-    <Preference
-        android:key="buttons_category"
-        android:title="@string/buttons_title"
-        android:summary="@string/buttons_summary"
-        android:icon="@drawable/ic_settings_buttons"
-        android:fragment="com.liquid.liquidlounge.fragments.ButtonsSettings"/>
-
     <!-- Gestures -->
     <Preference
         android:key="gestures_category"
         android:title="@string/gestures_title"
         android:summary="@string/gestures_summary"
         android:icon="@drawable/ic_settings_gestures"
-        android:fragment="com.liquid.liquidlounge.fragments.GesturesSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.GesturesTab" />
 
     <!-- Lock screen -->
     <Preference
@@ -42,7 +34,7 @@
         android:title="@string/lockscreen_title"
         android:summary="@string/lockscreen_summary"
         android:icon="@drawable/ic_settings_lockscreen"
-        android:fragment="com.liquid.liquidlounge.fragments.LockScreenSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.LockScreenTab" />
 
     <!-- Miscellaneous -->
     <Preference
@@ -50,7 +42,7 @@
         android:title="@string/misc_title"
         android:summary="@string/misc_summary"
         android:icon="@drawable/ic_settings_misc"
-        android:fragment="com.liquid.liquidlounge.fragments.MiscSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.MiscTab" />
 
     <!-- Navigation -->
     <Preference
@@ -58,7 +50,7 @@
         android:title="@string/navbar_title"
         android:summary="@string/navbar_summary"
         android:icon="@drawable/ic_settings_navbar"
-        android:fragment="com.liquid.liquidlounge.fragments.NavbarSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.NavigationTab" />
 
     <!-- Notifications -->
     <Preference
@@ -66,7 +58,7 @@
         android:title="@string/notifications_title"
         android:summary="@string/notifications_summary"
         android:icon="@drawable/ic_settings_notifications"
-        android:fragment="com.liquid.liquidlounge.fragments.NotificationSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.NotificationsTab" />
 
     <!-- Power menu -->
     <Preference
@@ -74,7 +66,7 @@
         android:title="@string/powermenu_title"
         android:summary="@string/powermenu_summary"
         android:icon="@drawable/ic_settings_powermenu"
-        android:fragment="com.liquid.liquidlounge.fragments.PowerMenuSettings"/>
+        android:fragment="com.liquid.liquidlounge.fragments.PowerMenuSettings" />
 
     <!-- Quick settings -->
     <Preference
@@ -82,7 +74,7 @@
         android:title="@string/quicksettings_title"
         android:summary="@string/quicksettings_summary"
         android:icon="@drawable/ic_settings_quicksettings"
-        android:fragment="com.liquid.liquidlounge.fragments.QuickSettings"/>
+        android:fragment="com.liquid.liquidlounge.fragments.QuickSettings" />
 
     <!-- Recents panel -->
     <Preference
@@ -90,7 +82,7 @@
         android:title="@string/recents_title"
         android:summary="@string/recents_summary"
         android:icon="@drawable/ic_settings_recents"
-        android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings"/>
+        android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings" />
 
     <!-- Status bar -->
     <Preference
@@ -98,6 +90,6 @@
         android:title="@string/statusbar_title"
         android:summary="@string/statusbar_summary"
         android:icon="@drawable/ic_settings_statusbar"
-        android:fragment="com.liquid.liquidlounge.fragments.StatusBarSettings"/>
+        android:fragment="com.liquid.liquidlounge.tabs.StatusBarTab" />
 
 </PreferenceScreen>

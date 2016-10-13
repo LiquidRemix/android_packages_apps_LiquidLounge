@@ -20,16 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gestures_title">
 
-    <Preference
-        android:key="gestures_dashboard"
-        android:title="@string/gesture_preference"
-        android:fragment="com.android.settings.gestures.GestureSettings" />
-
-    <Preference
-        android:key="carbon_gestures"
-        android:title="@string/carbon_gesture_preference_title"
-        android:fragment="com.liquid.liquidlounge.fragments.CarbonGesturesSettings" />
-
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"

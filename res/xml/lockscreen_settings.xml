@@ -27,11 +27,6 @@
             android:targetClass="com.android.systemui.tuner.LockscreenActivity"/>
     </Preference>
 
-    <Preference
-        android:key="lockscreen_weather"
-        android:title="@string/ls_weather_title"
-        android:fragment="com.liquid.liquidlounge.fragments.LockScreenWeatherSettings"/>
-
     <ListPreference
         android:key="lock_clock_fonts"
         android:title="@string/lock_clock_font_title"
