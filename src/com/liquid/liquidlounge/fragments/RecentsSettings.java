@@ -63,6 +63,7 @@ import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
+import com.android.internal.util.liquid.PackageUtils;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -83,6 +84,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
     private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
+    private static final String RECENTS_USE_SLIM= "use_slim_recents";
     private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
 
     // Package name of the omnniswitch app
@@ -90,7 +92,13 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     // Intent for launching the omniswitch settings actvity
     public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN)
             .setClassName(OMNISWITCH_PACKAGE_NAME, OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+    private static final String CATEGORY_STOCK_RECENTS = "stock_recents";
+    private static final String CATEGORY_OMNI_RECENTS = "omni";
+    private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
 
+    private PreferenceCategory mStockRecents;
+    private PreferenceCategory mOmniRecents;
+    private PreferenceCategory mSlimRecents;
     private ListPreference mRecentsClearAllLocation;
     private SwitchPreference mRecentsClearAll;
     private ListPreference mImmersiveRecents;
@@ -110,6 +118,10 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mStockRecents = (PreferenceCategory) findPreference(CATEGORY_STOCK_RECENTS);
+        mOmniRecents = (PreferenceCategory) findPreference(CATEGORY_OMNI_RECENTS);
+        mSlimRecents = (PreferenceCategory) findPreference(CATEGORY_SLIM_RECENTS);
 
         // clear all recents
         mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
@@ -149,6 +161,8 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mOmniSwitchSettings = (Preference)
                 prefScreen.findPreference(OMNISWITCH_START_SETTINGS);
         mOmniSwitchSettings.setEnabled(mRecentsUseOmniSwitch.isChecked());
+
+        updateRecents();
     }
 
     @Override
@@ -173,6 +187,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                     UserHandle.USER_CURRENT);
             mSlimToggle.setChecked(value);
             mStockIconPacks.setEnabled(!value);
+            updateRecents();
             return true;
         } else if (preference == mRecentsUseOmniSwitch) {
             boolean value = (Boolean) objValue;
@@ -184,6 +199,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENTS_OMNI_SWITCH_ENABLED, value ? 1 : 0);
             mOmniSwitchSettings.setEnabled(value);
+            updateRecents();
             return true;
         }
         return false;
@@ -214,6 +230,20 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                         public void onClick(DialogInterface dialog, int whichButton) {
                         }
                 }).show();
+    }
+
+    private void updateRecents() {
+        boolean omniRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_OMNI_SWITCH_ENABLED, 0) == 1;
+        boolean isOmniInstalled = PackageUtils.isAppInstalled(getActivity(), OMNISWITCH_PACKAGE_NAME);
+        boolean slimRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1;
+
+        mStockRecents.setEnabled(!omniRecents && !slimRecents);
+        // Slim recents overwrites omni recents
+        mOmniRecents.setEnabled(omniRecents || !slimRecents);
+        // Don't allow OmniSwitch if we're already using slim recents
+        mSlimRecents.setEnabled(slimRecents || !omniRecents);
     }
 
     /** Recents Icon Pack Dialog **/
