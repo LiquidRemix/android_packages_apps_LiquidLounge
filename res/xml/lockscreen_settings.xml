@@ -41,7 +41,19 @@
         android:key="status_bar_locked_on_secure_keyguard"
         android:title="@string/block_on_secure_keyguard_title"
         android:summary="@string/block_on_secure_keyguard_summary"
-        android:defaultValue="false"/>
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_pin_ripple"
+        android:title="@string/lockscreen_pin_ripple_title"
+        android:summary="@string/lockscreen_pin_ripple_summary"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_media_metadata"
+        android:title="@string/media_art_title"
+        android:summary="@string/media_art_summary"
+        android:defaultValue="false" />
 
     <Preference
         android:title="@string/lockscreen_tuner_title" >
@@ -49,11 +61,5 @@
             android:targetPackage="com.android.systemui"
             android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
-
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_media_metadata"
-        android:title="@string/media_art_title"
-        android:summary="@string/media_art_summary"
-        android:defaultValue="false" />
 
 </PreferenceScreen>
