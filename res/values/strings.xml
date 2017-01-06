@@ -955,4 +955,8 @@
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
 
+    <!-- QS edit icon -->
+    <string name="qs_edit_title">QS edit icon</string>
+    <string name="qs_edit_summary">Disable the tile edit icon in the footer</string>
+
 </resources>
