@@ -869,4 +869,8 @@
     <string name="roaming_indicator_icon_title">Show roaming indicator</string>
     <string name="roaming_indicator_icon_summary">Display roaming indicator in signal icon when in roaming mode</string>
 
+    <!-- Running services icon -->
+    <string name="qs_running_services_title">Running services icon</string>
+    <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
+
 </resources>
