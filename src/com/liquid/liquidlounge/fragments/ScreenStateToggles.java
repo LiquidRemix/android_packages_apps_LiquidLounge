@@ -19,21 +19,20 @@ package com.liquid.liquidlounge.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.view.View;
-
-import android.content.Intent;
 import android.util.Log;
-import android.net.ConnectivityManager;
+import android.view.View;
 
 import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
@@ -59,8 +58,8 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
     private SwitchPreference mEnableScreenStateTogglesTwoG;
     private SwitchPreference mEnableScreenStateTogglesGps;
     private SwitchPreference mEnableScreenStateTogglesMobileData;
-    private CustomSeekBarPreference mSecondsOffDelay;
-    private CustomSeekBarPreference mSecondsOnDelay;
+    private CustomSeekBarPreference mMinutesOffDelay;
+    private CustomSeekBarPreference mMinutesOnDelay;
     private PreferenceCategory mMobileDateCategory;
     private PreferenceCategory mLocationCategory;
 
@@ -82,17 +81,17 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
         mEnableScreenStateToggles.setChecked(enabled != 0);
         mEnableScreenStateToggles.setOnPreferenceChangeListener(this);
 
-        mSecondsOffDelay = (CustomSeekBarPreference) findPreference(SCREEN_STATE_OFF_DELAY);
-        int offd = Settings.System.getIntForUser(resolver,
-                Settings.System.SCREEN_STATE_OFF_DELAY, 0, UserHandle.USER_CURRENT);
-        mSecondsOffDelay.setValue(offd);
-        mSecondsOffDelay.setOnPreferenceChangeListener(this);
+        mMinutesOffDelay = (CustomSeekBarPreference) findPreference(SCREEN_STATE_OFF_DELAY);
+        int offd = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_STATE_OFF_DELAY, 0);
+        mMinutesOffDelay.setValue(offd / 60);
+        mMinutesOffDelay.setOnPreferenceChangeListener(this);
 
-        mSecondsOnDelay = (CustomSeekBarPreference) findPreference(SCREEN_STATE_ON_DELAY);
-        int ond = Settings.System.getIntForUser(resolver,
-                Settings.System.SCREEN_STATE_ON_DELAY, 0, UserHandle.USER_CURRENT);
-        mSecondsOnDelay.setValue(ond);
-        mSecondsOnDelay.setOnPreferenceChangeListener(this);
+        mMinutesOnDelay = (CustomSeekBarPreference) findPreference(SCREEN_STATE_ON_DELAY);
+        int ond = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_STATE_ON_DELAY, 0);
+        mMinutesOnDelay.setValue(ond / 60);
+        mMinutesOnDelay.setOnPreferenceChangeListener(this);
 
         mMobileDateCategory = (PreferenceCategory) findPreference(
                 SCREEN_STATE_CATGEGORY_MOBILE_DATA);
@@ -188,15 +187,15 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
             Intent intent = new Intent("android.intent.action.SCREEN_STATE_SERVICE_UPDATE");
             mContext.sendBroadcast(intent);
             return true;
-        } else if (preference == mSecondsOffDelay) {
-            int delay = (Integer) newValue;
-            Settings.System.putIntForUser(resolver,
-                    Settings.System.SCREEN_STATE_OFF_DELAY, delay, UserHandle.USER_CURRENT);
+        } else if (preference == mMinutesOffDelay) {
+            int delay = ((Integer) newValue) * 60;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SCREEN_STATE_OFF_DELAY, delay);
             return true;
-        } else if (preference == mSecondsOnDelay) {
-            int delay = (Integer) newValue;
-            Settings.System.putIntForUser(resolver,
-                    Settings.System.SCREEN_STATE_ON_DELAY, delay, UserHandle.USER_CURRENT);
+        } else if (preference == mMinutesOnDelay) {
+            int delay = ((Integer) newValue) * 60;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SCREEN_STATE_ON_DELAY, delay);
             return true;
         }
         return false;
@@ -220,7 +219,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
 
     private void restartService(){
         Intent service = (new Intent())
-                .setClassName("com.android.systemui", "com.android.systemui.crdroid.screenstate.ScreenStateService");
+                .setClassName("com.android.systemui", "com.android.systemui.screenstate.ScreenStateService");
         getActivity().stopService(service);
         getActivity().startService(service);
     }
