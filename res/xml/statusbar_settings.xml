@@ -61,6 +61,12 @@
         android:summary="@string/ime_switcher_notify_summary"
         android:defaultValue="false" />
 
+    <ListPreference
+        android:key="statusbar_show_weather_temp"
+        android:title="@string/statusbar_weather_title"
+        android:entries="@array/status_bar_weather_entries"
+        android:entryValues="@array/status_bar_weather_values" />
+
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="battery_save_mode_color"
         android:title="@string/battery_saver_color_title"

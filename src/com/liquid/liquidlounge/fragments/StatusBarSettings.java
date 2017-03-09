@@ -56,12 +56,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     private static final String BATTERY_STYLE = "battery_style";
     private static final String BATTERY_PERCENT = "show_battery_percent";
+    private static final String STATUS_BAR_WEATHER = "statusbar_show_weather_temp";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
     private ListPreference mTickerMode;
     private ListPreference mBatteryIconStyle;
     private ListPreference mBatteryPercentage;
+    private ListPreference mStatusBarWeather;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -110,6 +112,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mBatteryPercentage.setOnPreferenceChangeListener(this);
         boolean hideForcePercentage = batteryStyle == 7 || batteryStyle == 8; /*text or hidden style*/
         mBatteryPercentage.setEnabled(!hideForcePercentage);
+
+        int statusbarWeather = Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_SHOW_WEATHER_TEMP, 0);
+        mStatusBarWeather = (ListPreference) findPreference(STATUS_BAR_WEATHER);
+        mStatusBarWeather.setValue(Integer.toString(statusbarWeather));
+        int val = mStatusBarWeather.findIndexOfValue(String.valueOf(statusbarWeather));
+        mStatusBarWeather.setSummary(mStatusBarWeather.getEntries()[val]);
+        mStatusBarWeather.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -155,6 +165,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     .findIndexOfValue((String) objValue);
             mBatteryPercentage
                     .setSummary(mBatteryPercentage.getEntries()[valueIndex]);
+            return true;
+        } else if (preference == mStatusBarWeather) {
+            int value = Integer.parseInt(((String) objValue).toString());
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.STATUSBAR_SHOW_WEATHER_TEMP,
+                    value, UserHandle.USER_CURRENT);
+            int index = mStatusBarWeather.findIndexOfValue((String) objValue);
+            mStatusBarWeather.setSummary(mStatusBarWeather.getEntries()[index]);
             return true;
         }
         return false;
