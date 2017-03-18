@@ -1130,4 +1130,8 @@
     <string name="statusbar_show_wifi_activity_title">Show Wi-Fi data indicators</string>
     <string name="statusbar_show_wifi_activity_summary">Show indicators when Wi-Fi is sending/receiving data like mobile</string>
 
+    <!-- Bluetooth battery status -->
+    <string name="bluetooth_battery_title">Bluetooth battery status</string>
+    <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
+
 </resources>
