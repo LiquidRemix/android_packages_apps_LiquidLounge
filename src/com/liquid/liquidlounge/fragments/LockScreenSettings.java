@@ -41,10 +41,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFpKeystore;
     ListPreference mLockClockFonts;
 
     @Override
@@ -59,12 +61,17 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFpKeystore = (SwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
         if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
+            prefScreen.removePreference(mFpKeystore);
         } else {
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
+            mFpKeystore.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1));
+            mFpKeystore.setOnPreferenceChangeListener(this);
         }
 
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
@@ -80,6 +87,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+        } else if (preference == mFpKeystore) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FP_UNLOCK_KEYSTORE, value ? 1 : 0);
             return true;
         } else if (preference == mLockClockFonts) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONTS,
