@@ -51,6 +51,12 @@
         android:summary="@string/quick_settings_vibrate_summary"
         android:defaultValue="false" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="qs_footer_warnings"
+        android:title="@string/qs_footer_warnings_title"
+        android:summary="@string/qs_footer_warnings_summary"
+        android:defaultValue="true" />
+
     <ListPreference
         android:key="smart_pulldown"
         android:title="@string/smart_pulldown_title"
