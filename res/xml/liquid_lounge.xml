@@ -80,4 +80,11 @@
         android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings"
         android:icon="@drawable/ic_settings_recents"/>
 
+    <!-- Status Bar -->
+    <Preference
+        android:key="statusbar_category"
+        android:title="@string/statusbar_title"
+        android:fragment="com.liquid.liquidlounge.fragments.StatusBarSettings" 
+        android:icon="@drawable/ic_settings_statusbar"/>
+
 </PreferenceScreen>
