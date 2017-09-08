@@ -30,4 +30,6 @@
         android:title="@string/fprint_sucess_vib_title"
         android:summary="@string/fprint_sucess_vib_summary"
         android:persistent="false" />
+
+    </Preference>
 </PreferenceScreen>
