@@ -31,6 +31,7 @@ import android.view.Surface;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import com.android.settings.R;
+import com.liquid.liquidlounge.preferences.Utils;
 
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -52,6 +53,7 @@ public class LiquidLoungeSettings extends SettingsPreferenceFragment {
         if (isNewRecents(context)) {
             prefSet.removePreference(findPreference(RECENTS_CATEGORY));
         }
+    }
 
     @Override
     public int getMetricsCategory() {

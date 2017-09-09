@@ -35,7 +35,7 @@ public class OmniGestureSettings extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.LIQUIS;
+        return MetricsEvent.LIQUID;
     }
 
     public void onCreate(Bundle savedInstanceState) {
