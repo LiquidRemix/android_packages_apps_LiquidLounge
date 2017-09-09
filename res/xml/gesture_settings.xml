@@ -29,7 +29,7 @@
         android:key="gesture_settings"
         android:title="@string/gesture_settings_title"
         android:summary="@string/gesture_settings_summary"
-        android:fragment="com.nitrogen.settings.fragments.OmniGestureSettings" />
+        android:fragment="com.liquid.liquidlounge.fragments.OmniGestureSettings" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="torch_long_press_power_gesture"
@@ -46,4 +46,16 @@
         android:entryValues="@array/torch_long_press_power_timeout_values"
         android:dependency="torch_long_press_power_gesture"
         android:persistent="false" />
+
+    <PreferenceCategory
+         android:key="dtts_category"
+         android:title="@string/dtts_category_header" >
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_to_sleep_lockscreen_title"
+            android:summary="@string/double_tap_to_sleep_lockscreen_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
