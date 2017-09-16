@@ -21,9 +21,14 @@
     android:title="@string/misc_title">
 
     <Preference
-        android:id="@+id/alarm_blocker"
+        android:id="alarm_blocker"
         android:title="@string/alarm_blocker"
         android:fragment="com.liquid.liquidlounge.fragments.AlarmBlocker"/>
+
+    <Preference
+        android:id="display_rotation"
+        android:title="@string/display_rotation"
+        android:fragment="com.liquid.liquidlounge.fragments.DisplayRotation"/>
 
     <Preference
         android:key="wakelock_blocker"
