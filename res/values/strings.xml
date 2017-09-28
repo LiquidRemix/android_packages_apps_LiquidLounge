@@ -405,6 +405,10 @@
     <string name="qs_show_mini_title">Mini mode</string>
     <string name="qs_show_mini_summary">Make the header images smaller</string>
 
+    <!-- Disable music track title in QS tile -->
+    <string name="qs_music_tile_track_optional_title">Music tile track title</string>
+    <string name="qs_music_tile_track_optional_summary">Show the music track title as the QS tile title</string>
+
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app on headset connection</string>
     <string name="headset_connect_player_disabled">Disabled</string>
