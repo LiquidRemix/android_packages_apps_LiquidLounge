@@ -15,16 +15,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+<resources>
 
-    <CheckBox
-        android:id="@+id/alarm_blocked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:focusable="false"/>
+    <!-- Color picker preview -->
+    <dimen name="picker_circle_preview_size">26dp</dimen>
 
-</LinearLayout>
+</resources>

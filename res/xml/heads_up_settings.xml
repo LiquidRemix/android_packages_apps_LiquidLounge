@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The CyanogenMod Project
+<!--
+     Copyright (C) 2017 The Nitrogen Project
+     Copyright (C) 2017 The Liquid Remix Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,14 +15,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/heads_up_title">
 
-    <com.nitrogen.settings.preferences.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled"
-            android:defaultValue="true" />
+    <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/heads_up_notifications"
+        android:summaryOn="@string/summary_heads_up_enabled"
+        android:summaryOff="@string/summary_heads_up_disabled"
+        android:defaultValue="true" />
 
     <ListPreference
         android:key="heads_up_time_out"
@@ -37,25 +42,29 @@
         android:persistent="false" />
 
     <PreferenceCategory
-            android:title="@string/heads_up_stoplist_title"
-            android:key="stoplist_applications"
-            android:dependency="heads_up_notifications_enabled" >
+        android:key="stoplist_applications"
+        android:title="@string/heads_up_stoplist_title"
+        android:dependency="heads_up_notifications_enabled">
+
         <Preference
             android:key="add_stoplist_packages"
             android:icon="@drawable/ic_menu_add"
             android:title="@string/add_heads_up_package"
             android:summary="@string/add_heads_up_stoplist_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
-            android:title="@string/heads_up_blacklist_title"
-            android:key="blacklist_applications"
-            android:dependency="heads_up_notifications_enabled" >
+        android:key="blacklist_applications"
+        android:title="@string/heads_up_blacklist_title"
+        android:dependency="heads_up_notifications_enabled">
+
         <Preference
             android:key="add_blacklist_packages"
             android:icon="@drawable/ic_menu_add"
             android:title="@string/add_heads_up_package"
             android:summary="@string/add_heads_up_blacklist_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

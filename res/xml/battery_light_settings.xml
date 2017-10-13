@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 The ABC rom
+<!--
+     Copyright (C) 2017 The Nitrogen Project
+     Copyright (C) 2017 The Liquid Remix Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,21 +15,22 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/battery_light_settings">
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="battery_light_enabled"
         android:title="@string/battery_light_enable"
         android:defaultValue="true" />
 
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="battery_light_allow_on_dnd"
         android:title="@string/battery_light_allow_on_dnd_title"
         android:defaultValue="false" />
 
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="battery_light_low_blinking"
         android:title="@string/battery_light_low_blinking_title"
         android:defaultValue="false" />
@@ -35,6 +38,7 @@
     <PreferenceCategory
         android:key="battery_light_cat"
         android:title="@string/battery_light_cat">
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="battery_light_low_color"
             android:title="@string/battery_light_low_color"
@@ -54,6 +58,7 @@
             android:key="battery_light_reallyfull_color"
             android:title="@string/battery_light_reallyfull_color"
             settings:defaultColorValue="0xFF00FF00" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

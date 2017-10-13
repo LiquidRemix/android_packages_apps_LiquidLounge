@@ -15,16 +15,19 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+<resources>
 
-    <CheckBox
-        android:id="@+id/alarm_blocked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:focusable="false"/>
+    <!-- CustomSeekBarPreference -->
+    <declare-styleable name="CustomSeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="min" format="integer" />
+        <attr name="units" format="string|reference" />
+        <attr name="defaultText" format="string|reference" />
+    </declare-styleable>
 
-</LinearLayout>
+    <!-- ColorPreference -->
+    <declare-styleable name="ColorPreference">
+        <attr name="defaultColorValue" format="integer" />
+    </declare-styleable>
+
+</resources>

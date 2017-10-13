@@ -15,16 +15,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
+<PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/navbar_title">
 
-    <CheckBox
-        android:id="@+id/alarm_blocked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:focusable="false"/>
+    <Preference
+        android:title="@string/navbar_tuner_title" >
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.NavBarActivity"/>
+    </Preference>
 
-</LinearLayout>
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="navigation_bar_show"
+        android:title="@string/navigation_bar_enabled_title"
+        android:defaultValue="false" />
+
+</PreferenceScreen>
