@@ -425,4 +425,8 @@
     <!-- Gesture preference -->
     <string name="gesture_preference">AOSP gestures</string>
 
+    <!-- Dark Style QS Tiles -->
+    <string name="qs_style_dark_title">Dark SystemUI style</string>
+    <string name="qs_style_dark_summary">Reboot is required after changing</string>
+
 </resources>
