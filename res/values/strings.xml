@@ -20,18 +20,48 @@
     <!-- App title -->
     <string name="app_settings_title">Liquid Lounge</string>
 
-    <!-- App categories -->
+    <!-- Buttons -->
     <string name="buttons_title">Buttons</string>
+    <string name="buttons_summary">Use your device hardware keys to perform actions</string>
+
+    <!-- Gestures -->
     <string name="gestures_title">Gestures</string>
-    <string name="heads_up_title">Heads up</string>
+    <string name="gestures_summary">Quick gestures to perform actions on your device</string>
+
+    <!-- Lock screen -->
     <string name="lockscreen_title">Lock screen</string>
+    <string name="lockscreen_summary">Customize weather service or change shortcuts</string>
+
+    <!-- Miscellaneous -->
     <string name="misc_title">Miscellaneous</string>
+    <string name="misc_summary">App ops security and block alarms or wakelocks</string>
+
+    <!-- Navigation bar -->
     <string name="navbar_title">Navigation bar</string>
+    <string name="navbar_summary">Force on screen navbar and customize buttons</string>
+
+    <!-- Notifications -->
     <string name="notifications_title">Notifications</string>
+    <string name="notifications_summary">Control device lights and heads up notifications</string>
+
+    <!-- Power menu -->
     <string name="powermenu_title">Power menu</string>
+    <string name="powermenu_summary">Other menus and control on secure lock screen</string>
+
+    <!-- Quick settings -->
     <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_summary">Resize columns and rows and speed up pulldown</string>
+
+    <!-- Recents panel -->
     <string name="recents_title">Recents panel</string>
+    <string name="recents_summary">Position clear button and different immersive styles</string>
+
+    <!-- Status bar -->
     <string name="statusbar_title">Status bar</string>
+    <string name="statusbar_summary">Hide or show system icons and network traffic stats</string>
+
+    <!-- Other categories -->
+    <string name="heads_up_title">Heads up</string>
     <string name="volume_title">Volume rocker</string>
 
     <!-- General strings -->
