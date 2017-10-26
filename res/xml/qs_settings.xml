@@ -20,11 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_title">
 
-    <Preference
-        android:key="qs_rows_columns"
-        android:title="@string/qs_rows_columns_title"
-        android:fragment="com.liquid.liquidlounge.fragments.QsRowsColumns"/>
-
     <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
