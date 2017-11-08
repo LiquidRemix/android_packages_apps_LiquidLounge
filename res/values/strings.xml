@@ -392,6 +392,10 @@
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
+	
+    <!-- Liquid statusbar logo -->
+    <string name="status_bar_logo_title">Liquid logo</string>
+    <string name="status_bar_logo_summary">Allow Liquid logo on your statusbar</string>
 
     <!-- Toast app icon -->
     <string name="toast_icon_title">Toast app icon</string>
