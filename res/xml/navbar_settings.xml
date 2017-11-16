@@ -32,9 +32,4 @@
             android:targetClass="com.android.systemui.tuner.NavBarActivity"/>
     </Preference>
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="navigation_bar_show"
-        android:title="@string/navigation_bar_enabled_title"
-        android:defaultValue="false" />
-
 </PreferenceScreen>

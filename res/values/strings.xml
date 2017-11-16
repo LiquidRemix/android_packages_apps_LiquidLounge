@@ -155,10 +155,8 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
-    <!-- Double tap navbar to sleep -->
+    <!-- Double tap to sleep -->
     <string name="dtts_category_header">Double tap to sleep</string>
-    <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
-    <string name="double_tap_sleep_navbar_summary">Double tap on navigation bar to put the device to sleep</string>
 
     <!-- Double tap lock screen to sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Lockscreen</string>
@@ -342,9 +340,6 @@
     <string name="powermenu_soundpanel">Sound Panel</string>
     <string name="powermenu_users">Users</string>
     <string name="powermenu_torch">Flashlight</string>
-
-    <!-- Show navbar -->
-    <string name="navigation_bar_enabled_title">Enable</string>
 
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">Power menu when locked</string>
