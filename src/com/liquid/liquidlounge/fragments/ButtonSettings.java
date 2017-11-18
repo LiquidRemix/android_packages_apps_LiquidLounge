@@ -34,7 +34,6 @@ import com.android.settings.R;
 
 import com.liquid.liquidlounge.preferences.ActionFragment;
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-import com.liquid.liquidlounge.preferences.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.hwkeys.ActionConstants;
@@ -76,15 +75,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        final String KEY_DEVICE_PART = "device_part";
-        final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
 
         addPreferencesFromResource(R.xml.button_settings);
-
-        // DeviceParts
-        if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
-            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
-        }
 
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();
