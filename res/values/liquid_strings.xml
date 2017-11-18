@@ -74,6 +74,10 @@
     <string name="volume_title">Volume rocker</string>
     <string name="volume_summary">Other volume options and volume rocker switch</string>
 
+    <!-- Device features -->
+    <string name="device_title">Device features</string>
+    <string name="device_summary">Customize alert slider and off screen gestures</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>

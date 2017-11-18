@@ -19,6 +19,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/button_title">
 
+    <!-- Device features -->
+    <Preference
+        android:key="device_part"
+        android:persistent="false"
+    	 android:title="@string/device_title"
+    	 android:summary="@string/device_summary">
+    	 <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="org.omnirom.device"
+            android:targetClass="org.omnirom.device.DeviceSettingsActivity" />
+    </Preference>
+
+    <!-- Volume rocker -->
     <Preference
         android:key="volume_key"
     	 android:title="@string/volume_title"
