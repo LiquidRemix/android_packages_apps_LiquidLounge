@@ -34,7 +34,7 @@
 
     <!-- Miscellaneous -->
     <string name="misc_title">Разное</string>
-    <string name="misc_summary">Безопасность App Ops и блокировка сигнализаций или вейклоков</string>
+    <string name="misc_summary">Операции в приложениях, блокировка *alarms* или *wakelocks* и др.</string>
 
     <!-- Navigation bar -->
     <string name="navbar_title">Панель навигации</string>
