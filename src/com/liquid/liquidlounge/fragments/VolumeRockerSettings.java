@@ -18,6 +18,7 @@
 package com.liquid.liquidlounge.fragments;
 
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
@@ -32,8 +33,10 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
 
     private ListPreference mVolumeKeyCursorControl;
+    private ListPreference mLaunchPlayerHeadsetConnection;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -50,6 +53,13 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
             mVolumeKeyCursorControl.setValue(Integer.toString(volumeRockerCursorControl));
             mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
         }
+
+        mLaunchPlayerHeadsetConnection = (ListPreference) findPreference(HEADSET_CONNECT_PLAYER);
+        int mLaunchPlayerHeadsetConnectionValue = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.HEADSET_CONNECT_PLAYER, 4, UserHandle.USER_CURRENT);
+        mLaunchPlayerHeadsetConnection.setValue(Integer.toString(mLaunchPlayerHeadsetConnectionValue));
+        mLaunchPlayerHeadsetConnection.setSummary(mLaunchPlayerHeadsetConnection.getEntry());
+        mLaunchPlayerHeadsetConnection.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -63,6 +73,14 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
                     .findIndexOfValue(volumeKeyCursorControl);
             mVolumeKeyCursorControl
                     .setSummary(mVolumeKeyCursorControl.getEntries()[volumeKeyCursorControlIndex]);
+            return true;
+        } else if (preference == mLaunchPlayerHeadsetConnection) {
+            int mLaunchPlayerHeadsetConnectionValue = Integer.valueOf((String) value);
+            int index = mLaunchPlayerHeadsetConnection.findIndexOfValue((String) value);
+            mLaunchPlayerHeadsetConnection.setSummary(
+                    mLaunchPlayerHeadsetConnection.getEntries()[index]);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+            	    Settings.System.HEADSET_CONNECT_PLAYER, mLaunchPlayerHeadsetConnectionValue, UserHandle.USER_CURRENT);
             return true;
         }
         return false;

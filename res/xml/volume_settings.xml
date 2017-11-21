@@ -50,6 +50,12 @@
         android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="true" />
 
+    <ListPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:entries="@array/headset_connect_player_entries"
+        android:entryValues="@array/headset_connect_player_values" />
+
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="volume_keys_control_media_stream"
         android:title="@string/volume_keys_control_media_stream_title"
