@@ -54,7 +54,7 @@
 
     <!-- Recents panel -->
     <string name="recents_title">Недавние приложения</string>
-    <string name="recents_summary">Расположение кнопки очистки и различные иммерсивные стили</string>
+    <string name="recents_summary">Расположение кнопки очистки и полноэкранные стили</string>
 
     <!-- Status bar -->
     <string name="statusbar_title">Строка состояния</string>
