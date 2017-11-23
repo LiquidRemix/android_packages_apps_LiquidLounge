@@ -439,16 +439,16 @@
     <string name="daylight_header_provider" translatable="false">при дневном свете</string>
     <string name="static_header_provider_title">Статический</string>
     <string name="daylight_header_provider_title">Динамический</string>
-    <string name="custom_header_provider_title">Заголовок оператора</string>
-    <string name="custom_header_browse_title">Просмотр установленных заголовков</string>
+    <string name="custom_header_provider_title">Шапка</string>
+    <string name="custom_header_browse_title">Просмотр установленных</string>
     <string name="custom_header_browse_summary">Нажмите на любое изображение для использования в статическом режиме</string>
-    <string name="custom_header_browse_summary_new">Просмотр всех доступных пакетов заголовков</string>
-    <string name="custom_header_pick_title">Выберите заголовок</string>
+    <string name="custom_header_browse_summary_new">Просмотр всех доступных наборов</string>
+    <string name="custom_header_pick_title">Выберите шапку</string>
     <string name="custom_header_pick_summary">Выберите изображение для использования в статическом режиме</string>
-    <string name="style_enabled_summary">Пользовательское изображение заголовка включено</string>
-    <string name="style_disabled_summary">Пользовательское изображение заголовка выключено</string>
+    <string name="style_enabled_summary">Пользовательское изображение шапки включено</string>
+    <string name="style_disabled_summary">Пользовательское изображение шапки выключено</string>
     <string name="header_provider_disabled">Выключено</string>
-    <string name="custom_header_title">Пользовательское изображение заголовка</string>
+    <string name="custom_header_title">Пользовательское изображение шапки</string>
     
  <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Запустить музыкальное приложение при подключение гарнитуры</string>
