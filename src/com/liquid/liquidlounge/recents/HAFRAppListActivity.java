@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.liquid.liquidlounge.fragments;
+package com.liquid.liquidlounge.recents;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -37,7 +37,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.android.settings.R;
-import com.liquid.liquidlounge.fragments.HAFRAppChooserAdapter.AppItem;
+import com.liquid.liquidlounge.recents.HAFRAppChooserAdapter.AppItem;
 
 public class HAFRAppListActivity extends Activity {
 

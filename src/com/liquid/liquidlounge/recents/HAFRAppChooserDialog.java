@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.liquid.liquidlounge.fragments;
+package com.liquid.liquidlounge.recents;
 
 import android.app.Dialog;
 import android.content.Context;

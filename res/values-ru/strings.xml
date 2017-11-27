@@ -153,12 +153,10 @@
     <string name="lockscreen_tuner_title">Ярлыки на экране блокировки</string>
 
     <!-- Navbar tuner -->
-    <string name="navbar_tuner_title">Кнопки на панели навигации</string>
+    <string name="navbar_tuner_title">Панель навигации</string>
 
-    <!-- Double tap navbar to sleep -->
-    <string name="dtts_category_header">Спящий режим</string>
-    <string name="double_tap_sleep_navbar">Выключение экрана двойным нажатием на панель навигации</string>
-    <string name="double_tap_sleep_navbar_summary">Дважды коснитесь панели навигации для перевода устройства в спящий режим</string>
+    <!-- Double tap to sleep -->
+    <string name="dtts_category_header">Коснуться дважды для перевода устройства в спящий режим</string>
 
     <!-- Double tap lock screen to sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Экран блокировки</string>
@@ -342,9 +340,6 @@
     <string name="powermenu_soundpanel">Звуковая панель</string>
     <string name="powermenu_users">Пользователи</string>
     <string name="powermenu_torch">Фонарик</string>
-
-    <!-- Show navbar -->
-    <string name="navigation_bar_enabled_title">Включить</string>
 
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">Меню питания при блокировке</string>
