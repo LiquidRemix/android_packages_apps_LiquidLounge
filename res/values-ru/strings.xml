@@ -454,4 +454,203 @@
     <string name="headset_connect_player_both_no_carkit">Любая гарнитура (не автомобильная) подключена</string>
     <string name="headset_connect_player_both">Любая гарнитура подключена</string>
     
+<!-- Battery bar -->
+    <string name="battery_icon">Стиль значка батареи</string>
+    <string name="battery_not_title">Значек батареи в уведомлениях</string>
+    <string name="battery_not_summary">Значок батареи появится там, где отображается кнопка «Очистить все»</string>
+    <string name="battery_bar_title">Панель заряда батареи</string>
+    <string name="battery_bar_location">Расположение панели батареи</string>
+    <string name="battery_bar_color">Цвет панели батареи</string>
+    <string name="battery_bar_charging_color">Цвет зарядки батареи</string>
+    <string name="battery_bar_battery_low_color">Цвет разряженной батареи</string>
+    <string name="battery_bar_style_title">Стиль панели батареи</string>
+    <string name="battery_bar_thickness_title">Ширина панели батареи</string>
+    <string name="battery_bar_animate_title">Анимация зарядки</string>
+    <string name="battery_bar_animate_summary">Анимация зарядки может ухудшить опыт использования. Включайте по своему усмотрению.</string>
+    <string name="battery_bar_hide">Спрятать</string>
+    <string name="battery_bar_statusbar">Панель статуса</string>
+    <string name="battery_bar_topnav">Верх панели навигации</string>
+    <string name="battery_bar_bottomnav">Низ панели навигации</string>
+    <string name="battery_bar_reg">Обычный</string>
+    <string name="battery_bar_center">Центр-зеркальный</string>
+    <string name="battery_bar_reversed">Развернутый</string>
+    <string name="battery_bar_use_gradient_color">Использовать цвет градиента</string>
+    <string name="battery_bar_gradient_color_summary">Использовать цвет градиента в качестве шкалы для уровня заряда батареи</string>
+    <string name="battery_bar_high_color">Цвет высокого уровня заряда</string>
+    <string name="battery_bar_low_color">Цвет низкого уровня заряда</string>
+
+<!-- DUI -->
+    <string name="navbar_interface_title">Интерфейс</string>
+    <string name="navbar_size">Размер панели</string>
+    <string name="navbar_mode">Режим навигации</string>
+    <string name="navbar_mode_summary">Выберите, какой режим навигации использовать на вашем устройстве</string>
+    <string name="navbar_visibility">Разрешить навигационную панель</string>
+    <string name="navigationbar_settings_title">Панель навигации</string>
+    <string name="bottom_nav_navigation_title">Панель навигации</string>
+    <string name="navigationbar_settings_summary">Настроить стиль и поведение панели навигации</string>
+    <string name="navbar_general_title">Дополнительно</string>
+    <string name="navigation_bar_left_title">Режим левой руки</string>
+    <string name="navigation_bar_left_summary">Расположить панель навигации в левой части экрана в горизонтальном режиме </string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Пакеты оикнок</string>
+    <string name="image_exceeds_max_allowed_size">Изображение не должно превышать 512x512</string>
+    <string name="invalid_icon_from_uri">Невозможно загрузить изображение от поставщика контента</string>
+    <string name="picker_activities">Действия</string>
+    <string name="select_custom_app_title">Выберите пользовательское приложение</string>
+    <string name="select_custom_activity_title">Выберите пользовательские дейсвия</string>
+    <string name="profile_applist_title">Приложения</string>
+    <string name="default_string">Стоковая панель навигации</string>
+    <string name="default_settings">Настройки обычной панели навигации</string>
+    <string name="default_settings_summary">Обычная AOSP панель навигации</string>
+
+<!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Выберите действие</string>
+    <string name="action_entry_default_action">Настройки по умолчанию</string>
+    <string name="action_entry_select_app">Выберите приложение </string>
+    <string name="action_entry_custom_action">Выберите пользовательское действие</string>
+    <string name="action_value_default_action" translatable="false">default</string>
+    <string name="action_value_select_app" translatable="false">app</string>
+    <string name="action_value_custom_action" translatable="false">custom</string>
+    <string name="action_value_back" translatable="false">task_back</string>
+    <string name="action_value_home" translatable="false">task_home</string>
+    <string name="action_value_search_assist" translatable="false">task_assist</string>
+    <string name="action_value_recent_apps" translatable="false">task_recents</string>
+    <string name="action_value_voice_search" translatable="false">task_voice_search</string>
+    <string name="action_value_menu" translatable="false">task_menu</string>
+
+<!-- Fling -->
+    <string name="fling_settings">Настройки Fling</string>
+    <string name="fling_settings_summary">Уникальная и полностью настраиваемая панель навигации на основе жестов</string>
+    <string name="fling_interface">Fling</string>
+    <string name="fling_enable_title">Включить Fling</string>
+    <string name="fling_back_home_policy">"Назад" и "Домой" должны быть установлены всегда. Чтобы изменить назначение «Назад» или «Домой», сначала установите нужное назначение.\n\nТакже, установка двойного нажатия приведет к небольшой задержке одиночного нажатия.</string>
+    <string name="fling_split_bar_policy">Когда назначено только действие справа или слева, действие применяется ко всей панели.</string>
+    <string name="fling_def_summary">Действие не выбрано</string>
+    <string name="fling_swipe_actions">Свайп жесты</string>
+    <string name="fling_tap_actions">Жесты касания</string>
+    <string name="fling_short_swipe_right">Короткий свайп вправо</string>
+    <string name="fling_short_swipe_left">Короткий свайп влево</string>
+    <string name="fling_long_swipe_right">Длинный свайп вправо</string>
+    <string name="fling_long_swipe_left">Длинный свайп влево</string>
+    <string name="fling_right_up_swipe">Свайп вверх справа</string>
+    <string name="fling_left_up_swipe">Свайп вверх слева</string>
+    <string name="fling_single_tap">Одиночное касание справа</string>
+    <string name="fling_double_tap">Двойное касание справа</string>
+    <string name="fling_long_press">Долгое нажатие справа</string>
+    <string name="fling_single_left_tap">Одиночное касание слева</string>
+    <string name="fling_double_left_tap">Двойное касание слева</string>
+    <string name="fling_long_left_press">Долгое нажатие слева</string>
+    <string name="long_swipe_portrait_title">Вертикальный</string>
+    <string name="long_swipe_landscape_title">Горизонтальный</string>
+    <string name="portrait_right_swipe_title">Жест справа в вертикальном положении</string>
+    <string name="portrait_left_swipe_title">Жест слева в вертикальном положении</string>
+    <string name="landscape_right_swipe_title">Жест справа в горизонтальном положении</string>
+    <string name="landscape_left_swipe_title">Жест слева в горизонтальном положении</string>
+    <string name="vertical_up_swipe_title">Вертикальный свайп вверх</string>
+    <string name="vertical_down_swipe_title">Вертикальный свайп вниз</string>
+    <string name="up_swipe_title">Свайп вверх</string>
+    <string name="down_swipe_title">Свайп вниз</string>
+    <string name="long_swipe_reset">Сброс</string>
+    <string name="fling_advanced">Дополнительно</string>
+    <string name="fling_long_swipe_title">Задержка длинного свайпа</string>
+    <string name="fling_long_swipe_summary">Точная настройка задержки длинных свайпов на основе процента ширины или высоты интерфейса Fling</string>
+    <string name="fling_appearance">Внешний вид</string>
+    <string name="fling_show_logo_title">Показать логотип Fling</string>
+    <string name="fling_animate_logo_title">Анимировать логотип</string>
+    <string name="fling_animate_logo_summary">Логотип анимируется при касаниях</string>
+    <string name="fling_logo_color">Цвет логотипа</string>
+    <string name="fling_logo_custom_logo_pick_title">Пользовательский логотип</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Пользовательское изображение логотипа</string>
+    <string name="fling_logo_custom_logo_reset_title">Сбросить значок логотипа</string>
+    <string name="fling_show_ripple_title">Показать пульсацию</string>
+    <string name="fling_show_ripple_summary">Эффект пульсации при касаниях</string>
+    <string name="fling_ripple_color">Цвет пульсации</string>
+    <string name="fling_longpress_timeout_label_left">Меньшая задержка</string>
+    <string name="fling_longpress_timeout_label_right">Большая задержка</string>
+    <string name="fling_longpress_title">Задержка долгого нажатия</string>
+    <string name="fling_longpress_summary">Увеличить или уменьшить время, необходимое для долгого нажатия</string>
+    <string name="fling_keyboard_cursors_title">Действия курсора динамической клавиатуры</string>
+    <string name="fling_keyboard_cursors_summary">Двойное нажатие влево или вправо - это действия левой и правой клавиш клавиатуры, если клавиатура открыта </string>
+    <string name="fling_logo_opacity_title">Прозрачность логотипа Fling</string>
+
+<!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_help_policy_notice_summary">Pulse does not work with some audio sources when listening on device speaker</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
+    <string name="fling_show_pulse_title">Allow Pulse</string>
+    <string name="fling_show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
+    <string name="pulse_render_mode_title">Render mode</string>
+    <string name="pulse_render_mode_fading_bars">Fading blocks</string>
+    <string name="pulse_render_mode_solid_lines">Solid lines</string>
+    <string name="fling_pulse_color">Pulse color</string>
+    <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
+    <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
+    <string name="pulse_advanced_category">Advanced</string>
+    <string name="pulse_legacy_mode_advanced_category">Fading blocks mode settings</string>
+    <string name="pulse_custom_fudge_factor">Sanity level</string>
+    <string name="lavamp_solid_speed_title">Lava Lamp speed</string>
+    <string name="pulse_solid_units_count">Solid lines count</string>
+    <string name="pulse_solid_lines_count">Solid lines count</string>
+    <string name="pulse_solid_units_opacity">Solid lines opacity</string>
+    <string name="pulse_solid_dimen_category">Solid lines mode settings</string>
+    <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
+
+ <!-- Pulse config -->
+    <string name="pulse_custom_dimen">Bar width</string>
+    <string name="pulse_custom_div">Bar spacing</string>
+    <string name="pulse_filled_block_size">Block size</string>
+    <string name="pulse_empty_block_size">Block spacing</string>
+
+<!-- Navbar height -->
+    <string name="navigation_bar_size_title">Bar size</string>
+    <string name="portrait_title">Portrait height</string>
+    <string name="land_vert_title">Landscape width</string>
+    <string name="land_hor_title">Landscape height</string>
+    <string name="positive_done">Done</string>
+
+<!-- SmartBar -->
+    <string name="smartbar_category">Smartbar</string>
+    <string name="smartbar_settings_title">Smartbar settings</string>
+    <string name="smartbar_settings_summary">Fully-customizable navigation bar</string>
+    <string name="smartbar_editor_title">Start edit mode</string>
+    <string name="smartbar_editor_summary">Open smartbar buttons editor</string>
+    <string name="smartbar_help_policy_notice_summary">When in editor mode, medium press and drag a button to change its position or long press a button to show the edit menu. Button position may be changed while menu is showing.\n\nSetting a double tap action will delay single tap a bit.</string>
+    <string name="smartbar_context_menu_position_title">Context buttons layout position</string>
+    <string name="smartbar_context_menu_position_summary">Set the position of contextual buttons such as menu and ime selector</string>
+    <string name="smartbar_right">Right</string>
+    <string name="smartbar_left">Left</string>
+    <string name="smartbar_button_animation_title">Button touch animation</string>
+    <string name="smartbar_button_animation_summary">Set the animation style of the primary buttons when they are pressed</string>
+    <string name="smartbar_button_animation_ripple">Ripple</string>
+    <string name="smartbar_button_animation_flip">Flip</string>
+    <string name="smartbar_button_animation_pixel">Pixel (all buttons)</string>
+    <string name="smartbar_button_animation_pixel_home">Pixel (Home button only)</string>
+    <string name="smartbar_button_animation_pixel_home_ripple">Pixel (Home button only) and Ripple</string>
+    <string name="smartbar_factory_reset_title">Reset to stock</string>
+    <string name="smartbar_factory_reset_confirm">Are you sure you want to reset Smartbar to stock settings?</string>
+    <string name="smartbar_ime_action_title">Input method and media actions</string>
+    <string name="smartbar_ime_action_summary">Set what buttons to show when a on-screen keyboard is showing or music is playing</string>
+    <string name="smartbar_ime_action_none">None</string>
+    <string name="smartbar_ime_action_arrows">Input arrows</string>
+    <string name="smartbar_ime_action_switcher">Keyboard switcher</string>
+    <string name="smartbar_ime_action_dynamic">Input/media arrows</string>
+    <string name="smartbar_backup_current_config_title">Save profile</string>
+    <string name="smartbar_restore_config_title">Restore profile</string>
+    <string name="smartbar_config_name_edit_dialog_title">Smartbar profile name</string>
+    <string name="smartbar_config_name_edit_dialog_message">Enter name or leave blank</string>
+    <string name="smartbar_config_dialog_title">Smartbar profiles</string>
+    <string name="smartbar_config_backup_success_toast">Smartbar profile successfully saved</string>
+    <string name="smartbar_config_restore_success_toast">Smartbar profile successfully restored</string>
+    <string name="smartbar_config_backup_error_toast">Error saving Smartbar profile</string>
+    <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
+    <string name="navbar_buttons_alpha_title">Button transparency</string>
+    <string name="smartbar_longpress_delay_title">Button longpress delay</string>
+    <string name="smartbar_longpress_delay_summary">Set how long the system will wait before triggering a longpress action</string>
+    <string name="smartbar_longpress_delay_default">Default delay (fast)</string>
+    <string name="smartbar_longpress_delay_normal">Normal delay</string>
+    <string name="smartbar_longpress_delay_long">Long delay</string>
+    <string name="smartbar_custom_icon_size_title">Custom icon scaling</string>
+    <string name="one_handed_mode_title">One handed mode</string>
+    <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+    
 </resources>
