@@ -646,4 +646,8 @@
     <string name="anbi_title">Accidental touch</string>
     <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
 
+    <!-- Lock screen rotation -->
+    <string name="lockscreen_rotation_title">Lock screen rotation</string>
+    <string name="lockscreen_rotation_summary">Enable or disable rotation of the lock screen</string>
+
 </resources>
