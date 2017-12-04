@@ -660,4 +660,8 @@
     <string name="anbi_title">Случайное касание</string>
     <string name="anbi_summary">Запретить взаимодействие с навигационными кнопками во время касания экрана</string>
     
+    <!-- Lock screen rotation -->
+    <string name="lockscreen_rotation_title">Поворот экрана блокировки</string>
+    <string name="lockscreen_rotation_summary">Включить или выключить поворот экрана блокировки</string>
+    
 </resources>
