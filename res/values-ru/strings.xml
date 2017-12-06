@@ -648,14 +648,14 @@
     <string name="anbi_summary">Запретить взаимодействие с навигационными кнопками во время касания экрана</string>
     
     <!-- Display rotation -->
-    <string name="display_rotation">Display rotation</string>
-    <string name="display_rotation_disabled">Disabled</string>
-    <string name="display_rotation_unit">degrees</string>
-    <string name="display_rotation_category_title">Rotation modes</string>
-    <string name="display_rotation_0_title">0 degrees</string>
-    <string name="display_rotation_90_title">90 degrees</string>
-    <string name="display_rotation_180_title">180 degrees</string>
-    <string name="display_rotation_270_title">270 degrees</string>
-    <string name="display_lockscreen_rotation_title">Lock screen</string>
+    <string name="display_rotation">Поворот экрана</string>
+    <string name="display_rotation_disabled">Отключено</string>
+    <string name="display_rotation_unit">градусов</string>
+    <string name="display_rotation_category_title">Режимы поворота</string>
+    <string name="display_rotation_0_title">0 градусов</string>
+    <string name="display_rotation_90_title">90 градусов</string>
+    <string name="display_rotation_180_title">180 градусов</string>
+    <string name="display_rotation_270_title">270 градусов</string>
+    <string name="display_lockscreen_rotation_title">Экран блокировки</string>
     
 </resources>
