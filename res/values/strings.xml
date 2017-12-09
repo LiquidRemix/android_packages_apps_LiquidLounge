@@ -347,7 +347,7 @@
     <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
 
     <!-- Gesture preference -->
-    <string name="gesture_preference">AOSP gestures</string>
+    <string name="gesture_preference">AOSP</string>
 
     <!-- Quick settings headers -->
     <string name="status_bar_header_title">Headers</string>
@@ -536,8 +536,8 @@
     <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
     <string name="pulse_colors_reset_title">Reset pulse colors</string>
     <string name="pulse_colors_reset_message">Are you sure you want to reset these colors to default?</string>
-	<string name="fling_smoothing_enabled_title">Turn on smoothing</string>
-	<string name="fling_smoothing_enabled_summary">Each bar is animated more smoothly</string>
+    <string name="fling_smoothing_enabled_title">Turn on smoothing</string>
+    <string name="fling_smoothing_enabled_summary">Each bar is animated more smoothly</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Bar width</string>
@@ -634,7 +634,7 @@
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
 	
-	<!-- Custom carrier label and position -->
+    <!-- Custom carrier label and position -->
     <string name="carrier_label_title">Carrier label</string>
     <string name="custom_carrier_label_title">Liquid carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
@@ -645,11 +645,11 @@
     <string name="show_carrier_statusbar">Status bar only</string>
     <string name="show_carrier_enabled">Lock screen &amp; status bar</string>
 	
-	<!-- Pocket judge -->
+    <!-- Pocket judge -->
     <string name="pocket_judge_title">Pocket detection</string>
     <string name="pocket_judge_summary">Block screen and button inputs when device is in pocket</string>
 
-	<!-- Less Notification sounds -->
+    <!-- Less Notification sounds -->
     <string name="less_notification_sounds_title">Notification sounds</string>
     <string name="less_notification_sounds_summary">Play the notification sound of each app only once per set time period</string>
     <string name="less_notification_sounds_default">Default Behaviour</string>
@@ -741,7 +741,7 @@
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in notification shade</string>
 
     <!-- Allow vibration instead of beep for in-call notifications -->
-	<string name="incall_notifications_vibrate">Less annoying in-call notifications</string>
+    <string name="incall_notifications_vibrate">Less annoying in-call notifications</string>
     <string name="incall_notifications_vibrate_summary">Vibrate instead of playing a sound for in-call notifications</string>
 
     <!-- Screen off animation -->
@@ -800,7 +800,7 @@
     <string name="system_default_animation_summary">Enable Android P \"Default\" animations</string>
 
     <!-- Carbon gestures -->
-    <string name="carbon_gesture_preference_title">Carbon gestures</string>
+    <string name="carbon_gesture_preference_title">Carbon</string>
     <string name="carbon_gestures_summary">Configure custom global gestures</string>
     <string name="carbon_gestures_fingers_title">Fingers used for gesture</string>
     <string name="carbon_gestures_right_title">Right gesture</string>
@@ -973,5 +973,77 @@
     <!-- Notification count -->
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
+    <!-- Gesture anywhere -->
+    <string name="gesture_anywhere_title">Anywhere</string>
+    <string name="gesture_anywhere_summary">Launch activities by drawing gestures on the screen</string>
+    <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
+    <string name="gesture_anywhere_position_title">Location</string>
+    <string name="gesture_anywhere_position_left">Left edge</string>
+    <string name="gesture_anywhere_position_right">Right edge</string>
+    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+    <string name="ga_button_add">Add gesture</string>
+    <string name="ga_button_reload">Reload</string>
+    <string name="ga_button_discard">Discard</string>
+    <string name="ga_button_done">Done</string>
+    <string name="ga_prompt_gesture_name">Name</string>
+    <string name="ga_error_missing_name">You must enter a name</string>
+    <string name="ga_save_success">Gesture saved in %s</string>
+    <string name="ga_rename_action">OK</string>
+    <string name="ga_cancel_action">Cancel</string>
+    <string name="ga_gestures_loading">Loading gestures...</string>
+    <string name="ga_gestures_empty">No gestures</string>
+    <string name="ga_gestures_activity">Gestures</string>
+    <string name="ga_gestures_edit">Edit</string>
+    <string name="ga_gestures_delete">Delete</string>
+    <string name="ga_gestures_delete_success">Gesture deleted</string>
+    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <string name="ga_gestures_rename_label">Gesture name</string>
+    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <string name="gesture_anywhere_0">0px</string>
+    <string name="gesture_anywhere_1">1px</string>
+    <string name="gesture_anywhere_5">5px</string>
+    <string name="gesture_anywhere_10">10px</string>
+    <string name="gesture_anywhere_15">15px</string>
+    <string name="gesture_anywhere_20">20px</string>
+    <string name="gesture_anywhere_25">25px</string>
+    <string name="gesture_anywhere_30">30px</string>
+    <string name="gesture_anywhere_35">35px</string>
+    <string name="gesture_anywhere_40">40px</string>
+    <string name="gesture_anywhere_45">45px</string>
+    <string name="gesture_anywhere_50">50px</string>
+    <string name="gesture_anywhere_55">55px</string>
+    <string name="gesture_anywhere_60">60px</string>
+    <string name="gesture_anywhere_65">65px</string>
+    <string name="gesture_anywhere_70">70px</string>
+    <string name="gesture_anywhere_75">75px</string>
+    <string name="gesture_anywhere_80">80px</string>
+    <string name="gesture_anywhere_85">85px</string>
+    <string name="gesture_anywhere_90">90px</string>
+    <string name="gesture_anywhere_95">95px</string>
+    <string name="gesture_anywhere_100">100px</string>
+    <string name="gesture_anywhere_4">4px</string>
+    <string name="gesture_anywhere_8">8px</string>
+    <string name="gesture_anywhere_12">12px</string>
+    <string name="gesture_anywhere_16">16px</string>
+    <string name="gesture_anywhere_24">24px</string>
+    <string name="gesture_anywhere_28">28px</string>
+    <string name="gesture_anywhere_32">32px</string>
+    <string name="gesture_anywhere_36">36px</string>
+    <string name="gesture_anywhere_44">44px</string>
+    <string name="gesture_anywhere_48">48px</string>
+    <string name="gesture_anywhere_52">52px</string>
+    <string name="gesture_anywhere_56">56px</string>
+    <string name="gesture_anywhere_64">64px</string>
+    <string name="gesture_anywhere_68">68px</string>
 
 </resources>
