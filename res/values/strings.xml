@@ -388,10 +388,6 @@
     <!-- Gesture preference -->
     <string name="gesture_preference">AOSP gestures</string>
 
-    <!-- Dark Style QS Tiles -->
-    <string name="qs_style_dark_title">Dark SystemUI style</string>
-    <string name="qs_style_dark_summary">Reboot is required after changing</string>
-
     <!-- Quick settings headers -->
     <string name="status_bar_custom_header_title">Enable</string>
     <string name="daylight_header_pack_title">Header image pack</string>
@@ -645,5 +641,11 @@
     <!-- ANBI -->
     <string name="anbi_title">Accidental touch</string>
     <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
+
+    <!-- SystemUI theme -->
+    <string name="systemui_theme_style_title">UI style</string>
+    <string name="systemui_theme_style_auto">Wallpaper based</string>
+    <string name="systemui_theme_style_light">Light style</string>
+    <string name="systemui_theme_style_dark">Dark style</string>
 
 </resources>
