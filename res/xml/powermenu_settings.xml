@@ -20,6 +20,12 @@
     android:title="@string/powermenu_title">
 
          <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_lockscreen"
+            android:title="@string/powermenu_lockscreen_title"
+            android:summary="@string/powermenu_lockscreen_summary"
+            android:defaultValue="true" />
+
+         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="powermenu_power"
             android:title="@string/powermenu_power"
             android:defaultValue="true" />
