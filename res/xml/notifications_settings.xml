@@ -35,12 +35,6 @@
         android:title="@string/notification_light_settings"
         android:fragment="com.android.settings.applications.NotificationApps"/>
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="toast_icon"
-        android:title="@string/toast_icon_title"
-        android:summary="@string/toast_icon_summary"
-        android:defaultValue="true" />
-
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category">
