@@ -42,12 +42,6 @@
             android:defaultValue="true" />
 
     </PreferenceCategory>
-
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="pocket_judge"
-        android:title="@string/pocket_judge_title"
-        android:summary="@string/pocket_judge_summary"
-        android:defaultValue="false" />
 		
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
