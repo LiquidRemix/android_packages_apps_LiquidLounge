@@ -23,7 +23,7 @@
     <Preference
         android:key="gestures_dashboard"
         android:title="@string/gesture_preference"
-        android:fragment="com.android.settings.system.GesturesFragment"/>
+        android:fragment="com.android.settings.gestures.GestureSettings"/>
 
     <PreferenceCategory
         android:key="dtts_category"
