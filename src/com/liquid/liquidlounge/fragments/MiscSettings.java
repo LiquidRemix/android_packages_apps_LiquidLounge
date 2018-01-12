@@ -45,12 +45,10 @@ import com.android.settings.SettingsPreferenceFragment;
 public class MiscSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String SYSTEMUI_THEME_STYLE = "systemui_theme_style";
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "2";
 
-    private ListPreference mSystemUIThemeStyle;
 	private ListPreference mScrollingCachePref;
 
     @Override
@@ -62,14 +60,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mSystemUIThemeStyle = (ListPreference) findPreference(SYSTEMUI_THEME_STYLE);
-        int systemUIThemeStyle = Settings.System.getInt(resolver,
-                Settings.System.SYSTEM_UI_THEME, 0);
-        int valueIndex = mSystemUIThemeStyle.findIndexOfValue(String.valueOf(systemUIThemeStyle));
-        mSystemUIThemeStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
-        mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntry());
-        mSystemUIThemeStyle.setOnPreferenceChangeListener(this);
-		
 		mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
@@ -79,15 +69,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-
-        if (preference == mSystemUIThemeStyle) {
-            String value = (String) objValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.SYSTEM_UI_THEME, Integer.valueOf(value));
-            int valueIndex = mSystemUIThemeStyle.findIndexOfValue(value);
-            mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntries()[valueIndex]);
-            return true;
-		} else if (preference == mScrollingCachePref) {
+		if (preference == mScrollingCachePref) {
             if (objValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
             }
