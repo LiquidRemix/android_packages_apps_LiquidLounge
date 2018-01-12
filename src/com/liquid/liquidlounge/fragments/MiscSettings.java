@@ -46,8 +46,12 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String SYSTEMUI_THEME_STYLE = "systemui_theme_style";
+	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "2";
 
     private ListPreference mSystemUIThemeStyle;
+	private ListPreference mScrollingCachePref;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -65,6 +69,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         mSystemUIThemeStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntry());
         mSystemUIThemeStyle.setOnPreferenceChangeListener(this);
+		
+		mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -78,6 +87,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             int valueIndex = mSystemUIThemeStyle.findIndexOfValue(value);
             mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntries()[valueIndex]);
             return true;
+		} else if (preference == mScrollingCachePref) {
+            if (objValue != null) {
+                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
+            }
+            return true;	
         }
         return false;
     }
