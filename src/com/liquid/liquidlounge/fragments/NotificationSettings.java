@@ -19,6 +19,7 @@ package com.liquid.liquidlounge.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -40,6 +41,7 @@ public class NotificationSettings extends SettingsPreferenceFragment
 	
     private Preference mChargingLeds;
 	private ListPreference mAnnoyingNotifications;
+    private ListPreference mNoisyNotification;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -60,7 +62,7 @@ public class NotificationSettings extends SettingsPreferenceFragment
                         com.android.internal.R.bool.config_intrusiveBatteryLed)) {
             prefScreen.removePreference(mChargingLeds);
         }
-		
+
 		mAnnoyingNotifications = (ListPreference) findPreference(PREF_LESS_NOTIFICATION_SOUNDS);
         int notificationThreshold = Settings.System.getInt(getContentResolver(),
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, 0);
@@ -71,6 +73,13 @@ public class NotificationSettings extends SettingsPreferenceFragment
         }
         mAnnoyingNotifications.setOnPreferenceChangeListener(this);
 
+        mNoisyNotification = (ListPreference) findPreference("notification_sound_vib_screen_on");
+        mNoisyNotification.setOnPreferenceChangeListener(this);
+        int mode = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.NOTIFICATION_SOUND_VIB_SCREEN_ON,
+                1, UserHandle.USER_CURRENT);
+        mNoisyNotification.setValue(String.valueOf(mode));
+        mNoisyNotification.setSummary(mNoisyNotification.getEntry());
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -84,8 +93,15 @@ public class NotificationSettings extends SettingsPreferenceFragment
             mAnnoyingNotifications
                     .setSummary(mAnnoyingNotifications.getEntries()[notificationThresholdIndex]);
             return true;
+        } else if (preference.equals(mNoisyNotification)) {
+            int mode = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NOTIFICATION_SOUND_VIB_SCREEN_ON, mode, UserHandle.USER_CURRENT);
+            int index = mNoisyNotification.findIndexOfValue((String) newValue);
+            mNoisyNotification.setSummary(
+                    mNoisyNotification.getEntries()[index]);
+            return true;
         }
-
         return false;
     }
 

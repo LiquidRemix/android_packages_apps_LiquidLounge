@@ -64,4 +64,11 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="notification_sound_vib_screen_on"
+        android:title="@string/notification_sound_vib_screen_on_title"
+        android:entries="@array/notification_sound_vib_screen_on_entries"
+        android:entryValues="@array/notification_sound_vib_screen_on_values"
+        android:summary="%s" />
+
 </PreferenceScreen>
