@@ -67,10 +67,12 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
         mResolver = getActivity().getContentResolver();
         PreferenceScreen prefs = getPreferenceScreen();
 
-        if (!isOmniJawsServiceInstalled())
+        if (!isOmniJawsServiceInstalled()) {
             getPreferenceScreen().removePreference(findPreference(KEY_OMNIJAWS));
-
-        initweather();
+            getPreferenceScreen().removePreference(findPreference(WEATHER_ICON_PACK));
+        } else {
+            initweather();
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
