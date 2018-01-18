@@ -683,4 +683,8 @@
     <string name="less_notification_sounds_2m">Every 2 minutes</string>
     <string name="less_notification_sounds_5m">Every 5 minutes</string>
 
+    <!-- Ambient display music ticker -->
+    <string name="force_ambient_for_media_title">Show Ambient on new track</string>
+    <string name="force_ambient_for_media_summary">Show an Ambient Display notification when a new track is being played</string>
+
 </resources>
