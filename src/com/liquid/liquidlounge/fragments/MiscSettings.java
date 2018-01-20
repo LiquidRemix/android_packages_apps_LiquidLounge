@@ -48,10 +48,8 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "2";
-    private static final String FORCE_AMBIENT_FOR_MEDIA = "force_ambient_for_media";
 
 	private ListPreference mScrollingCachePref;
-    private ListPreference mAmbientTicker;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -66,13 +64,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
-
-        mAmbientTicker = (ListPreference) findPreference(FORCE_AMBIENT_FOR_MEDIA);
-        int mode = Settings.System.getIntForUser(resolver,
-                Settings.System.FORCE_AMBIENT_FOR_MEDIA, 0, UserHandle.USER_CURRENT);
-        mAmbientTicker.setValue(Integer.toString(mode));
-        mAmbientTicker.setSummary(mAmbientTicker.getEntry());
-        mAmbientTicker.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -83,14 +74,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
             }
             return true;	
-        } else if (preference == mAmbientTicker) {
-            int mode = Integer.valueOf((String) objValue);
-            int index = mAmbientTicker.findIndexOfValue((String) objValue);
-            mAmbientTicker.setSummary(
-                    mAmbientTicker.getEntries()[index]);
-            Settings.System.putIntForUser(resolver, Settings.System.FORCE_AMBIENT_FOR_MEDIA,
-                    mode, UserHandle.USER_CURRENT);
-            return true;
         }
         return false;
     }

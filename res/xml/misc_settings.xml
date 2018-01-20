@@ -34,13 +34,13 @@
         android:title="@string/app_ops_settings"
         android:fragment="com.android.settings.applications.AppOpsSummary"/>
 
-    <ListPreference
-        android:key="force_ambient_for_media"
-        android:title="@string/force_ambient_for_media_title"
-        android:entries="@array/force_ambient_for_media_entries"
-        android:entryValues="@array/force_ambient_for_media_values" />
+    <Preference
+        android:key="force_ambient_for_media_pref"
+        android:fragment="com.liquid.liquidlounge.fragments.AmbientTicker"
+        android:title="@string/force_ambient_for_media_pref_title"
+        android:summary="@string/force_ambient_for_media_pref_summary" />
 
-	<ListPreference
+	  <ListPreference
         android:key="pref_scrollingcache"
         android:dialogTitle="@string/pref_scrollingcache_title"
         android:title="@string/pref_scrollingcache_title"
@@ -60,8 +60,8 @@
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
         android:defaultValue="true" />
 		
-	<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
-	    android:key="pocket_judge"
+	  <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
+	      android:key="pocket_judge"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
