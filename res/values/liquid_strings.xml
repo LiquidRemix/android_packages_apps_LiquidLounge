@@ -898,4 +898,8 @@
     <string name="status_bar_temperature_hide_scale_hide_image">Temp</string>
     <string name="status_bar_show_image">Image</string>
 
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Pocket detection</string>
+    <string name="pocket_judge_summary">Block screen and button inputs when device is in pocket</string>
+
 </resources>

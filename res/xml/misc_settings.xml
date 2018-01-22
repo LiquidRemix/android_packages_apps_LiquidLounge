@@ -64,6 +64,12 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+        android:key="pocket_judge" 
+        android:title="@string/pocket_judge_title" 
+        android:summary="@string/pocket_judge_summary" 
+        android:defaultValue="false" /> 
+
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wakeup_when_plugged_unplugged_title"
