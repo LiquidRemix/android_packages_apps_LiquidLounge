@@ -23,6 +23,10 @@
     <string name="ambient_title">Ambient</string>
     <string name="ambient_summary">Enable ambient display material and doze function</string>
 
+    <!-- Animations -->
+    <string name="animation_title">Animations</string>
+    <string name="animation_summary">Control many different types of system animations</string>
+
     <!-- Buttons -->
     <string name="button_title">Buttons</string>
     <string name="button_summary">Use hardware keys or control volume rocker switch</string>
@@ -85,6 +89,12 @@
     <!-- Device -->
     <string name="device_title">Device</string>
     <string name="device_summary">Customize alert slider and off screen gestures</string>
+
+    <!-- Category strings -->
+    <string name="listview_animation_title">Listview</string>
+    <string name="misc_animation_title">Miscellaneous</string>
+    <string name="system_animation_title">System</string>
+    <string name="tiles_animation_title">Tiles</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -518,5 +528,12 @@
     <string name="chooser_activity_blacklist_cat_title">Blacklist</string>
     <string name="chooser_activity_blacklist_pref_title">Add app</string>
     <string name="chooser_activity_blacklist_pref_summary">Tap here to add, tap on added app to remove it</string>
+
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_fade">Simple fade</string>
+    <string name="screen_off_animation_color">Color fade</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
 
 </resources>

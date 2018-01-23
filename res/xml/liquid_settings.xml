@@ -27,6 +27,14 @@
         android:icon="@drawable/ic_settings_ambient"
         android:fragment="com.liquid.liquidlounge.fragments.AmbientSettings" />
 
+    <!-- Animations -->
+    <Preference
+        android:key="animation_category"
+        android:title="@string/animation_title"
+        android:summary="@string/animation_summary"
+        android:icon="@drawable/ic_settings_animation"
+        android:fragment="com.liquid.liquidlounge.fragments.AnimationSettings" />
+
     <!-- Buttons -->
     <Preference
         android:key="button_category"
