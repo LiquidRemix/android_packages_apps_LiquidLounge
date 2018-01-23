@@ -48,8 +48,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "2";
+    private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
 
 	private ListPreference mScrollingCachePref;
+    private ListPreference mScreenOffAnimation;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -64,6 +66,13 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
+        int screenOffAnimation = Settings.Global.getInt(getContentResolver(),
+                Settings.Global.SCREEN_OFF_ANIMATION, 0);
+        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+        mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -74,6 +83,12 @@ public class MiscSettings extends SettingsPreferenceFragment implements
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
             }
             return true;	
+        } else if (preference == mScreenOffAnimation) {
+            int value = Integer.valueOf((String) objValue);
+            int index = mScreenOffAnimation.findIndexOfValue((String) objValue);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
+            Settings.Global.putInt(getContentResolver(), Settings.Global.SCREEN_OFF_ANIMATION, value);
+            return true;
         }
         return false;
     }
