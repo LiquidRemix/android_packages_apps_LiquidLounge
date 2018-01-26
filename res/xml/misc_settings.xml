@@ -53,6 +53,12 @@
         android:title="@string/wakeup_when_plugged_unplugged_title"
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
         android:defaultValue="true" />
+		
+	<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
+	    android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary"
+        android:defaultValue="false" />
 
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="show_cpu_overlay"
