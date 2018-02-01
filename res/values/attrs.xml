@@ -25,9 +25,11 @@
         <attr name="defaultText" format="string|reference" />
     </declare-styleable>
 
-    <!-- ColorPreference -->
-    <declare-styleable name="ColorPreference">
+    <!-- Value to pass to callback when restore button is pressed -->
+    <declare-styleable name="ColorPickerPreference">
         <attr name="defaultColorValue" format="integer" />
+        <attr name="ledPreview" format="boolean" />
+        <attr name="alphaSlider" format="boolean" />
     </declare-styleable>
 
 </resources>
