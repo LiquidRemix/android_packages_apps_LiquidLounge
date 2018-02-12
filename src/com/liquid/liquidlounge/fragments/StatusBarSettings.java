@@ -54,9 +54,12 @@ import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private static final String BATTERY_STYLE = "battery_style";
+
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
     private ListPreference mTickerMode;
+    private ListPreference mBatteryIconStyle;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -87,6 +90,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                 0, UserHandle.USER_CURRENT);
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
+
+        mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
+        mBatteryIconStyle.setValue(Integer.toString(Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0)));
+        mBatteryIconStyle.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -112,6 +120,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     tickerMode, UserHandle.USER_CURRENT);
             int index = mTickerMode.findIndexOfValue((String) objValue);
             mTickerMode.setSummary(mTickerMode.getEntries()[index]);
+            return true;
+        } else  if (preference == mBatteryIconStyle) {
+            int value = Integer.valueOf((String) objValue);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
             return true;
         }
         return false;
