@@ -37,12 +37,24 @@
         android:fragment="com.liquid.liquidlounge.fragments.StatusBarClockSettings"
         android:title="@string/statusbar_clock_title" />
 
-    <ListPreference
-        android:key="battery_style"
-        android:title="@string/battery_style_title"
-        android:summary="@string/battery_style_summary"
-        android:entries="@array/battery_style_entries"
-        android:entryValues="@array/battery_style_values" />
+    <PreferenceCategory
+        android:key="battery_style_category"
+        android:title="@string/battery_style_category_title" >
+
+        <ListPreference
+            android:key="battery_style"
+            android:title="@string/battery_style_title"
+            android:summary="@string/battery_style_summary"
+            android:entries="@array/battery_style_entries"
+            android:entryValues="@array/battery_style_values" />
+
+        <SwitchPreference
+            android:key="show_battery_percent"
+            android:title="@string/show_battery_percent_title"
+            android:summary="@string/show_battery_percent_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="status_bar_brightness_control"
@@ -75,7 +87,7 @@
         android:defaultValue="false" />
 		
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-	android:key="status_bar_logo"
+	    android:key="status_bar_logo"
         android:title="@string/status_bar_logo_title"
         android:summary="@string/status_bar_logo_summary"
         android:defaultValue="false"/>
