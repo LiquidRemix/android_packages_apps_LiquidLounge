@@ -31,7 +31,7 @@
 
     <!-- Miscellaneous -->
     <string name="misc_title">Varie</string>
-    <string name="misc_summary">Sicurezza delle applicazioni e blocco degli allarmi o dei wakelock</string>
+    <string name="misc_summary">Sicurezza delle applicazioni, blocco degli allarmi e dei wakelock</string>
 
     <!-- Navigation bar -->
     <string name="navbar_title">Barra di navigazione</string>
@@ -55,7 +55,7 @@
 
     <!-- Status bar -->
     <string name="statusbar_title">Barra di stato</string>
-    <string name="statusbar_summary">Nascondi o mostra le icone di sistema e le statistiche del traffico di rete</string>
+    <string name="statusbar_summary">Nascondi o mostra le icone di sistema e delle statistiche del traffico di rete</string>
 
     <!-- Other categories -->
     <string name="heads_up_title">Notifche fluttuanti</string>
@@ -122,9 +122,9 @@
     <!-- Lock screen weather -->
     <string name="ls_weather_title">Meteo sulla schermata di blocco</string>
     <string name="weather_show_weather_title">Mostra il meteo</string>
-    <string name="weather_show_weather_summary">Abilita per visualizzare le informazioni meteorologiche</string>
+    <string name="weather_show_weather_summary">Abilita per la visualizzazione delle informazioni meteorologiche</string>
     <string name="weather_show_location_title">Mostra la posizione</string>
-    <string name="weather_show_location_summary">Abilita per visualizzare la posizione</string>
+    <string name="weather_show_location_summary">Abilita per la visualizzazione della posizione</string>
     <string name="weather_config_title">Impostazioni del servizio</string>
     <string name="weather_icon_pack_title">Pacchetto icone delle condizioni</string>
 
@@ -177,7 +177,7 @@
 
     <!-- Media art -->
     <string name="media_art_title">Copertina applicazioni multimediali</string>
-    <string name="media_art_summary">Abilita la visualizzazione della copertina dei file multimediali nella schermata di blocco</string>
+    <string name="media_art_summary">Abilita per la visualizzazione della copertina dei file multimediali nella schermata di blocco</string>
 
     <!-- Torch power button gestures -->
     <string name="torch_power_button_gesture_title">Torcia a schermo spento con pulsante di accensione</string>
@@ -186,7 +186,7 @@
     <string name="torch_power_button_gesture_lp">Pressione prolungata del pulsante per accendere la torcia</string>
 
     <!-- Lockscreen battery info -->
-    <string name="lockscreen_battery_info_title">Informazioni di ricarica sulla schermata di blocco</string>
+    <string name="lockscreen_battery_info_title">Info batteria sulla schermata di blocco</string>
     <string name="lockscreen_battery_info_summary">Visualizza la corrente massima di ricarica, il voltaggio e la temperatura della batteria durante la ricarica</string>
 
     <!-- Volume rocker cursor control -->
@@ -197,11 +197,11 @@
     <string name="volume_key_cursor_control_on_reverse">Volume sù/giù spostano il cursore nel testo a destra/sinistra</string>
 
     <!-- Volume rocker wake -->
-    <string name="volume_rocker_wake_title">Risveglio con pulsanti</string>
-    <string name="volume_rocker_wake_summary">Premendo i pulsanti del volume si risveglierà il dispositivo</string>
+    <string name="volume_rocker_wake_title">Risveglio con tasti volume</string>
+    <string name="volume_rocker_wake_summary">Premendo i tasti del volume farà riattivare il dispositivo</string>
 
     <!-- Button backlight -->
-    <string name="button_backlight_on_touch_only_title">Tocco del tasto</string>
+    <string name="button_backlight_on_touch_only_title">Tocco dei tasti</string>
     <string name="button_backlight_on_touch_only_summary">Abilita la durata della retroilluminazione con il solo tocco di un tasto</string>
 
     <!-- Incall Home button behavior-->
@@ -250,8 +250,8 @@
     <string name="ime_switcher_notify_summary">Visualizza il metodo d\'ingresso di selezione della notifica</string>
 
     <!-- Battery saver color -->
-    <string name="battery_saver_color_title">Colore di avviso</string>
-    <string name="battery_saver_color_summary">Abilita lo stato arancione sulle barre di navigazione quando è attivato il risparmio batteria</string>
+    <string name="battery_saver_color_title">Colore risparmio batteria</string>
+    <string name="battery_saver_color_summary">Abilita lo stato arancione su entrambi le barre quando è attivato il risparmio della batteria</string>
 
     <!-- Volume key answer -->
     <string name="volume_answer_call_title">Rispondi alla chiamata</string>
@@ -273,7 +273,7 @@
 
     <!-- Status bar net traffic -->
     <string name="network_traffic_state_title">Traffico di rete</string>
-    <string name="network_traffic_state_summary">Mostra l\'attività di rete nella barra di stato</string>
+    <string name="network_traffic_state_summary">Visualizza l\'attività di rete nella barra di stato</string>
     <string name="network_traffic_autohide_threshold_title">Nascondi soglia per inattività (KB/s)</string>
 
     <!-- Smart pulldown -->
@@ -282,8 +282,8 @@
     <string name="smart_pulldown_none_summary">Apri le impostazioni rapide quando non ci sono notifiche</string>
     <string name="smart_pulldown_off">Spenta</string>
     <string name="smart_pulldown_none">Nessuna notifica</string>
-    <string name="smart_pulldown_dismissable">Non removibili</string>
-    <string name="smart_pulldown_ongoing">Nessuna in corso</string>
+    <string name="smart_pulldown_dismissable">Nessuna notifica removibile</string>
+    <string name="smart_pulldown_ongoing">Nessuna notifica in corso</string>
 
     <!-- Notification lights -->
     <string name="notification_light_settings">Luci delle notifiche</string>
@@ -295,7 +295,7 @@
     <!-- Power Menu -->
     <string name="powermenu_screenshot">Screenshot</string>
     <string name="powermenu_screenrecord">Registra schermo</string>
-    <string name="powermenu_power">Alimentazione</string>
+    <string name="powermenu_power">Spegni</string>
     <string name="powermenu_restart">Riavvio</string>
     <string name="powermenu_restart_recovery">Riavvio avanzato</string>
     <string name="powermenu_airplane">Aereo</string>
@@ -307,7 +307,7 @@
 
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">Menù alimentazione quando bloccato</string>
-    <string name="lockscreen_power_menu_disabled_summary">Disattiva il menù di alimentazione sulla schermata di blocco quando bloccato</string>
+    <string name="lockscreen_power_menu_disabled_summary">Disattiva il menù di alimentazione sulla schermata di blocco quando il dispositivo è bloccato</string>
 
     <!-- fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
@@ -332,7 +332,7 @@
 
     <!-- Quick Settings brightness icon -->
     <string name="brightness_icon_title">Icona luminosità </string>
-    <string name="brightness_icon_summary">Visualizza un\'icona a sinistra dello slider per regolare la luminosità automatica</string>
+    <string name="brightness_icon_summary">Visualizza l\'icona di luminosità a sinistra del cursore per regolare la luminosità automatica</string>
 	
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
@@ -443,7 +443,7 @@
     <string name="navbar_visibility">Abilita barra di navigazione</string>
     <string name="navigationbar_settings_title">Barra di navigazione</string>
     <string name="bottom_nav_navigation_title">Barra di navigazione</string>
-    <string name="navigationbar_settings_summary">Personalizza lo stile di navigazione e il comportamento</string>
+    <string name="navigationbar_settings_summary">Personalizza lo stile di navigazione e il suo comportamento</string>
     <string name="navbar_general_title">Avanzate</string>
     <string name="navigation_bar_left_title">Modalità mancino</string>
     <string name="navigation_bar_left_summary">Posiziona la barra di navigazione sul lato sinistro dello schermo in modalità orizzontale</string>
@@ -561,9 +561,9 @@
     <!-- Smart bar -->
     <string name="smartbar_category">SmartBar</string>
     <string name="smartbar_settings_title">Impostazioni Smartbar</string>
-	  <string name="smartbar_settings_summary">Barra di navigazione completamente personalizzabile</string>
+    <string name="smartbar_settings_summary">Barra di navigazione completamente personalizzabile</string>
     <string name="smartbar_editor_title">Avvia modalità modifica</string>
-  	<string name="smartbar_editor_summary">Apri la modifica dei pulsanti della smartbar</string>
+    <string name="smartbar_editor_summary">Apri la modifica dei pulsanti della smartbar</string>
     <string name="smartbar_help_policy_notice_summary">In modalità modifica, premere a metà e trascinare un pulsante per cambiarne la posizione o premere a lungo un pulsante per visualizzare il menù della modifica. La posizione del pulsante può essere modificata mentre viene visualizzato il menù.\n\nL\'impostazione di una doppia azione ritarderà il tocco di un singolo bit.</string>
     <string name="smartbar_context_menu_position_title">Posizione pulsanti contestuali</string>
     <string name="smartbar_context_menu_position_summary">Regola la posizione dei pulsanti contestuali, come il pulsante menù e il selettore della tastiera</string>
@@ -603,7 +603,7 @@
     <string name="one_handed_mode_title">Modalità una mano</string>
     <string name="one_handed_mode_summary">Consente di attivare la modalità una mano strisciando sulla barra di navigazione</string>
     <string name="smartbar_double_tap_sleep_title">Doppio tocco per sospendere</string>
-    <string name="smartbar_double_tap_sleep_summary">Doppio tocco sulle aree della barra di navigazione vuota per dormire</string>
+    <string name="smartbar_double_tap_sleep_summary">Doppio tocco su uno spazio vuoto della barra di navigazione per spegnere lo schermo</string>
 
     <!-- Hardware keys -->
     <string name="hardware_keys_home_key_title">Pulsante home</string>
@@ -651,11 +651,11 @@
     <string name="show_carrier_statusbar">Barra di stato</string>
     <string name="show_carrier_enabled">Entrambi</string>
 	
-	  <!-- Pocket judge -->
+    <!-- Pocket judge -->
     <string name="pocket_judge_title">Rilevamento in tasca</string>
     <string name="pocket_judge_summary">Blocca lo schermo e i tasti quando il dispositivo è in tasca</string>
 
-  	<!-- Less Notification sounds -->
+    <!-- Less Notification sounds -->
     <string name="less_notification_sounds_title">Suoni di notifica meno frequenti</string>
     <string name="less_notification_sounds_summary">Riproduci il suono di notifica di ogni app solo una volta per ogni periodo di tempo impostato</string>
     <string name="less_notification_sounds_default">Comportamento predefinito</string>
@@ -686,7 +686,7 @@
 
     <!-- Clock options -->
     <string name="statusbar_clock_title">Opzioni orologio</string>
-    <string name="status_bar_show_clock_title">Mostra l'orologio e la data</string>
+    <string name="status_bar_show_clock_title">Mostra l\'orologio e la data</string>
     <string name="clock_title_enable">Allineamento</string>
     <string name="right_clock">Orologio a destra</string>
     <string name="center_clock">Orologio centrato</string>
@@ -713,7 +713,7 @@
     <string name="menu_cancel">Cancella</string>
 
     <!-- Suppress notification vib/sound feature -->
-    <string name="notification_sound_vib_screen_on_title">Notifiche suono e vibrazioni se lo schermo è acceso</string>
+    <string name="notification_sound_vib_screen_on_title">Notifiche con suono e vibrazione se lo schermo è acceso</string>
     <string name="notification_sound_vib_screen_on_never">Mai</string>
     <string name="notification_sound_vib_screen_on_always">Sempre (predefinito)</string>
     <string name="notification_sound_vib_screen_on_nomedia">Nessuna riproduzione multimediale</string>
