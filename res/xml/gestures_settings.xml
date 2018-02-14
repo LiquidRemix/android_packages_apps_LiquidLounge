@@ -23,7 +23,12 @@
     <Preference
         android:key="gestures_dashboard"
         android:title="@string/gesture_preference"
-        android:fragment="com.android.settings.gestures.GestureSettings"/>
+        android:fragment="com.android.settings.gestures.GestureSettings" />
+
+    <Preference
+        android:key="carbon_gestures"
+        android:title="@string/carbon_gesture_preference_title"
+        android:fragment="com.liquid.liquidlounge.fragments.CarbonGesturesSettings" />
 
     <PreferenceCategory
         android:key="dtts_category"
