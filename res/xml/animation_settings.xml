@@ -17,11 +17,12 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:liquid="http://schemas.android.com/apk/res-auto"
     android:title="@string/animation_title">
 
     <PreferenceCategory
         android:key="system_animation"
-        android:title="@string/system_animation_title" >
+        android:title="@string/system_animations_title" >
  
          <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="disable_transition_animations"
@@ -86,7 +87,7 @@
 
     <PreferenceCategory
         android:key="listview_animation"
-        android:title="@string/listview_animation_title" >
+        android:title="@string/listview_animations_title" >
  
         <ListPreference
             android:key="listview_animation"
@@ -108,7 +109,7 @@
 
     <PreferenceCategory
         android:key="misc_animation"
-        android:title="@string/misc_animation_title" >
+        android:title="@string/misc_animations_title" >
  
         <ListPreference 
             android:key="screen_off_animation" 
@@ -136,7 +137,7 @@
 
     <PreferenceCategory
         android:key="tiles_animation"
-        android:title="@string/tiles_animation_title" >
+        android:title="@string/tiles_animations_title" >
  
         <ListPreference
             android:key="qs_tile_animation_style"

@@ -26,7 +26,13 @@
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
     <Preference
-        android:key="gesture_settings"
+        android:key="carbon_gestures"
+        android:title="@string/carbon_gestures_title"
+        android:summary="@string/carbon_gestures_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.CarbonGesturesSettings" />
+
+    <Preference
+        android:key="omni_gestures"
         android:title="@string/gesture_settings_title"
         android:summary="@string/gesture_settings_summary"
         android:fragment="com.liquid.liquidlounge.fragments.OmniGestureSettings" />

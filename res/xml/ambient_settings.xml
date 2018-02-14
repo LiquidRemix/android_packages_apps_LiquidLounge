@@ -17,6 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:liquidns="http://schemas.android.com/apk/res-auto"
     android:title="@string/ambient_title">
 
     <PreferenceCategory
@@ -28,7 +29,6 @@
             android:title="@string/ambient_battery_percent_title" 
             android:summary="@string/ambient_battery_percent_summary" 
             android:defaultValue="false" />
-
    </PreferenceCategory>
 
    <PreferenceCategory
@@ -84,7 +84,7 @@
             android:min="0"
             android:defaultValue="0"
             settings:units="ms"
-            liquid:interval="50"
+            liquidns:interval="50"
             android:persistent="false"
             android:dependency="doze_trigger_tilt" />
 
@@ -108,7 +108,7 @@
             android:min="0"
             android:defaultValue="0"
             settings:units="ms"
-            liquid:interval="50"
+            liquidns:interval="50"
             android:persistent="false"
             android:dependency="doze_trigger_pickup" />
 
@@ -139,7 +139,7 @@
             android:min="0"
             android:defaultValue="0"
             settings:units="ms"
-            liquid:interval="50"
+            liquidns:interval="50"
             android:persistent="false"
             android:dependency="doze_enabled" />
 
