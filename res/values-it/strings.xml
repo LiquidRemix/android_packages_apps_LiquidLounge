@@ -331,12 +331,12 @@
     <string name="status_bar_toggle_brightness_summary">Regola la luminosità facendo scorrere il dito sulla barra di stato</string>
 
     <!-- Quick Settings brightness icon -->
-    <string name="brightness_icon_title">Icona luminosità </string>
+    <string name="brightness_icon_title">Icona luminosità</string>
     <string name="brightness_icon_summary">Visualizza l\'icona di luminosità a sinistra del cursore per regolare la luminosità automatica</string>
 	
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
-    <string name="heads_up_time_out_summary">Le notifiche verranno mostrate per <xliff:g id="number">%d</xliff:g> secondi</string>
+    <string name="heads_up_time_out_summary">Le notifiche verranno visualizzate per <xliff:g id="number">%d</xliff:g> secondi</string>
     <string name="heads_up_time_out_2sec">2 secondi</string>
     <string name="heads_up_time_out_4sec">4 secondi</string>
     <string name="heads_up_time_out_5sec">5 secondi</string>
@@ -360,7 +360,7 @@
     <string name="toast_icon_summary">Visualizza l\'icona dell\'applicazione corrispondente al toast</string>
 
     <!-- Disable QS on secure Lockscreen -->
-    <string name="lockscreen_qs_disabled_title">Disabilita impostazioni rapide </string>
+    <string name="lockscreen_qs_disabled_title">Disabilita impostazioni rapide</string>
     <string name="lockscreen_qs_disabled_summary">Disabilita le impostazioni rapide sulla schermata di blocco</string>
 
     <!-- Status bar notification ticker -->
@@ -530,7 +530,7 @@
     <string name="pulse_render_mode_fading_bars">Dissolvenza blocchi</string>
     <string name="pulse_render_mode_solid_lines">Linee continue</string>
     <string name="fling_pulse_color">Colore Pulse</string>
-  	<string name="fling_pulse_color_summary">Usato anche come fallback per il colore automatico</string>
+    <string name="fling_pulse_color_summary">Usato anche come fallback per il colore automatico</string>
     <string name="eos_fling_lavalamp_title">Attiva lampada di lava</string>
     <string name="eos_fling_lavalamp_summary">Pulse mescola e cambia colore come una lampada di lava</string>
     <string name="pulse_advanced_category">Avanzate</string>
@@ -690,12 +690,13 @@
     <string name="clock_title_enable">Allineamento</string>
     <string name="right_clock">Orologio a destra</string>
     <string name="center_clock">Orologio centrato</string>
+    <string name="left_clock">Orologio a sinistra</string>
     <string name="status_bar_clock_seconds_title">Secondi nell\'orologio</string>
     <string name="status_bar_clock_seconds_summary">Visualizza i secondi accanto all\'orologio nella barra di stato</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">Formato 24 ore abilitato</string>
-    <string name="am_pm_clock_normal">Dimensione del carattere normale</string>
-    <string name="am_pm_clock_small">Dimensione del carattere piccolo</string>
+    <string name="am_pm_clock_normal">Dimensione carattere normale</string>
+    <string name="am_pm_clock_small">Dimensione carattere piccolo</string>
     <string name="am_pm_clock_none">Non visualizzare</string>
     <string name="clock_date_display">Data</string>
     <string name="clock_date_display_summary">Mostra la data personalizzata prima dell\'orologio</string>
@@ -704,8 +705,8 @@
     <string name="clock_date_string_edittext_title">Deve essere in formato data es. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Inserisci una stringa</string>
     <string name="clock_date_display_none">Non visualizzare</string>
-    <string name="clock_date_display_small">Dimensione del carattere piccolo</string>
-    <string name="clock_date_display_normal">Dimensione del carattere normale</string>
+    <string name="clock_date_display_small">Dimensione carattere piccolo</string>
+    <string name="clock_date_display_normal">Dimensione carattere normale</string>
     <string name="clock_date_style_normal">Normale</string>
     <string name="clock_date_style_lowercase">Minuscolo</string>
     <string name="clock_date_style_uppercase">Maiuscolo</string>
