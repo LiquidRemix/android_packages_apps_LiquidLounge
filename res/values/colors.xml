@@ -23,4 +23,8 @@
     <color name="darkLiquidPrimaryDark">@color/material_blue_700</color>
     <color name="darkLiquidAccent">@color/material_blue_500</color>
 
+    <!-- Accent picker -->
+    <color name="accent_picker_white_accent">@android:color/white</color>
+    <color name="accent_picker_dark_accent">@android:color/black</color>
+
 </resources>
