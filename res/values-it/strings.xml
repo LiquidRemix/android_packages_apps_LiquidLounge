@@ -711,6 +711,9 @@
     <string name="clock_date_style_lowercase">Minuscolo</string>
     <string name="clock_date_style_uppercase">Maiuscolo</string>
     <string name="clock_date_format_custom">Formato java personalizzato</string>
+    <string name="clock_date_right">Data a destra</string>
+    <string name="clock_date_left">Data a sinistra</string>
+    <string name="clock_date_position">Posizione aata</string>
     <string name="menu_cancel">Cancella</string>
 
     <!-- Suppress notification vib/sound feature -->
@@ -736,4 +739,19 @@
     <string name="lock_clock_font_medium_normal">Medio</string>
     <string name="lock_clock_font_medium_italic">Corsivo Medio</string>
 
+    <!-- Battery Styles -->
+    <string name="battery_style_title">Indicatore della batteria</string>
+    <string name="battery_style_port">Verticale</string>
+    <string name="battery_style_land">Orizzontale</string>
+    <string name="battery_style_circle">Cerchio</string>
+    <string name="battery_style_dotted_circle">Cerchio tratteggiato</string>
+    <string name="battery_style_big_circle">Cerchio grande</string>
+    <string name="battery_style_big_dotted_circle">Cerchio grande tratteggiato</string>
+    <string name="battery_style_text">Testo</string>
+    <string name="battery_style_hidden">Nascosta</string>
+    <string name="show_battery_percent_title">Visualizza la percentuale della batteria</string>
+    <string name="battery_style_category_title">Icona della batteria</string>
+    <string name="battery_percent_none">Nasconsta</string>
+    <string name="battery_percent_outside">Visualizza fuori l\'icona</string>
+    <string name="battery_percent_inside">Visualizza dentro l\'icona</string>
 </resources>
