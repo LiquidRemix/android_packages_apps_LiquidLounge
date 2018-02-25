@@ -82,7 +82,7 @@
         <SwitchPreference
             android:key="fling_keyboard_cursors"
             android:title="@string/fling_keyboard_cursors_title"
-            android:summary="@string/fling_keyboard_cursors_summary" />
+            android:summary="@string/fling_keyboard_cursors_move_summary" />
 
         <com.liquid.liquidlounge.preferences.ActionPreference
             android:key="long_right_press"
