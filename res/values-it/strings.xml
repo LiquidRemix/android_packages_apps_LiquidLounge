@@ -517,7 +517,7 @@
     <string name="fling_longpress_title">Ritardo pressione prolungata</string>
     <string name="fling_longpress_summary">Aumenta o diminuisce il tempo impiegato per eseguire una pressione prolungata</string>
     <string name="fling_keyboard_cursors_title">Azione dei cursori della tastiera dinamica</string>
-    <string name="fling_keyboard_cursors_summary">Doppio tocco a sinistra e destra, le azioni diventano azioni del cursore della tastiera per lo spostamento, se la tastiera è aperta</string>
+    <string name="fling_keyboard_cursors_move_summary">Quando viene visualizzata la tastiera, le azioni della pressione prolungata a sinistra o a destra diventano azioni del cursore della tastiera per lo spostamento. Mantieni la pressione prolungata per continuare a spostare il cursore, un solo tocco sulla barra consente di andare alla schermata principale.</string>
     <string name="fling_logo_opacity_title"> Opacità del logo Fling</string>
 
     <!-- Pulse music visualizer -->
@@ -745,6 +745,7 @@
     <string name="battery_style_land">Orizzontale</string>
     <string name="battery_style_circle">Cerchio</string>
     <string name="battery_style_dotted_circle">Cerchio tratteggiato</string>
+    <string name="battery_style_square">Quadrato</string>
     <string name="battery_style_big_circle">Cerchio grande</string>
     <string name="battery_style_big_dotted_circle">Cerchio grande tratteggiato</string>
     <string name="battery_style_text">Testo</string>
