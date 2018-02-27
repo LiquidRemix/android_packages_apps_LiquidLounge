@@ -745,6 +745,7 @@
     <string name="battery_style_land">Orizzontale</string>
     <string name="battery_style_circle">Cerchio</string>
     <string name="battery_style_dotted_circle">Cerchio tratteggiato</string>
+    <string name="battery_style_square">Quadrato</string>
     <string name="battery_style_big_circle">Cerchio grande</string>
     <string name="battery_style_big_dotted_circle">Cerchio grande tratteggiato</string>
     <string name="battery_style_text">Testo</string>
