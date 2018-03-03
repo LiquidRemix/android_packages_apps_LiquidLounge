@@ -937,7 +937,7 @@
     <string name="slim_icon_pack_title">Icon Pack</string>
     <string name="slim_icon_pack_summary">Apply a custom icon pack for apps in the panel</string>
     <string name="slim_recents_corner_radius_title">Use round corners for cards</string>
-    <string name="slim_recents_hints_footer">To clear all apps, pinch-in with two fingers on the panel. To block an app from being cleared, long press on its icon to star it.\n\nFor additional recents features such as multiwindow or to kill an app, long press on any app window in the panel.</string>
+    <string name="slim_recents_hints_footer">To clear all apps, pinch-in with two fingers on the panel. To block an app from being cleared, long press on its icon to star it.\n\nFor additional recents features such as multiwindow or to kill an app, long press or drag an app card in the panel.</string>
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
     <string name="slim_blacklist_apps_cat_title">Blacklist</string>
