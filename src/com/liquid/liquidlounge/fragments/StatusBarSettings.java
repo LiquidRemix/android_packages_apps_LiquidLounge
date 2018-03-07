@@ -61,6 +61,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
     private ListPreference mTickerMode;
+    private ListPreference mTickerAnimation;
     private ListPreference mBatteryIconStyle;
     private ListPreference mBatteryPercentage;
     private ListPreference mStatusBarWeather;
@@ -92,8 +93,17 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         int tickerMode = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_SHOW_TICKER,
                 0, UserHandle.USER_CURRENT);
+        updatePrefs();
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
+
+        mTickerAnimation = (ListPreference) findPreference("status_bar_ticker_animation_mode");
+        mTickerAnimation.setOnPreferenceChangeListener(this);
+        int tickerAnimationMode = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.STATUS_BAR_TICKER_ANIMATION_MODE,
+                1, UserHandle.USER_CURRENT);
+        mTickerAnimation.setValue(String.valueOf(tickerAnimationMode));
+        mTickerAnimation.setSummary(mTickerAnimation.getEntry());
 
         int batteryStyle = Settings.Secure.getInt(resolver,
                 Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
@@ -143,8 +153,17 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.STATUS_BAR_SHOW_TICKER,
                     tickerMode, UserHandle.USER_CURRENT);
+            updatePrefs();
             int index = mTickerMode.findIndexOfValue((String) objValue);
             mTickerMode.setSummary(mTickerMode.getEntries()[index]);
+            return true;
+        } else if (preference == mTickerAnimation) {
+            int tickerAnimationMode = Integer.parseInt(((String) objValue).toString());
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_ANIMATION_MODE,
+                    tickerAnimationMode, UserHandle.USER_CURRENT);
+            int index = mTickerAnimation.findIndexOfValue((String) objValue);
+            mTickerAnimation.setSummary(mTickerAnimation.getEntries()[index]);
             return true;
         } else if (preference == mBatteryIconStyle) {
             int value = Integer.valueOf((String) objValue);
@@ -181,5 +200,16 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.LIQUID;
+    }
+
+    private void updatePrefs() {
+        ContentResolver resolver = getActivity().getContentResolver();
+        boolean enabled = (Settings.Global.getInt(resolver,
+                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 0) == 1);
+        if (enabled) {
+            Settings.System.putInt(resolver,
+                Settings.System.STATUS_BAR_SHOW_TICKER, 0);
+            mTickerMode.setEnabled(false);
+        }
     }
 }
