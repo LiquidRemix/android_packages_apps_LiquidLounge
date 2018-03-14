@@ -19,6 +19,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/app_settings_title">
 
+    <!-- Ambient -->
+    <Preference
+        android:key="ambient_category"
+        android:title="@string/ambient_title"
+        android:summary="@string/ambient_summary"
+        android:icon="@drawable/ic_settings_ambient"
+        android:fragment="com.liquid.liquidlounge.fragments.AmbientSettings" />
+
     <!-- Buttons -->
     <Preference
         android:key="button_category"

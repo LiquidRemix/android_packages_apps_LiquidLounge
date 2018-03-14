@@ -19,6 +19,10 @@
     <!-- App title -->
     <string name="app_settings_title">Liquid Lounge</string>
 
+    <!-- Ambient -->
+    <string name="ambient_title">Ambient</string>
+    <string name="ambient_summary">Enable ambient display material and doze function</string>
+
     <!-- Buttons -->
     <string name="button_title">Buttons</string>
     <string name="button_summary">Use hardware keys or control volume rocker switch</string>
@@ -499,5 +503,9 @@
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Sensor block per-package</string>
     <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery</string>
+
+    <!-- Ambient display battery percentage -->
+    <string name="ambient_battery_percent_title">Battery level on bottom</string>
+    <string name="ambient_battery_percent_summary">Enable to show battery percent while dozing</string>
 
 </resources>
