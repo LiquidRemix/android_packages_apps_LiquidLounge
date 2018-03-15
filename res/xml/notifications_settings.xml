@@ -53,6 +53,12 @@
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
+			
+		<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+		    android:key="incall_notifications_vibrate"
+			android:title="@string/incall_notifications_vibrate"
+			android:summary="@string/incall_notifications_vibrate_summary"
+			android:defaultValue="false" />
 
     </PreferenceCategory>
 	

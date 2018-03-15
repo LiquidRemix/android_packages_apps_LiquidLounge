@@ -775,6 +775,9 @@
     <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in notification shade</string>
+	
+	<string name="incall_notifications_vibrate">Less annoying in-call notifications</string>
+    <string name="incall_notifications_vibrate_summary">Vibrate instead of playing a sound for in-call notifications</string>
 
     <!-- Screen off animation -->
     <string name="screen_off_animation_fade">Simple fade</string>
