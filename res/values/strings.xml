@@ -56,6 +56,10 @@
     <string name="recents_title">Recents panel</string>
     <string name="recents_summary">Position clear button and different immersive styles</string>
 
+	<!-- Screen shot -->
+    <string name="screenshot_title">Screen shot</string>
+    <string name="screenshot_summary">Control app to edit and customize your screen shots</string>
+
     <!-- Status bar -->
     <string name="statusbar_title">Status bar</string>
     <string name="statusbar_summary">Hide or show system icons and network traffic stats</string>
@@ -785,6 +789,11 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
+
+	<!-- Screen shot -->
+	<string name="screenshot_edit_app">Screen shot edit app</string>
+    <string name="screenshot_edit_app_summary">Choose which app should be launched when tapping on the screenshot notification edit button</string>
+    <string name="screenshot_edit_app_no_editor">No image editor available</string>
 
     <!-- On-The-Go -->
     <string name="onthego_title">On-The-Go Mode</string>

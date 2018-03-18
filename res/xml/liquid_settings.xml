@@ -92,6 +92,14 @@
         android:icon="@drawable/ic_settings_recents"
         android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings"/>
 
+	<!-- Screen shot -->
+    <Preference
+        android:key="screenshot_category"
+        android:title="@string/screenshot_title"
+        android:summary="@string/screenshot_summary"
+        android:icon="@drawable/ic_settings_screenshot"
+        android:fragment="com.liquid.liquidlounge.fragments.ScreenShotSettings"/>	
+
     <!-- Status bar -->
     <Preference
         android:key="statusbar_category"
