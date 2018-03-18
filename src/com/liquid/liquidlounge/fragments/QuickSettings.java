@@ -59,6 +59,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
     private static final String FILE_HEADER_SELECT = "file_header_select";
+    private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
 
     private static final int REQUEST_PICK_IMAGE = 0;
 
@@ -71,6 +72,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mHeaderEnabled;
     private Preference mFileHeader;
     private String mFileHeaderProvider;
+    private CustomSeekBarPreference mQsPanelAlpha;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -118,7 +120,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         if (providerName == null) {
             providerName = mDaylightHeaderProvider;
         }
-	mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && !providerName.equals(mFileHeaderProvider));
+	    mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && !providerName.equals(mFileHeaderProvider));
 
         mHeaderProvider = (ListPreference) findPreference(CUSTOM_HEADER_PROVIDER);
         int valueIndex = mHeaderProvider.findIndexOfValue(providerName);
@@ -127,8 +129,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mHeaderProvider.setOnPreferenceChangeListener(this);
         mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
 
-	mFileHeader = findPreference(FILE_HEADER_SELECT);
+	    mFileHeader = findPreference(FILE_HEADER_SELECT);
         mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
+
+        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(QS_PANEL_ALPHA);
+        int qsPanelAlpha = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
+        mQsPanelAlpha.setValue(qsPanelAlpha);
+        mQsPanelAlpha.setOnPreferenceChangeListener(this);
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -191,6 +199,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         } else if (preference == mHeaderEnabled) {
             Boolean headerEnabled = (Boolean) newValue;
             updateHeaderProviderSummary(headerEnabled);
+        } else if (preference == mQsPanelAlpha) {
+            int bgAlpha = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
+                    UserHandle.USER_CURRENT);
         }
         return true;
     }
