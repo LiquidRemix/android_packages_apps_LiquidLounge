@@ -406,6 +406,8 @@
     <string name="file_header_select_summary">Select image from storage</string>
     <string name="file_header_provider_title">Single image</string>
     <string name="file_header_provider" translatable="false">file</string>
+    <string name="qs_show_mini_title">Mini mode</string>
+    <string name="qs_show_mini_summary">Make the header images smaller</string>
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app on headset connection</string>

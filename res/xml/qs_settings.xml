@@ -87,6 +87,13 @@
             android:title="@string/status_bar_custom_header_title"
             android:defaultValue="false" />
 
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="qs_show_mini"
+            android:title="@string/qs_show_mini_title"
+            android:summary="@string/qs_show_mini_summary"
+            android:dependency="status_bar_custom_header"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="custom_header_provider"
             android:title="@string/custom_header_provider_title"
