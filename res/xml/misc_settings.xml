@@ -47,7 +47,7 @@
         android:entryValues="@array/screen_off_animation_values"
         android:persistent="false"/>
 
-	  <ListPreference
+	<ListPreference
         android:key="pref_scrollingcache"
         android:dialogTitle="@string/pref_scrollingcache_title"
         android:title="@string/pref_scrollingcache_title"
@@ -66,9 +66,9 @@
         android:title="@string/wakeup_when_plugged_unplugged_title"
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
         android:defaultValue="true" />
-		
-	  <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
-	      android:key="pocket_judge"
+
+	<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
+	    android:key="pocket_judge"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />

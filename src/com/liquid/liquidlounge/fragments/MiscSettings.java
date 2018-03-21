@@ -82,7 +82,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             if (objValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
             }
-            return true;	
+            return true;		
         } else if (preference == mScreenOffAnimation) {
             int value = Integer.valueOf((String) objValue);
             int index = mScreenOffAnimation.findIndexOfValue((String) objValue);
