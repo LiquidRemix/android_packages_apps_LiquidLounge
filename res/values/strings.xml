@@ -789,7 +789,7 @@
     <string name="onthego_alpha_title">On-The-Go Alpha</string>
     <string name="onthego_alpha_summary">Alpha value of the On-The-Go overlay.</string>
 
-    <!-- QuickSettings Panel Transparency -->
-    <string name="qs_panel_alpha_title">Transparency</string>
+    <!-- QS Panel Opacity -->
+    <string name="qs_panel_alpha_title">QS Panel Opacity</string>
 
 </resources>
