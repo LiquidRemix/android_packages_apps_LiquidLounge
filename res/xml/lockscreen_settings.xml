@@ -44,6 +44,12 @@
         android:defaultValue="false" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_hide_status_bar"
+        android:title="@string/lockscreen_hide_status_bar_title"
+        android:summary="@string/lockscreen_hide_status_bar_summary"
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_pin_ripple"
         android:title="@string/lockscreen_pin_ripple_title"
         android:summary="@string/lockscreen_pin_ripple_summary"

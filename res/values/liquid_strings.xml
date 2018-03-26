@@ -747,11 +747,11 @@
     <string name="lock_clock_font_condensed_bold">Condensed Bold</string>
     <string name="lock_clock_font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="lock_clock_font_condensed_light">Condensed Light</string>
-    <string name="lock_clock_font_condensed_light_italic">Condensed Light Italic</string> 
+    <string name="lock_clock_font_condensed_light_italic">Condensed Light Italic</string>
     <string name="lock_clock_font_medium_normal">Medium</string>
     <string name="lock_clock_font_medium_italic">Medium Italic</string>
     <string name="lock_clock_font_black">Black</string>
-    <string name="lock_clock_font_black_italic">Black Italic</string> 
+    <string name="lock_clock_font_black_italic">Black Italic</string>
 
     <!-- Use old mobile type style -->
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
@@ -761,5 +761,9 @@
     <string name="burn_in_protection_title">Burn-in Protection</string>
     <string name="burn_in_protection_summary">Shift navbar and statusbar icons to prevent burn-in</string>
     <string name="burn_in_protection_interval_title">Interval of shift</string>
+
+    <!-- Hide statusbar on lockscreen -->
+    <string name="lockscreen_hide_status_bar_title">Disable Statusbar</string>
+    <string name="lockscreen_hide_status_bar_summary">When enabled the statusbar will be hidden on lockscreen</string>
 
 </resources>
