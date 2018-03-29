@@ -688,9 +688,9 @@
     <string name="statusbar_clock_title">Opzioni orologio</string>
     <string name="status_bar_show_clock_title">Mostra l\'orologio e la data</string>
     <string name="clock_title_enable">Allineamento</string>
-    <string name="right_clock">Orologio a destra</string>
-    <string name="center_clock">Orologio centrato</string>
-    <string name="left_clock">Orologio a sinistra</string>
+    <string name="right_clock">Destra</string>
+    <string name="center_clock">Centrato</string>
+    <string name="left_clock">Sinistra</string>
     <string name="status_bar_clock_seconds_title">Secondi nell\'orologio</string>
     <string name="status_bar_clock_seconds_summary">Visualizza i secondi accanto all\'orologio nella barra di stato</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
@@ -754,4 +754,25 @@
     <string name="battery_percent_none">Nasconsta</string>
     <string name="battery_percent_outside">Visualizza fuori l\'icona</string>
     <string name="battery_percent_inside">Visualizza dentro l\'icona</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Pulsante termina app</string>
+    <string name="notification_guts_kill_app_button_summary">Mostra un pulsante per terminare le notifiche delle applicazioni</string>
+
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_fade">Semplice dissolvenza</string>
+    <string name="screen_off_animation_color">Colore dissolvenza</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scala</string>
+    <string name="screen_off_animation_title">Animazione spegni schermo</string>
+
+    <!-- On-The-Go -->
+    <string name="onthego_title">Modalità On-The-Go</string>
+    <string name="global_actions_onthego_title">On-The-Go</string>
+    <string name="onthego_alpha_title">Alpha On-The-Go</string>
+    <string name="onthego_alpha_summary">Valore Alpha della sovrapposizione di On-The-Go.</string>
+
+    <!-- Quick settings panel opacity -->
+    <string name="qs_panel_alpha_title">Trasparenza</string>
+	
 </resources>
