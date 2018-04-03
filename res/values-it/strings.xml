@@ -759,12 +759,20 @@
     <string name="notification_guts_kill_app_button_title">Pulsante termina app</string>
     <string name="notification_guts_kill_app_button_summary">Mostra un pulsante per terminare le notifiche delle applicazioni</string>
 
+    <string name="incall_notifications_vibrate">Notifiche meno fastidiose per le chiamate in corso</string>
+    <string name="incall_notifications_vibrate_summary">Vibra invece di riprodurre un suono per le notifiche in chiamata</string>
+	
     <!-- Screen off animation -->
-    <string name="screen_off_animation_fade">Semplice dissolvenza</string>
-    <string name="screen_off_animation_color">Colore dissolvenza</string>
+    <string name="screen_off_animation_fade">Dissolvenza semplice</string>
+    <string name="screen_off_animation_color">Dissolvenza colorata</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scala</string>
     <string name="screen_off_animation_title">Animazione spegni schermo</string>
+
+    <!-- Screen shot -->
+    <string name="screenshot_edit_app">App modifica screenshot</string>
+    <string name="screenshot_edit_app_summary">Scegli quale app deve essere avviata quando tocchi il pulsante di modifica della notifica dello screenshot</string>
+    <string name="screenshot_edit_app_no_editor">Nessuna immagine disponibile per la modifica</string>
 
     <!-- On-The-Go -->
     <string name="onthego_title">Modalità On-The-Go</string>
@@ -775,4 +783,34 @@
     <!-- Quick settings panel opacity -->
     <string name="qs_panel_alpha_title">Trasparenza</string>
 	
+    <!-- Tiles animation style  -->
+    <string name="qs_tile_animation_style_title">Stile animazione</string>
+    <string name="qs_tile_animation_duration_title">Durata animazione</string>
+    <string name="qs_tile_animation_interpolator_title">Interpolatore animazione tile</string>
+    <string name="qs_tile_animation_style_off">Nessuna animazione</string>
+    <string name="qs_tile_animation_style_flip">Capovolgi</string>
+    <string name="qs_tile_animation_style_rotate">Ruotazione</string>
+    <string name="qs_tile_animation_duration_low">Lenta</string>
+    <string name="qs_tile_animation_duration_default">Predefinita</string>
+    <string name="qs_tile_animation_duration_fast">Veloce</string>
+    <string name="qs_tile_animation_duration_quite_fast">Molto veloce</string>
+    <string name="qs_tile_animation_duration_super_fast">Super veloce</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Lineare</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelera</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelera</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelera e decelera</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Rimbalzo</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Supera</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipa</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipa e supera</string>
+
+    <!-- Status bar weather -->
+    <string name="statusbar_weather_title">Meteo barra di stato</string>
+    <string name="statusbar_weather_summary">Configura lo stile del meteo che verrà visualizzato nella barra di stato</string>
+    <string name="status_bar_weather_hidden">Nascondi meteo</string>
+    <string name="status_bar_temperature_image_show_scale">Mostra temperatura con scala e immagine</string>
+    <string name="status_bar_temperature_image_hide_scale">Mostra temperatura con immagine senza scala</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Mostra temperatura con scala</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Mostra temperatura senza scala</string>
+    <string name="status_bar_show_image">Mostra immagine</string>
 </resources>
