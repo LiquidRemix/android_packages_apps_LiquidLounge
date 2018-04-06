@@ -73,6 +73,12 @@
         android:summary="@string/qs_footer_warnings_summary"
         android:defaultValue="true" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="qs_footer_show_services"
+        android:title="@string/qs_footer_services_title"
+        android:summary="@string/qs_footer_services_summary"
+        android:defaultValue="false" />
+
     <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
         android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
