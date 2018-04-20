@@ -170,8 +170,8 @@
     <string name="torch_power_button_gesture_dt">Double tap power to toggle torch (will add a small delay to single tap)</string>
     <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
 
-    <!-- Lockscreen battery info -->
-    <string name="lockscreen_battery_info_title">Lock screen charging info</string>
+    <!-- Lock screen battery info -->
+    <string name="lockscreen_battery_info_title">Lock screen battery info</string>
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lock screen while charging</string>
 
     <!-- Button backlight -->
@@ -302,7 +302,7 @@
 
     <!-- QS brightness icon -->
     <string name="brightness_icon_title">Brightness icon</string>
-    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust autobrightness</string>
+    <string name="brightness_icon_summary">Show a brightness icon to the right of the brighness slider to adjust autobrightness</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Time out</string>
@@ -892,5 +892,9 @@
     <string name="hide_lockscreen_indicator_display_summary">Hide charging information and unlock hints</string>
     <string name="hide_lockscreen_icon_title">Hide lock screen icon</string>
     <string name="hide_lockscreen_icon_summary">Change the lock screen icon visibility</string>
+
+    <!-- Lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">Lock screen visualizer</string>
+    <string name="lockscreen_visualizer_summary">Displays a live design on lock screen while music is playing (works with most audio apps)</string>
 
 </resources>
