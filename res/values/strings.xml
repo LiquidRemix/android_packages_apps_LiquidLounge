@@ -131,6 +131,10 @@
     <string name="weather_config_title">Service settings</string>
     <string name="weather_icon_pack_title">Condition icon pack</string>
 
+    <!-- Wake And Unlock -->
+    <string name="fp_wake_and_unlock_title">Wake and unlock</string>
+    <string name="fp_wake_and_unlock_summary">Disabling this will make fingerprint sensor only work when screen is on</string>
+
     <!-- Status bar tuner -->
     <string name="statusbar_items_title">Statusbar items</string>
 
