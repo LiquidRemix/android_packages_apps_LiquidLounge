@@ -539,6 +539,17 @@
     <string name="fling_keyboard_cursors_title">Akce kurzorů dynamické klávesnice</string>
     <string name="fling_keyboard_cursors_move_summary">Když se klávesnice zobrazí, dlouhým stiskem vlevo nebo vpravo přesunete textový kurzor doleva nebo doprava.\nDlouhým stiskem pokračujete v pohybu kurzoru, jedním klepnutím na panel přejdete na domovskou obrazovku.</string>
     <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
+    <string name="fling_factory_reset_title">Obnovit výchozí</string>
+    <string name="fling_factory_reset_confirm">Opravdu chcete obnovit Fling na výchozí nastavení?</string>
+    <string name="fling_backup_current_config_title">Uložit profil</string>
+    <string name="fling_restore_config_title">Obnovit profil</string>
+    <string name="fling_config_name_edit_dialog_title">Název profilu Fling</string>
+    <string name="fling_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
+    <string name="fling_config_dialog_title">Profily Fling</string>
+    <string name="fling_config_backup_success_toast">Profil Fling byl úspěšně uložen</string>
+    <string name="fling_config_restore_success_toast">Profil Fling byl úspěšně obnoven</string>
+    <string name="fling_config_backup_error_toast">Chyba při ukládání profilu Fling</string>
+    <string name="fling_config_restore_error_toast">Chyba při obnovení profilu Fling</string>
 
     <!-- Pulse music visualizer -->
     <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zvukovými zdroji při poslechu z reproduktoru zařízení</string>
@@ -876,5 +887,15 @@
     <string name="screen_state_off_delay_summary">Počet sekund čekání před provedením akcí po vypnutí obrazovky</string>
     <string name="screen_state_on_delay_title">Zpoždění akcí po zapnutí obrazovky</string>
     <string name="screen_state_on_delay_summary">Počet sekund čekání před provedením akcí po zapnutí obrazovky</string>
+	
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="smart_pixels_summary">Ušetření baterie vypnutím pixelů</string>
+    <string name="smart_pixels_enable_title">Povolit Smart Pixels</string>
+    <string name="smart_pixels_enable_summary">Shut off pixels to reduce power consumption</string>
+    <string name="smart_pixels_on_power_save_title">Automatické zapnutí při spořiči baterie</string>
+    <string name="smart_pixels_on_power_save_summary">Povolit Smart Pixels, pokud je aktivován spořič baterie</string>
+    <string name="smart_pixels_percent">Procento pixelů k vypnutí</string>
+    <string name="smart_pixels_shift">Zabraňuje vypalování přepínáním pixelů</string>	
 
 </resources>
