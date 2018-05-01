@@ -579,7 +579,7 @@
     <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
     <string name="pulse_auto_color_title">Automatic Pulse color</string>
     <string name="pulse_auto_color_summary">Sync color with album arts. Overrides Lava Lamp and lines opacity.</string>
-	<string name="fling_lavalamp_color_from">Lava Lamp start color</string>
+    <string name="fling_lavalamp_color_from">Lava Lamp start color</string>
     <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
     <string name="pulse_colors_reset_title">Reset pulse colors</string>
     <string name="pulse_colors_reset_message">Are you sure you want to reset these colors to default?</string>
@@ -955,7 +955,7 @@
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
 
-	<!-- Hide Lockscreen clock, date, alarm -->
+    <!-- Hide Lockscreen clock, date, alarm -->
     <string name="lockscreen_item_category">Lockscreen items</string>
     <string name="show_lockscreen_clock_title">Clock widget</string>
     <string name="show_lockscreen_clock_summary">Change the clock widget\'s visibility</string>
@@ -963,5 +963,9 @@
     <string name="show_lockscreen_date_summary">Change the date\'s visibility underneath the clock widget</string>
     <string name="show_lockscreen_alarm_title">Alarm text</string>
     <string name="show_lockscreen_alarm_summary">Change the alarm text\'s visibility underneath the clock widget</string>
+
+    <!-- Toast icon -->
+    <string name="toast_icon_title">App\'s icon in toast</string>
+    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>    
 
 </resources>
