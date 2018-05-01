@@ -850,6 +850,8 @@
 
     <!-- Hide Lock screen clock, date, alarm -->
     <string name="lockscreen_item_category">Lock screen items</string>
+
+    <!-- Hide Lockscreen clock, date, alarm -->
     <string name="show_lockscreen_clock_title">Clock widget</string>
     <string name="show_lockscreen_clock_summary">Change the clock widget\'s visibility</string>
     <string name="show_lockscreen_date_title">Date widget</string>
@@ -878,5 +880,9 @@
     <string name="theme_accent_picker_title">Accent color</string>
     <string name="theme_accent_picker_summary">Select system theme accent color</string>
     <string name="theme_accent_picker_default">Default</string>
+
+    <!-- Toast icon -->
+    <string name="toast_icon_title">App\'s icon in toast</string>
+    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
 
 </resources>
