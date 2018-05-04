@@ -130,6 +130,10 @@
     <string name="weather_show_location_summary">Povolit zobrazení polohy</string>
     <string name="weather_config_title">Nastavení služby</string>
     <string name="weather_icon_pack_title">Balík ikon stavu počasí</string>
+	
+    <!-- Wake And Unlock -->
+    <string name="fp_wake_and_unlock_title">Probudit a odemknout</string>
+    <string name="fp_wake_and_unlock_summary">Vypnutím této funkce bude snímač otisků prstů fungovat pouze při zapnuté obrazovce</string>	
 
     <!-- Status bar tuner -->
     <string name="statusbar_items_title">Položky stavové lišty</string>
@@ -539,6 +543,17 @@
     <string name="fling_keyboard_cursors_title">Akce kurzorů dynamické klávesnice</string>
     <string name="fling_keyboard_cursors_move_summary">Když se klávesnice zobrazí, dlouhým stiskem vlevo nebo vpravo přesunete textový kurzor doleva nebo doprava.\nDlouhým stiskem pokračujete v pohybu kurzoru, jedním klepnutím na panel přejdete na domovskou obrazovku.</string>
     <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
+    <string name="fling_factory_reset_title">Obnovit výchozí</string>
+    <string name="fling_factory_reset_confirm">Opravdu chcete obnovit nastavení Fling?</string>
+    <string name="fling_backup_current_config_title">Uložit profil</string>
+    <string name="fling_restore_config_title">Obnovit profil</string>
+    <string name="fling_config_name_edit_dialog_title">Název profilu Fling</string>
+    <string name="fling_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
+    <string name="fling_config_dialog_title">Profily Fling</string>
+    <string name="fling_config_backup_success_toast">Profil Fling byl úspěšně uložen</string>
+    <string name="fling_config_restore_success_toast">Profil Fling byl úspěšně obnoven</string>
+    <string name="fling_config_backup_error_toast">Chyba při ukládání profilu Fling</string>
+    <string name="fling_config_restore_error_toast">Chyba při obnovování profilu Fling</string>
 
     <!-- Pulse music visualizer -->
     <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zvukovými zdroji při poslechu z reproduktoru zařízení</string>
@@ -563,7 +578,11 @@
     <string name="pulse_solid_dimen_category">Nastavení režimu plných čar</string>
     <string name="pulse_custom_buttons_opacity_title">Průhlednost tlačítek lišty SmartBar při pulsování</string>
     <string name="pulse_auto_color_title">Automatická barva Pulse</string>
-    <string name="pulse_auto_color_summary">Synchronizuje barvu s obalem alba. Odstraní lávovou lampu a průhlednost čar.</string>
+    <string name="pulse_auto_color_summary">Synchronizuje barvu s obalem alba. Odstraní lávovou lampu a průhlednost čar.</string>	
+    <string name="fling_lavalamp_color_from">Počáteční barva Lávové lampy</string>
+    <string name="fling_lavalamp_color_to">Konečná barva Lávové lampy</string>
+    <string name="pulse_colors_reset_title">Obnovit barvy Pulse</string>
+    <string name="pulse_colors_reset_message">Jste si jisti, že chcete obnovit tyto barvy na výchozí hodnoty?</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Šířka pruhu</string>
@@ -876,5 +895,77 @@
     <string name="screen_state_off_delay_summary">Počet sekund čekání před provedením akcí po vypnutí obrazovky</string>
     <string name="screen_state_on_delay_title">Zpoždění akcí po zapnutí obrazovky</string>
     <string name="screen_state_on_delay_summary">Počet sekund čekání před provedením akcí po zapnutí obrazovky</string>
+
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="smart_pixels_summary">Ušetření baterie vypnutím pixelů</string>
+    <string name="smart_pixels_enable_title">Povolit Smart Pixels</string>
+    <string name="smart_pixels_enable_summary">Chcete-li snížit spotřebu energie, vypněte pixely</string>
+    <string name="smart_pixels_on_power_save_title">Automatické zapnutí při spořiči baterie</string>
+    <string name="smart_pixels_on_power_save_summary">Povolit Smart Pixels, pokud je aktivován spořič baterie</string>
+    <string name="smart_pixels_percent">Procenta pixelů k vypnutí</string>
+    <string name="smart_pixels_shift">Zabraňuje vypalování častým přepínáním pixelů</string>
+
+    <!-- Recents icon pack support -->
+    <string name="recents_icon_pack_title">Balíček ikon</string>
+    <string name="recents_icon_pack_summary">Použít vlastní balíček ikon pro aplikace v panelu</string>
+    <string name="no_iconpacks_summary">Není nainstalován žádný balíček ikon</string>
+    <string name="dialog_pick_iconpack_title">Zvolit balíček ikon</string>
+    <string name="default_iconpack_title">Výchozí ikony</string>
+
+    <!-- Stock recents -->
+    <string name="stock_recents_title">Stock Nedávné</string>
+
+    <!-- Slim recents panel -->
+    <string name="slim_recents_title">Slim Nedávné</string>
+    <string name="use_slim_recents_title">Použít alternativní panel nedávných</string>
+    <string name="use_slim_recents_summary">Použít Slim Nedávné namísto výchozího zobrazení</string>
+    <string name="slim_recents_settings_title">Nastavení Slim Nedávné</string>
+    <string name="slim_recents_settings_summary">Zobrazit nastavení pro Slim Nedávné</string>
+    <string name="recents_max_apps_title">Max. počet povolených aplikací</string>
+    <string name="recent_panel_scale_title">Velikost</string>
+    <string name="recent_panel_expanded_mode_title">Náhled rozšířeného režimu</string>
+    <string name="recent_panel_expanded_mode_summary">Režim rozšířeného náhledu nedávných aplikací</string>
+    <string name="recent_panel_expanded_mode_auto">Automaticky (výchozí)</string>
+    <string name="recent_panel_expanded_mode_always">Všechny náhledy</string>
+    <string name="recent_panel_expanded_mode_never">Zakázáno</string>
+    <string name="recent_panel_bg_color_title">Barva pozadí panelu</string>
+    <string name="recent_card_bg_color_title">Barva pozadí karty</string>
+    <string name="recent_reset_title">Obnovit výchozí barvu</string>
+    <string name="recent_reset_confirm">Opravdu chcete obnovit Slim Nedávné na výchozí barvu?</string>
+    <string name="default_auto_string">Výchozí (podle aplikace)</string>
+    <string name="slim_icon_pack_title">Balíček ikon</string>
+    <string name="slim_icon_pack_summary">Použít vlastní balíček ikon pro aplikace v panelu</string>
+    <string name="slim_recents_corner_radius_title">Použít oblé rohy pro karty</string>
+    <string name="slim_recents_hints_footer">Chcete-li vymazat všechny aplikace, přidržte na panelu dva prsty. Chcete-li zabránit vymazání aplikace, dlouze stiskněte její ikonu a označte ji hvězdičkou.\n\nPro další přídavné funkce, například vícenásobné okno nebo ukončení aplikace, podržte dlouze libovolné okno aplikace v panelu.</string>
+    <string name="recent_panel_lefty_mode_title">Zobrazit na levém okraji</string>
+    <string name="recent_panel_lefty_mode_summary">Zobrazit panel nedávných aplikací na levém okraji</string>
+    <string name="slim_blacklist_apps_cat_title">Černá listina</string>
+    <string name="slim_blacklist_apps_title">Černá listina aplikací</string>
+    <string name="slim_blacklist_apps_summary">Aplikace se nezobrazí v panelu</string>
+    <string name="slim_blacklist_add_apps_title">Přidat aplikaci</string>
+    <string name="slim_blacklist_add_apps_summary">Klepnutím sem přidáte, klepnutím na přidanou aplikaci odstraníte</string>
+
+    <!-- OmniSwitch -->
+    <string name="recents_use_omniswitch_title">Použít pro nedávné</string>
+    <string name="recents_use_omniswitch_summary">Použít OmniSwitch namísto výchozího zobrazení</string>
+    <string name="omniswitch_start_settings_title">Nastavení</string>
+    <string name="omniswitch_start_settings_summary">Otevřít nastavení OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Information</string>
+    <string name="omniswitch_first_time_message">Ujistěte se, že jste povolili OmniSwitch. To můžete provést pomocí níže uvedených možností v "Nastavení"</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
+
+    <!-- Hide Lockscreen clock, date, alarm -->
+    <string name="lockscreen_item_category">Položky zamykací obrazovky</string>
+    <string name="show_lockscreen_clock_title">Widget hodin</string>
+    <string name="show_lockscreen_clock_summary">Změna viditelnosti widgetu hodin</string>
+    <string name="show_lockscreen_date_title">Widget data</string>
+    <string name="show_lockscreen_date_summary">Změna viditelnost data pod widgetem hodin</string>
+    <string name="show_lockscreen_alarm_title">Text budíku</string>
+    <string name="show_lockscreen_alarm_summary">Změna viditelnost textu budíku pod widgetem hodin</string>
+
+    <!-- Toast icon -->
+    <string name="toast_icon_title">Ikona aplikace v oznámení Toast</string>
+    <string name="toast_icon_summary">Zobrazit ikonu aplikace v oznámení Toast</string>
 
 </resources>
