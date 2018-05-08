@@ -20,11 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/buttons_title">
 
-    <Preference
-        android:key="volume_key"
-        android:title="@string/volume_title"
-        android:fragment="com.liquid.liquidlounge.fragments.VolumeRockerSettings"/>
-
     <PreferenceCategory
         android:key="hardware_keys"
         android:title="@string/hardware_keys_category" >

@@ -62,7 +62,6 @@
 
     <!-- Other categories -->
     <string name="heads_up_title">Heads up</string>
-    <string name="volume_title">Volume rocker</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -141,14 +140,6 @@
     <!-- Power notification controls -->
     <string name="power_notification_title">Power notification controls</string>
 
-    <!-- Volume down enter do not disturb -->
-    <string name="volbtn_down_zen_title">Volume down for do not disturb</string>
-    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
-
-    <!-- Volume up exit do not disturb -->
-    <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
-    <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
-
     <!-- QS brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
     <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
@@ -167,21 +158,9 @@
     <string name="double_tap_to_sleep_title">Status bar</string>
     <string name="double_tap_to_sleep_summary">Double tap on status bar to put the device to sleep</string>
 
-    <!-- Volume button orientation -->
-    <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
-    <string name="swap_volume_buttons_summary">Adjust the rocker orientation based on current rotation</string>
-
-    <!-- Volume key controls media stream -->
-    <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
-    <string name="volume_keys_control_media_stream_summary">Force volume keys to control media stream</string>
-
     <!-- QS quick pulldown -->
     <string name="status_bar_quick_qs_pulldown">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown status bar from right side to show QS panel</string>
-
-    <!-- Volume rocker music control -->
-    <string name="volume_rocker_music_controls_title">Playback control</string>
-    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
@@ -196,17 +175,6 @@
     <!-- Lockscreen battery info -->
     <string name="lockscreen_battery_info_title">Lock screen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lock screen while charging</string>
-
-    <!-- Volume rocker cursor control -->
-    <string name="cursor_section_header">Cursor</string>
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
-
-    <!-- Volume rocker wake -->
-    <string name="volume_rocker_wake_title">Volume rocker wake</string>
-    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
 
     <!-- Button backlight -->
     <string name="button_backlight_on_touch_only_title">Button touch</string>
@@ -260,10 +228,6 @@
     <!-- Battery saver color -->
     <string name="battery_saver_color_title">Warning color</string>
     <string name="battery_saver_color_summary">Enable orange status - navigation bars when battery saver is activated</string>
-
-    <!-- Volume key answer -->
-    <string name="volume_answer_call_title">Volume keys answer</string>
-    <string name="volume_answer_call_summary">Answer the call when volume keys pressed</string>
 
     <!-- Enable keys backlight-->
     <string name="button_brightness_sw_title">Enable backlight</string>
@@ -411,15 +375,6 @@
     <string name="file_header_provider" translatable="false">file</string>
     <string name="qs_show_mini_title">Mini mode</string>
     <string name="qs_show_mini_summary">Make the header images smaller</string>
-
-    <!-- Launch music player when headset is connected -->
-    <string name="headset_connect_player_title">Launch music app on headset connection</string>
-    <string name="headset_connect_player_disabled">Disabled</string>
-    <string name="headset_connect_player_wired">Wired headset plugged in</string>
-    <string name="headset_connect_player_bt_no_carkit">BT headset (no carkit) plugged in</string>
-    <string name="headset_connect_player_bt">BT headset plugged in</string>
-    <string name="headset_connect_player_both_no_carkit">Any headset (no carkit) plugged in</string>
-    <string name="headset_connect_player_both">Any headset plugged in</string>
 
     <!-- Battery bar -->
     <string name="battery_icon">Battery icon style</string>

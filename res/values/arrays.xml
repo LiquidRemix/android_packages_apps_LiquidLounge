@@ -64,19 +64,6 @@
         <item>2</item>
     </string-array>
 
-    <!--- Volume key cursor control -->
-    <string-array name="volume_key_cursor_control_entries">
-        <item>@string/volume_key_cursor_control_off</item>
-        <item>@string/volume_key_cursor_control_on</item>
-        <item>@string/volume_key_cursor_control_on_reverse</item>
-    </string-array>
-
-    <string-array name="volume_key_cursor_control_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <!--- Button backlight timeout -->
     <string-array name="backlight_timeout_entries">
         <item>@string/backlight_timeout_on</item>
@@ -188,25 +175,6 @@
     <string-array name="custom_header_provider_values" translatable="false">
         <item>@string/daylight_header_provider</item>
 	    <item>@string/file_header_provider</item>
-    </string-array>
-
-    <!-- Launch default music player on headset connection -->
-    <string-array name="headset_connect_player_entries">
-        <item>@string/headset_connect_player_disabled</item>
-        <item>@string/headset_connect_player_wired</item>
-        <item>@string/headset_connect_player_bt_no_carkit</item>
-        <item>@string/headset_connect_player_bt</item>
-        <item>@string/headset_connect_player_both_no_carkit</item>
-        <item>@string/headset_connect_player_both</item>
-    </string-array>
-
-    <string-array name="headset_connect_player_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
     </string-array>
 
     <!-- Battery bar -->
