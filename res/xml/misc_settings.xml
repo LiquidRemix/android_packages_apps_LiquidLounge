@@ -44,12 +44,6 @@
         android:title="@string/wakelock_blocker_title"
         android:fragment="com.liquid.liquidlounge.fragments.WakeLockBlocker"/>
 
-    <Preference
-        android:key="force_ambient_for_media_pref"
-        android:fragment="com.liquid.liquidlounge.fragments.AmbientTicker"
-        android:title="@string/force_ambient_for_media_pref_title"
-        android:summary="@string/force_ambient_for_media_pref_summary" />
-
     <ListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
