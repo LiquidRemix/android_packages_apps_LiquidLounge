@@ -36,8 +36,8 @@
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_summary">App ops security and block alarms or wakelocks</string>
 
-    <!-- Navigation bar -->
-    <string name="navbar_title">Navigation bar</string>
+    <!-- Navigation -->
+    <string name="navbar_title">Navigation</string>
     <string name="navbar_summary">Force on screen navbar and customize buttons</string>
 
     <!-- Notifications -->
@@ -85,7 +85,7 @@
     <string name="enable_mtp_dirtyhack_summary">Enable MTP instead Charging after connect to PC</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
@@ -136,7 +136,7 @@
     <string name="fp_wake_and_unlock_summary">Disabling this will make fingerprint sensor only work when screen is on</string>
 
     <!-- Status bar tuner -->
-    <string name="statusbar_items_title">Statusbar items</string>
+    <string name="statusbar_items_title">Status bar items</string>
 
     <!-- Power notification controls -->
     <string name="power_notification_title">Power notification controls</string>
@@ -160,7 +160,7 @@
     <string name="dtts_category_header">Double tap to sleep</string>
 
     <!-- Double tap lock screen to sleep -->
-    <string name="double_tap_to_sleep_lockscreen_title">Lockscreen</string>
+    <string name="double_tap_to_sleep_lockscreen_title">Lock screen</string>
     <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
 
     <!-- Double tap status bar to sleep -->
@@ -177,7 +177,7 @@
 
     <!-- QS quick pulldown -->
     <string name="status_bar_quick_qs_pulldown">Quick pulldown</string>
-    <string name="status_bar_quick_qs_pulldown_summary">Pulldown statusbar from right side to show QS panel</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Pulldown status bar from right side to show QS panel</string>
 
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">Playback control</string>
@@ -185,7 +185,7 @@
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+    <string name="media_art_summary">Enable media cover art on the lock screen</string>
 
     <!-- Torch power button gestures -->
     <string name="torch_power_button_gesture_title">Screen off power button torch</string>
@@ -194,8 +194,8 @@
     <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
 
     <!-- Lockscreen battery info -->
-    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
-    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
+    <string name="lockscreen_battery_info_title">Lock screen charging info</string>
+    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lock screen while charging</string>
 
     <!-- Volume rocker cursor control -->
     <string name="cursor_section_header">Cursor</string>
@@ -234,12 +234,12 @@
     <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
 
     <!-- Immersive recents -->
-    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_title">Immersive recents</string>
     <string name="immersive_recents_summary">Change the view of the recents screen</string>
     <string name="immersive_recents_dialog_title">Select recents view</string>
     <string name="immersive_recents_default">Default</string>
     <string name="immersive_recents_fullscreen">Fullscreen</string>
-    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_statusbar">Status bar only</string>
     <string name="immersive_recents_navbar">Navbar only</string>
 
     <!-- Hide apps from recents -->
@@ -281,7 +281,7 @@
 
     <!-- Status bar net traffic -->
     <string name="network_traffic_state_title">Network traffic</string>
-    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_state_summary">Show net activity in status bar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 
     <!-- Smart pulldown -->
@@ -313,9 +313,9 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_torch">Flashlight</string>
 
-    <!-- Power menu on secure lockscreen -->
+    <!-- Power menu on secure lock screen -->
     <string name="lockscreen_power_menu_disabled_title">Power menu when locked</string>
-    <string name="lockscreen_power_menu_disabled_summary">Disable power menu on secure lockscreen</string>
+    <string name="lockscreen_power_menu_disabled_summary">Disable power menu on secure lock screen</string>
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
@@ -363,13 +363,13 @@
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
 	
-    <!-- Liquid statusbar logo -->
+    <!-- Liquid status bar logo -->
     <string name="status_bar_logo_title">Liquid logo</string>
-    <string name="status_bar_logo_summary">Allow Liquid logo on your statusbar</string>
+    <string name="status_bar_logo_summary">Allow Liquid logo on your status bar</string>
 
     <!-- Disable QS on secure lock screen -->
     <string name="lockscreen_qs_disabled_title">No QS when secured</string>
-    <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lockscreen</string>
+    <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lock screen</string>
 
     <!-- Status bar notification ticker -->
     <string name="ticker_mode_title">Notification ticker</string>
@@ -435,7 +435,7 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
     <string name="battery_bar_hide">Hide</string>
-    <string name="battery_bar_statusbar">Statusbar</string>
+    <string name="battery_bar_statusbar">Status bar</string>
     <string name="battery_bar_topnav">Top of navbar</string>
     <string name="battery_bar_bottomnav">Bottom of navbar</string>
     <string name="battery_bar_reg">Regular</string>
@@ -579,7 +579,7 @@
     <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
     <string name="pulse_auto_color_title">Automatic Pulse color</string>
     <string name="pulse_auto_color_summary">Sync color with album arts. Overrides Lava Lamp and lines opacity.</string>
-	<string name="fling_lavalamp_color_from">Lava Lamp start color</string>
+    <string name="fling_lavalamp_color_from">Lava Lamp start color</string>
     <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
     <string name="pulse_colors_reset_title">Reset pulse colors</string>
     <string name="pulse_colors_reset_message">Are you sure you want to reset these colors to default?</string>
@@ -686,9 +686,9 @@
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
     <string name="show_carrier_title">Carrier label</string>
     <string name="show_carrier_disabled">Disabled</string>
-    <string name="show_carrier_keyguard">Lockscreen only</string>
-    <string name="show_carrier_statusbar">Statusbar only</string>
-    <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+    <string name="show_carrier_keyguard">Lock screen only</string>
+    <string name="show_carrier_statusbar">Status bar only</string>
+    <string name="show_carrier_enabled">Lock screen &amp; status bar</string>
 	
 	<!-- Pocket judge -->
     <string name="pocket_judge_title">Pocket detection</string>
@@ -721,7 +721,7 @@
 
     <!-- Face auto unlock -->
     <string name="face_auto_unlock_title">Face auto unlock</string>
-    <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
+    <string name="face_auto_unlock_summary">Dismiss lock screen after face unlocking</string>
 
     <!-- Clock options -->
     <string name="statusbar_clock_title">Clock options</string>
@@ -756,14 +756,14 @@
     <string name="menu_cancel">Cancel</string>
 
     <!-- Suppress notification vib/sound feature -->
-    <string name="notification_sound_vib_screen_on_title">Notifications sound and vibration if screen is on</string>
+    <string name="notification_sound_vib_screen_on_title">Notifications sound vibration if screen on</string>
     <string name="notification_sound_vib_screen_on_never">Never</string>
     <string name="notification_sound_vib_screen_on_always">Always (default)</string>
     <string name="notification_sound_vib_screen_on_nomedia">If no media is playing</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Clock font options</string>
-    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_summary">Change the default font of the lock screen clock widget</string>
     <string name="lock_clock_font_dialog_title">Select lock clock font</string>
     <string name="lock_clock_font_stock">Normal (default)</string>
     <string name="lock_clock_font_bold">Bold</string>
@@ -819,6 +819,7 @@
     <string name="qs_panel_alpha_title">QS panel opacity</string>
 
     <!-- Tiles animation style  -->
+    <string name="qs_animations_cat">QS animations</string>
     <string name="qs_tile_animation_style_title">Animation style</string>
     <string name="qs_tile_animation_duration_title">Animation duration</string>
     <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
@@ -913,8 +914,8 @@
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
     <string name="default_iconpack_title">Default icons</string>
 
-	<!-- Hide Lockscreen clock, date, alarm -->
-    <string name="lockscreen_item_category">Lockscreen items</string>
+    <!-- Hide Lock screen clock, date, alarm -->
+    <string name="lockscreen_item_category">Lock screen items</string>
     <string name="show_lockscreen_clock_title">Clock widget</string>
     <string name="show_lockscreen_clock_summary">Change the clock widget\'s visibility</string>
     <string name="show_lockscreen_date_title">Date widget</string>

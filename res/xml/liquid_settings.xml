@@ -52,7 +52,7 @@
         android:icon="@drawable/ic_settings_misc"
         android:fragment="com.liquid.liquidlounge.fragments.MiscSettings"/>
 
-    <!-- Navigation bar -->
+    <!-- Navigation -->
     <Preference
         android:key="navbar_category"
         android:title="@string/navbar_title"

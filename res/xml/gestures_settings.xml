@@ -30,6 +30,18 @@
         android:title="@string/carbon_gesture_preference_title"
         android:fragment="com.liquid.liquidlounge.fragments.CarbonGesturesSettings" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="torch_power_button_gesture"
+        android:title="@string/torch_power_button_gesture_title"
+        android:entries="@array/torch_power_button_gesture_entries"
+        android:entryValues="@array/torch_power_button_gesture_values" />
+
     <PreferenceCategory
         android:key="dtts_category"
         android:title="@string/dtts_category_header">
@@ -47,17 +59,5 @@
             android:defaultValue="true" />
 
     </PreferenceCategory>
-		
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="three_finger_gesture"
-        android:title="@string/three_finger_gesture"
-        android:summary="@string/three_finger_gesture_summary"
-        android:defaultValue="false" />
-
-    <ListPreference
-        android:key="torch_power_button_gesture"
-        android:title="@string/torch_power_button_gesture_title"
-        android:entries="@array/torch_power_button_gesture_entries"
-        android:entryValues="@array/torch_power_button_gesture_values" />
 
 </PreferenceScreen>

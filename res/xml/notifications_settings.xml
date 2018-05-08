@@ -35,6 +35,27 @@
         android:title="@string/notification_light_settings"
         android:fragment="com.android.settings.applications.NotificationApps"/>
 
+	<ListPreference
+        android:key="less_notification_sounds"
+        android:title="@string/less_notification_sounds_title"
+        android:summary="@string/less_notification_sounds_summary"
+        android:entries="@array/less_notification_sounds_entries"
+        android:entryValues="@array/less_notification_sounds_values"
+        android:persistent="false" />      
+
+    <ListPreference
+        android:key="notification_sound_vib_screen_on"
+        android:title="@string/notification_sound_vib_screen_on_title"
+        android:entries="@array/notification_sound_vib_screen_on_entries"
+        android:entryValues="@array/notification_sound_vib_screen_on_values"
+        android:summary="%s" />
+
+	<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+		android:key="incall_notifications_vibrate"
+	    android:title="@string/incall_notifications_vibrate"
+		android:summary="@string/incall_notifications_vibrate_summary"
+		android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category">
@@ -54,27 +75,6 @@
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
 
-		<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-		    android:key="incall_notifications_vibrate"
-			android:title="@string/incall_notifications_vibrate"
-			android:summary="@string/incall_notifications_vibrate_summary"
-			android:defaultValue="false" />
-
     </PreferenceCategory>
-	
-	<ListPreference
-        android:key="less_notification_sounds"
-        android:title="@string/less_notification_sounds_title"
-        android:summary="@string/less_notification_sounds_summary"
-        android:entries="@array/less_notification_sounds_entries"
-        android:entryValues="@array/less_notification_sounds_values"
-        android:persistent="false" />
-
-    <ListPreference
-        android:key="notification_sound_vib_screen_on"
-        android:title="@string/notification_sound_vib_screen_on_title"
-        android:entries="@array/notification_sound_vib_screen_on_entries"
-        android:entryValues="@array/notification_sound_vib_screen_on_values"
-        android:summary="%s" />
 
 </PreferenceScreen>

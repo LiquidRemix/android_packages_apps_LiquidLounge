@@ -20,35 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_title">
 
-	<ListPreference
-		android:key="qs_tile_animation_style"
-		android:title="@string/qs_tile_animation_style_title"
-		android:entries="@array/qs_tile_animation_style_entries"
-		android:entryValues="@array/qs_tile_animation_style_values"
-		android:persistent="false" />
-
-	<ListPreference
-		android:key="qs_tile_animation_duration"
-		android:title="@string/qs_tile_animation_duration_title"
-		android:entries="@array/qs_tile_animation_duration_entries"
-		android:entryValues="@array/qs_tile_animation_duration_values"
-		android:persistent="false" />
-
-    <ListPreference
-        android:key="qs_tile_animation_interpolator"
-        android:title="@string/qs_tile_animation_interpolator_title"
-        android:entries="@array/qs_tile_animation_interpolator_entries"
-        android:entryValues="@array/qs_tile_animation_interpolator_values"
-        android:persistent="false" />
-
-    <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
-        android:key="qs_panel_alpha"
-        android:title="@string/qs_panel_alpha_title"
-        android:max="255"
-        settings:min="0"
-        settings:units=""
-        android:persistent="false" />
-
     <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
@@ -98,6 +69,41 @@
         android:entries="@array/smart_pulldown_entries"
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
+
+    <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
+        android:key="qs_panel_alpha"
+        android:title="@string/qs_panel_alpha_title"
+        android:max="255"
+        settings:min="0"
+        settings:units=""
+        android:persistent="false" />
+
+    <PreferenceCategory
+        android:key="qs_animations"
+        android:title="@string/qs_animations_cat">
+
+	    <ListPreference
+		    android:key="qs_tile_animation_style"
+		    android:title="@string/qs_tile_animation_style_title"
+		    android:entries="@array/qs_tile_animation_style_entries"
+		    android:entryValues="@array/qs_tile_animation_style_values"
+		    android:persistent="false" />
+
+	    <ListPreference
+		    android:key="qs_tile_animation_duration"
+		    android:title="@string/qs_tile_animation_duration_title"
+		    android:entries="@array/qs_tile_animation_duration_entries"
+		    android:entryValues="@array/qs_tile_animation_duration_values"
+		    android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_interpolator"
+            android:title="@string/qs_tile_animation_interpolator_title"
+            android:entries="@array/qs_tile_animation_interpolator_entries"
+            android:entryValues="@array/qs_tile_animation_interpolator_values"
+            android:persistent="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="category_custom_header"

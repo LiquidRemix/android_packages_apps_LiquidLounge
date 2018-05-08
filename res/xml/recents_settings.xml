@@ -26,12 +26,6 @@
         android:summary="@string/show_clear_all_recents_button_summary"
         android:defaultValue="true" />
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="systemui_recents_mem_display"
-        android:title="@string/recents_show_membar_title"
-        android:summary="@string/recents_show_membar_summary"
-        android:defaultValue="false" />
-
     <ListPreference
         android:key="recents_clear_all_location"
         android:title="@string/recents_clear_all_location_title"
@@ -48,6 +42,12 @@
         android:entries="@array/immersive_recents_entries"
         android:entryValues="@array/immersive_recents_values"
         android:persistent="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="systemui_recents_mem_display"
+        android:title="@string/recents_show_membar_title"
+        android:summary="@string/recents_show_membar_summary"
+        android:defaultValue="false" />
 
     <Preference
         android:key="hide_app_from_recents"
