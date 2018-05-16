@@ -87,4 +87,22 @@
             android:summary="@string/show_lockscreen_alarm_summary"
             android:defaultValue="true" />
 
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_status_bar"
+            android:title="@string/hide_lockscreen_status_bar_title"
+            android:summary="@string/hide_lockscreen_status_bar_summary"
+            android:defaultValue="false" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_indicator_display"
+            android:title="@string/hide_lockscreen_indicator_display_title"
+            android:summary="@string/hide_lockscreen_indicator_display_summary"
+            android:defaultValue="false" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_icon"
+            android:title="@string/hide_lockscreen_icon_title"
+            android:summary="@string/hide_lockscreen_icon_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
