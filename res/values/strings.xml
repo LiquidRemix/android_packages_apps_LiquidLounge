@@ -700,10 +700,8 @@
     <string name="menu_cancel">Cancel</string>
 
     <!-- Suppress notification vib/sound feature -->
-    <string name="notification_sound_vib_screen_on_title">Notifications sound vibration if screen on</string>
-    <string name="notification_sound_vib_screen_on_never">Never</string>
-    <string name="notification_sound_vib_screen_on_always">Always (default)</string>
-    <string name="notification_sound_vib_screen_on_nomedia">If no media is playing</string>
+    <string name="notification_sound_vib_screen_on_title">Notification sound if screen is on</string>
+    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Clock font options</string>
