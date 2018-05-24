@@ -47,6 +47,12 @@
         android:summary="@string/toast_icon_summary"
         android:defaultValue="false" />   
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="wallpaper_notification_shade_wallpaper_tint"
+        android:title="@string/wallpaper_tint_notification_shade"
+        android:summary="@string/wallpaper_tint_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category">
