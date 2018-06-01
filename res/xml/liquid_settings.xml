@@ -135,4 +135,12 @@
         android:icon="@drawable/ic_settings_statusbar"
         android:fragment="com.liquid.liquidlounge.fragments.StatusBarSettings" />
 
+    <!-- Weather -->
+    <Preference
+        android:key="weather_category"
+        android:title="@string/weather_title"
+        android:summary="@string/weather_summary"
+        android:icon="@drawable/ic_settings_weather"
+        android:fragment="com.liquid.liquidlounge.fragments.WeatherSettings" />
+
 </PreferenceScreen>

@@ -90,6 +90,10 @@
     <string name="device_title">Device</string>
     <string name="device_summary">Customize alert slider and off screen gestures</string>
 
+    <!-- Weather -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_summary">Show current weather on keyguard or statusbar</string>
+
     <!-- Category strings -->
     <string name="listview_animation_title">Listview</string>
     <string name="misc_animation_title">Miscellaneous</string>
@@ -684,5 +688,13 @@
     <string name="flashlight_on_call_not_dnd">Only in ringer mode</string>
     <string name="flashlight_on_call_dnd">Only in DND mode</string>
     <string name="flashlight_on_call_always">Always</string>
+
+    <!-- Weather - OmniJaws Settings -->
+    <string name="weather_config_title">Weather service</string>
+    <string name="weather_config_summary">System service settings</string>
+    <string name="header_weather_title">Header view weather</string>
+    <string name="header_weather_summary">Enable notification panel header weather display</string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+    <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
 
 </resources>
