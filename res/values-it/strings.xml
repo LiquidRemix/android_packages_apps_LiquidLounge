@@ -56,7 +56,7 @@
     <!-- Other categories -->
     <string name="buttons_title">Pulsanti</string>
     <string name="heads_up_title">Notifche fluttuanti</string>
-    <string name="volume_title">Bilanciere del volume</string>
+    <string name="misc_short_title">Bilanciere del volume</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -302,7 +302,7 @@
     <string name="brightness_icon_summary">Visualizza l\'icona di luminosità a sinistra del cursore per regolare la luminosità automatica</string>
 
     <!-- Heads up timeout -->
-    <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
+    <string name="heads_up_time_out_title">Durata di visualizzazione</string>
     <string name="heads_up_time_out_summary">Le notifiche verranno visualizzate per <xliff:g id="number">%d</xliff:g> secondi</string>
     <string name="heads_up_time_out_2sec">2 secondi</string>
     <string name="heads_up_time_out_4sec">4 secondi</string>
@@ -312,7 +312,7 @@
     <string name="heads_up_time_out_10sec">10 secondi</string>
 
     <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Tempo di posticipo</string>
+    <string name="heads_up_snooze_title">Durata di posticipo</string>
     <string name="heads_up_snooze_summary_one_minute">Scorri verso l\'alto sulle notifiche per posticipare l\'applicazione per 1 minuto</string>
     <string name="heads_up_snooze_summary">Le notifiche non verranno mostrate per i prossimi <xliff:g id="number">%d</xliff:g> minuti</string>
     <string name="heads_up_snooze_disabled_summary">Posticipo disattivato</string>
@@ -356,9 +356,6 @@
     <string name="static_header_provider_title">Statico</string>
     <string name="daylight_header_provider_title">Dinamico</string>
     <string name="custom_header_provider_title">Provider intestazione</string>
-    <string name="custom_header_browse_title">Sfoglia intestazioni installate</string>
-    <string name="custom_header_browse_summary">Premi a lungo su qualsiasi immagine per utillizzarla con la modalità statica</string>
-    <string name="custom_header_browse_summary_new">Sfoglia tutte le collezioni delle immagini d\'intestazione disponibili</string>
     <string name="custom_header_pick_title">Seleziona immagine d\'intestazione</string>
     <string name="custom_header_pick_summary">Seleziona un\'immagine da utilizzare per la modalità statica</string>
     <string name="style_enabled_summary">L\'immagine personalizzata dell\'intestazione è attivata</string>
@@ -375,7 +372,7 @@
     <string name="battery_icon">Stile icona batteria</string>
     <string name="battery_not_title">Icona della batteria nelle notifiche</string>
     <string name="battery_not_summary">L\'icona della batteria verrà visualizzata dove viene visualizzato il pulsante cancella tutto</string>
-    <string name="battery_bar_title">Barra della batteria</string>
+    <string name="battery_bar_title">Barra batteria</string>
     <string name="battery_bar_location">Posizione </string>
     <string name="battery_bar_color">Colore</string>
     <string name="battery_bar_charging_color">Colore di ricarica</string>
@@ -927,7 +924,6 @@
     <string name="slim_recents_hints_footer">Per cancellare tutte le app, pizzicare con due dita sul pannello. Per impedire a un\'app di essere cancellata, premi a lungo sulla sua icona per visualizzarla.\n\nPer ulteriori funzioni come la finestra multipla o per terminare un\'app, premi a lungo o trascina una scheda app nel pannello.</string>
     <string name="recent_panel_lefty_mode_title">Mostra sul bordo sinistro</string>
     <string name="recent_panel_lefty_mode_summary">Mostra il pannello delle app recenti sul lato sinistro</string>
-    <string name="slim_blacklist_apps_cat_title">Blacklist</string>
     <string name="slim_blacklist_apps_cat_title">Lista nera</string>
     <string name="slim_blacklist_apps_title">Lista nera delle app</string>
     <string name="slim_blacklist_apps_summary">App da non mostrare nel pannello</string>
