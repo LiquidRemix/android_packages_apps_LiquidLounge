@@ -19,6 +19,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/volume_title">
 
+    <!-- Volume steps -->
+    <Preference
+        android:key="volume_steps"
+        android:title="@string/volume_steps_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.VolumeSteps" />
+
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="volume_button_music_control"
         android:summary="@string/volume_rocker_music_controls_summary"
@@ -43,4 +50,5 @@
         android:title="@string/volume_answer_call_title"
         android:summary="@string/volume_answer_call_summary"
         android:defaultValue="false" />
+
 </PreferenceScreen>
