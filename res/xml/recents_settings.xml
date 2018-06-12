@@ -54,7 +54,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="immersive_recent"
+        android:key="immersive"
         android:title="@string/immersive_recents_title" >
 
         <ListPreference
@@ -65,6 +65,18 @@
             android:entries="@array/immersive_recents_entries"
             android:entryValues="@array/immersive_recents_values"
             android:persistent="false" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+            android:key="recents_full_screen_clock" 
+            android:title="@string/recents_full_screen_clock_title" 
+            android:summary="@string/recents_full_screen_clock_summary" 
+            android:defaultValue="false" /> 
+ 
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+            android:key="recents_full_screen_date" 
+            android:title="@string/recents_full_screen_date_title" 
+            android:summary="@string/recents_full_screen_date_summary" 
+            android:defaultValue="false" /> 
 
     </PreferenceCategory>
 
