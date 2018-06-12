@@ -108,10 +108,10 @@ public class RecentsSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mRecentsClearAllLocation) {
-            int location = Integer.valueOf((String) objValue);
+            int value = Integer.parseInt((String) objValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, value, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
         } else if (preference == mRecentsComponentType) {
@@ -127,13 +127,14 @@ public class RecentsSettings extends SettingsPreferenceFragment
             LiquidUtils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mImmersiveRecents) {
-            Settings.System.putIntForUser(resolver, Settings.System.IMMERSIVE_RECENTS,
-                    Integer.parseInt((String) newValue), UserHandle.USER_CURRENT);
-            mImmersiveRecents.setValue((String) newValue);
+            int mode = Integer.valueOf((String) objValue); 
+            Settings.System.putIntForUser(getActivity().getContentResolver(), Settings.System.IMMERSIVE_RECENTS,
+                    Integer.parseInt((String) objValue), UserHandle.USER_CURRENT);
+            mImmersiveRecents.setValue((String) objValue);
             mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
             updateDisablestate(mode);
             mPreferences = mContext.getSharedPreferences("recent_settings", Activity.MODE_PRIVATE);
-            if (!mPreferences.getBoolean("first_info_shown", false) && newValue != null) {
+            if (!mPreferences.getBoolean("first_info_shown", false) && objValue != null) {
                 getActivity().getSharedPreferences("recent_settings", Activity.MODE_PRIVATE)
                         .edit()
                         .putBoolean("first_info_shown", true)
