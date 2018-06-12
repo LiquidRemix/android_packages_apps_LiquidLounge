@@ -28,6 +28,10 @@
     <string name="gesture_summary">Quick gestures to perform actions on your device</string>
     <string name="gesture_preference_liquid">AOSP gestures</string>
 
+    <!-- Keyboard -->
+    <string name="keyboard_title">Keyboard</string>
+    <string name="keyboard_summary">Alter certain functions of the stock keyboard</string>
+
     <!-- Lock screen -->
     <string name="lockscreen_title">Lock screen</string>
     <string name="lockscreen_summary">Customize weather service or change shortcuts</string>

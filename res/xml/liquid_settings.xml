@@ -47,6 +47,14 @@
         android:icon="@drawable/ic_settings_gesture"
         android:fragment="com.liquid.liquidlounge.fragments.GestureSettings" />
 
+    <!-- Keyboard -->
+    <Preference
+        android:key="keyboard_category"
+        android:title="@string/keyboard_title"
+        android:summary="@string/keyboard_summary"
+        android:icon="@drawable/ic_settings_keyboard"
+        android:fragment="com.liquid.liquidlounge.fragments.KeyboardSettings" />
+
     <!-- Lock screen -->
     <Preference
         android:key="lockscreen_category"
