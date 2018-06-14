@@ -37,17 +37,20 @@ import android.support.v7.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
+import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
     private static final String KEY_LOCKSCREEN_CLOCK_SELECTION = "lockscreen_clock_selection";
     private static final String KEY_LOCKSCREEN_DATE_SELECTION = "lockscreen_date_selection";
 
     private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
+    private SystemSettingSwitchPreference mFingerprintVib;
+    private SystemSettingSwitchPreference mFpKeystore;
     private ListPreference mLockClockFonts;
     private ListPreference mLockscreenClockSelection;
     private ListPreference mLockscreenDateSelection;
@@ -63,9 +66,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Resources resources = getResources();
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFingerprintVib = (SystemSettingSwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFpKeystore = (SystemSettingSwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
+
         if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
+            prefScreen.removePreference(mFpKeystore);
         } else {
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
@@ -97,7 +103,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
             return true;
         } else if (preference == mLockClockFonts) {
