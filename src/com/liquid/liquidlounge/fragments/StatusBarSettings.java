@@ -17,42 +17,22 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v14.preference.SwitchPreference;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
 
-import java.util.Collections;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
-import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
 
-public class StatusBarSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+public class StatusBarSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String BATTERY_STYLE = "battery_style";
     private static final String BATTERY_PERCENT = "show_battery_percent";
@@ -73,15 +53,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.statusbar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        final ContentResolver resolver = getActivity().getContentResolver();
 
-        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
+        boolean isNetMonitorEnabled = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT) == 1;
         mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
 
-        int value = Settings.System.getIntForUser(resolver,
+        int value = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
         mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(value);
@@ -90,7 +69,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         mTickerMode = (ListPreference) findPreference("ticker_mode");
         mTickerMode.setOnPreferenceChangeListener(this);
-        int tickerMode = Settings.System.getIntForUser(resolver,
+        int tickerMode = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.STATUS_BAR_SHOW_TICKER,
                 0, UserHandle.USER_CURRENT);
         updatePrefs();
@@ -105,7 +84,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mTickerAnimation.setValue(String.valueOf(tickerAnimationMode));
         mTickerAnimation.setSummary(mTickerAnimation.getEntry());
 
-        int batteryStyle = Settings.Secure.getInt(resolver,
+        int batteryStyle = Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
         mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
         mBatteryIconStyle.setValue(Integer.toString(batteryStyle));
@@ -113,7 +92,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
         mBatteryIconStyle.setOnPreferenceChangeListener(this);
 
-        int showPercent = Settings.System.getInt(resolver,
+        int showPercent = Settings.System.getInt(getContentResolver(),
                 Settings.System.SHOW_BATTERY_PERCENT, 0);
         mBatteryPercentage = (ListPreference) findPreference(BATTERY_PERCENT);
         mBatteryPercentage.setValue(Integer.toString(showPercent));
@@ -123,7 +102,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         boolean hideForcePercentage = batteryStyle == 7 || batteryStyle == 8; /*text or hidden style*/
         mBatteryPercentage.setEnabled(!hideForcePercentage);
 
-        int statusbarWeather = Settings.System.getInt(resolver,
+        int statusbarWeather = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUSBAR_SHOW_WEATHER_TEMP, 0);
         mStatusBarWeather = (ListPreference) findPreference(STATUS_BAR_WEATHER);
         mStatusBarWeather.setValue(Integer.toString(statusbarWeather));
@@ -136,7 +115,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mNetMonitor) {
             boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
@@ -178,7 +157,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mBatteryPercentage) {
             int value = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.SHOW_BATTERY_PERCENT, value);
             int valueIndex = mBatteryPercentage
                     .findIndexOfValue((String) objValue);
@@ -197,19 +176,18 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.LIQUID;
-    }
-
     private void updatePrefs() {
-        ContentResolver resolver = getActivity().getContentResolver();
-        boolean enabled = (Settings.Global.getInt(resolver,
+        boolean enabled = (Settings.Global.getInt(getContentResolver(),
                 Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 0) == 1);
         if (enabled) {
-            Settings.System.putInt(resolver,
+            Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUS_BAR_SHOW_TICKER, 0);
             mTickerMode.setEnabled(false);
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.LIQUID;
     }
 }

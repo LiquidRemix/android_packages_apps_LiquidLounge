@@ -18,17 +18,6 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import com.android.internal.utils.du.ActionHandler;
-import com.android.settings.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -37,13 +26,10 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +41,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class IconPickerActivity extends Activity implements DialogInterface.OnCancelListener {
+import com.android.internal.utils.du.ActionHandler;
+import com.android.settings.R;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+
+public class IconPickerActivity extends Activity
+        implements DialogInterface.OnCancelListener {
+
     private static final int DIALOG_ICON_PACK = 1;
     private static final int ICON_PACK_ICON_RESULT = 69;
     public static final String INTENT_ICON_PICKER = "intent_icon_picker";
@@ -77,7 +75,6 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
                 dialog = getIconPackDialog(context);
         }
         return dialog;
-
     }
 
     private Dialog getIconPackDialog(Context context) {

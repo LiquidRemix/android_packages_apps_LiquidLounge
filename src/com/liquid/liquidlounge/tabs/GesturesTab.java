@@ -19,33 +19,21 @@ package com.liquid.liquidlounge.tabs;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.widget.Toolbar;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.gestures.GestureSettings;
 
 import com.liquid.liquidlounge.PagerSlidingTabStrip;
-import com.android.settings.gestures.GestureSettings;
-import com.liquid.liquidlounge.fragments.GesturesSettings;
 import com.liquid.liquidlounge.fragments.CarbonGesturesSettings;
+import com.liquid.liquidlounge.fragments.GesturesSettings;
 
 public class GesturesTab extends SettingsPreferenceFragment {
 

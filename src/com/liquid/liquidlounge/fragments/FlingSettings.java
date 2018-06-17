@@ -16,42 +16,21 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.utils.du.ActionConstants;
-import com.android.internal.utils.du.ActionHandler;
-import com.android.internal.utils.du.DUActionUtils;
-import com.android.internal.utils.du.Config.ButtonConfig;
-import com.android.settings.R;
-import com.liquid.liquidlounge.preferences.IconPickHelper;
-import com.liquid.liquidlounge.preferences.ActionFragment;
-import com.liquid.liquidlounge.preferences.ActionPreference;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Environment;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.UserHandle;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
-import android.provider.Settings;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -65,8 +44,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class FlingSettings extends ActionFragment implements
-        Preference.OnPreferenceChangeListener, IconPickHelper.OnPickListener {
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.utils.du.ActionConstants;
+import com.android.internal.utils.du.ActionHandler;
+import com.android.internal.utils.du.Config.ButtonConfig;
+import com.android.internal.utils.du.DUActionUtils;
+import com.android.settings.R;
+
+import com.liquid.liquidlounge.preferences.ActionFragment;
+import com.liquid.liquidlounge.preferences.ActionPreference;
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.IconPickHelper;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+
+public class FlingSettings extends ActionFragment
+        implements Preference.OnPreferenceChangeListener, IconPickHelper.OnPickListener {
+
     private static final String TAG = FlingSettings.class.getSimpleName();
     public static final String FLING_LOGO_URI = "fling_custom_icon_config";
 
@@ -109,6 +108,7 @@ public class FlingSettings extends ActionFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.fling_settings);
 
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.fling_back_home_policy);

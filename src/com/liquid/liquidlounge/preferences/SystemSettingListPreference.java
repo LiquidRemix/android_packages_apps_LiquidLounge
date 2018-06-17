@@ -24,6 +24,7 @@ import android.util.AttributeSet;
 import android.provider.Settings;
 
 public class SystemSettingListPreference extends ListPreference {
+
     private boolean mAutoSummary = false;
 
     public SystemSettingListPreference(Context context, AttributeSet attrs, int defStyle) {

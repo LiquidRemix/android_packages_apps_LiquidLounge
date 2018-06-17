@@ -19,11 +19,6 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import com.android.internal.utils.du.ActionHandler;
-import com.android.internal.utils.du.Config.ActionConfig;
-import com.android.settings.R;
-import com.liquid.liquidlounge.preferences.CustomActionListAdapter;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -32,8 +27,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class ActionPickerDialogActivity extends Activity implements
-        ShortcutPickHelper.OnPickListener {
+import com.android.internal.utils.du.ActionHandler;
+import com.android.internal.utils.du.Config.ActionConfig;
+import com.android.settings.R;
+
+import com.liquid.liquidlounge.preferences.CustomActionListAdapter;
+import com.liquid.liquidlounge.preferences.ShortcutPickHelper;
+
+public class ActionPickerDialogActivity extends Activity
+        implements ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_ROOT = 1;
     private static final int DIALOG_SYSTEM = 2;

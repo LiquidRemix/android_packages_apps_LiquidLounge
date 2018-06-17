@@ -18,14 +18,11 @@
 package com.liquid.liquidlounge.preferences;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,14 +30,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.settings.R;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TreeSet;
 
-import com.android.settings.R;
+public class PackageListAdapter extends BaseAdapter
+        implements Runnable {
 
-public class PackageListAdapter extends BaseAdapter implements Runnable {
     private PackageManager mPm;
     private LayoutInflater mInflater;
     private final List<PackageItem> mInstalledPackages = new LinkedList<PackageItem>();

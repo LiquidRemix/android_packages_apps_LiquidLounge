@@ -19,19 +19,6 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import java.util.ArrayList;
-
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.utils.du.ActionConstants.Defaults;
-import com.android.internal.utils.du.ActionHandler;
-import com.android.internal.utils.du.Config;
-import com.android.internal.utils.du.Config.ActionConfig;
-import com.android.internal.utils.du.Config.ButtonConfig;
-
-import com.liquid.liquidlounge.preferences.ShortcutPickHelper;
-import com.liquid.liquidlounge.preferences.ActionPreference;
-import com.liquid.liquidlounge.preferences.CustomActionListAdapter;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -41,12 +28,23 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.utils.du.ActionConstants.Defaults;
+import com.android.internal.utils.du.ActionHandler;
+import com.android.internal.utils.du.Config;
+import com.android.internal.utils.du.Config.ActionConfig;
+import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class ActionFragment extends SettingsPreferenceFragment implements
-        ShortcutPickHelper.OnPickListener {
+import com.liquid.liquidlounge.preferences.ActionPreference;
+import com.liquid.liquidlounge.preferences.CustomActionListAdapter;
+import com.liquid.liquidlounge.preferences.ShortcutPickHelper;
+
+import java.util.ArrayList;
+
+public class ActionFragment extends SettingsPreferenceFragment
+        implements ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_CATEGORY = 69;
     private static final int DIALOG_CUSTOM_ACTIONS = 70;
@@ -165,7 +163,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
         switch (dialogId) {
             case DIALOG_CATEGORY:
             case DIALOG_CUSTOM_ACTIONS:
-                return MetricsEvent.LIQUID;
+                return MetricsProto.MetricsEvent.LIQUID;
             default:
                 return 0;
         }

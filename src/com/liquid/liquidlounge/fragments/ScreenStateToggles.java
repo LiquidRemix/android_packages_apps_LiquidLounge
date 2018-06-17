@@ -17,26 +17,22 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.View;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 
 public class ScreenStateToggles extends SettingsPreferenceFragment
@@ -70,12 +66,11 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
         mContext = (Context) getActivity();
 
         addPreferencesFromResource(R.xml.screen_state_toggles);
-        ContentResolver resolver = getActivity().getContentResolver();
 
         mEnableScreenStateToggles = (SwitchPreference) findPreference(
                 SCREEN_STATE_TOGGLES_ENABLE);
 
-        int enabled = Settings.System.getIntForUser(resolver,
+        int enabled = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.START_SCREEN_STATE_SERVICE, 0, UserHandle.USER_CURRENT);
 
         mEnableScreenStateToggles.setChecked(enabled != 0);
@@ -107,7 +102,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
             getPreferenceScreen().removePreference(mEnableScreenStateTogglesTwoG);
         } else {
             mEnableScreenStateTogglesTwoG.setChecked((
-                Settings.System.getIntForUser(resolver,
+                Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.SCREEN_STATE_TWOG, 0, UserHandle.USER_CURRENT) == 1));
             mEnableScreenStateTogglesTwoG.setOnPreferenceChangeListener(this);
         }
@@ -119,7 +114,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
             getPreferenceScreen().removePreference(mEnableScreenStateTogglesMobileData);
         } else {
             mEnableScreenStateTogglesMobileData.setChecked((
-                Settings.System.getIntForUser(resolver,
+                Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.SCREEN_STATE_MOBILE_DATA, 0, UserHandle.USER_CURRENT) == 1));
             mEnableScreenStateTogglesMobileData.setOnPreferenceChangeListener(this);
         }
@@ -138,7 +133,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
             mEnableScreenStateTogglesGps = null;
         } else {
             mEnableScreenStateTogglesGps.setChecked((
-                Settings.System.getIntForUser(resolver,
+                Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.SCREEN_STATE_GPS, 0, UserHandle.USER_CURRENT) == 1));
             mEnableScreenStateTogglesGps.setOnPreferenceChangeListener(this);
         }
@@ -149,11 +144,9 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-
         if (preference == mEnableScreenStateToggles) {
             boolean value = (Boolean) newValue;
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.START_SCREEN_STATE_SERVICE, value ? 1 : 0, UserHandle.USER_CURRENT);
             Intent service = (new Intent())
                 .setClassName("com.android.systemui", "com.android.systemui.crdroid.screenstate.ScreenStateService");
@@ -168,33 +161,33 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
             return true;
         } else if (preference == mEnableScreenStateTogglesTwoG) {
             boolean value = (Boolean) newValue;
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.SCREEN_STATE_TWOG, value ? 1 : 0, UserHandle.USER_CURRENT);
             Intent intent = new Intent("android.intent.action.SCREEN_STATE_SERVICE_UPDATE");
             mContext.sendBroadcast(intent);
             return true;
         } else if (preference == mEnableScreenStateTogglesGps) {
             boolean value = (Boolean) newValue;
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.SCREEN_STATE_GPS, value ? 1 : 0, UserHandle.USER_CURRENT);
             Intent intent = new Intent("android.intent.action.SCREEN_STATE_SERVICE_UPDATE");
             mContext.sendBroadcast(intent);
             return true;
         } else if (preference == mEnableScreenStateTogglesMobileData) {
             boolean value = (Boolean) newValue;
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.SCREEN_STATE_MOBILE_DATA, value ? 1 : 0, UserHandle.USER_CURRENT);
             Intent intent = new Intent("android.intent.action.SCREEN_STATE_SERVICE_UPDATE");
             mContext.sendBroadcast(intent);
             return true;
         } else if (preference == mMinutesOffDelay) {
             int delay = ((Integer) newValue) * 60;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.SCREEN_STATE_OFF_DELAY, delay);
             return true;
         } else if (preference == mMinutesOnDelay) {
             int delay = ((Integer) newValue) * 60;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.SCREEN_STATE_ON_DELAY, delay);
             return true;
         }
@@ -202,18 +195,17 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
     }
 
     public static void reset(Context mContext) {
-        ContentResolver resolver = mContext.getContentResolver();
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.START_SCREEN_STATE_SERVICE, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_STATE_OFF_DELAY, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_STATE_ON_DELAY, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_STATE_TWOG, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_STATE_MOBILE_DATA, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
+        Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_STATE_GPS, 0, UserHandle.USER_CURRENT);
     }
 

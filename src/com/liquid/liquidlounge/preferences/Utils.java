@@ -26,8 +26,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.content.res.Resources.NotFoundException;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
@@ -73,7 +71,7 @@ public final class Utils {
     private static int getScreenType(Context context) {
         if (sDeviceType == -1) {
             WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-           DisplayInfo outDisplayInfo = new DisplayInfo();
+            DisplayInfo outDisplayInfo = new DisplayInfo();
             wm.getDefaultDisplay().getDisplayInfo(outDisplayInfo);
             int shortSize = Math.min(outDisplayInfo.logicalHeight, outDisplayInfo.logicalWidth);
             int shortSizeDp = shortSize * DisplayMetrics.DENSITY_DEFAULT

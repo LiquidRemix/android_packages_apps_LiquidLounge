@@ -22,16 +22,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.preference.PreferenceFragment;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -39,16 +36,16 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
 
 public class WakeLockBlocker extends SettingsPreferenceFragment {
 
@@ -108,7 +105,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("maxwen", "running");
     }
 
     @Override
@@ -191,7 +187,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
 
     private void updateSeenWakeLocksList() {
         PowerManager pm = (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
-        Log.d("maxwen", pm.getSeenWakeLocks());
 
         String seenWakeLocks =  pm.getSeenWakeLocks();
         mSeenWakeLocks = new ArrayList<String>();
@@ -240,7 +235,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
         if(buffer.length()>0){
             buffer.deleteCharAt(buffer.length() - 1);
         }
-        Log.d("maxwen", buffer.toString());
         Settings.System.putString(getActivity().getContentResolver(),
                 Settings.System.WAKELOCK_BLOCKING_LIST, buffer.toString());
     }

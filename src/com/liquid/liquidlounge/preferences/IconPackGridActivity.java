@@ -18,31 +18,12 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import com.android.settings.R;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -53,8 +34,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.ArrayMap;
-import android.util.ArraySet;
 import android.util.DisplayMetrics;
 import android.util.LruCache;
 import android.view.LayoutInflater;
@@ -66,10 +45,21 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.android.settings.R;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 public class IconPackGridActivity extends Activity {
+
     private IconGridAdapter mAdapter;
     private ArrayList<IconInfo> mGridData;
     private GridView mGridView;
@@ -256,9 +246,7 @@ public class IconPackGridActivity extends Activity {
             }
 
             return set;
-
         }
-
     }
 
     public static Bitmap drawableToBitmap(Drawable drawable) {

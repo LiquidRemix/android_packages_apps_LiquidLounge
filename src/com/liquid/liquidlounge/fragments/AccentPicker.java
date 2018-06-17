@@ -38,11 +38,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 
-public class AccentPicker extends InstrumentedDialogFragment implements OnClickListener {
+public class AccentPicker extends InstrumentedDialogFragment
+        implements OnClickListener {
 
     private static final String TAG_ACCENT_PICKER = "accent_picker";
 

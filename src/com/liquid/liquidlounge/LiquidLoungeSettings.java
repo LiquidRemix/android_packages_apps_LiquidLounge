@@ -21,11 +21,10 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.view.Surface;
 
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class LiquidLoungeSettings extends SettingsPreferenceFragment {

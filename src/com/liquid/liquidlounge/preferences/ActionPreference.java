@@ -20,7 +20,9 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import java.util.Map;
+import android.content.Context;
+import android.support.v7.preference.Preference;
+import android.util.AttributeSet;
 
 import com.android.internal.utils.du.ActionConstants.ConfigMap;
 import com.android.internal.utils.du.ActionConstants.Defaults;
@@ -28,11 +30,11 @@ import com.android.internal.utils.du.ActionHolder;
 import com.android.internal.utils.du.Config.ActionConfig;
 import com.android.internal.utils.du.Config.ButtonConfig;
 
-import android.content.Context;
-import android.support.v7.preference.Preference;
-import android.util.AttributeSet;
+import java.util.Map;
 
-public class ActionPreference extends Preference implements ActionHolder {
+public class ActionPreference extends Preference
+        implements ActionHolder {
+
     private Defaults mDefaults;
     private ConfigMap mMap;
     private ActionConfig mAction;

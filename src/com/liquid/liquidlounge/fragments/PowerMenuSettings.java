@@ -17,34 +17,21 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.Context;
-import android.content.ContentResolver;
-import android.content.Intent;
-import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.UserManager;
 import android.provider.Settings;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
-import android.support.annotation.NonNull;
 
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.android.settings.R;
-import com.liquid.liquidlounge.preferences.Utils;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.Utils;
 
 public class PowerMenuSettings extends SettingsPreferenceFragment
-                implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
@@ -58,7 +45,6 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.powermenu_settings);
 
-        final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
@@ -66,7 +52,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mPowermenuTorch);
         } else {
-            mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
+            mPowermenuTorch.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWERMENU_TORCH, 0) == 1));
         }
 

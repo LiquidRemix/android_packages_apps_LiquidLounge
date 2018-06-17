@@ -29,26 +29,24 @@ import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.PreferenceViewHolder;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup; 
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
+import com.liquid.liquidlounge.preferences.PackageListAdapter;
+import com.liquid.liquidlounge.preferences.PackageListAdapter.PackageItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
-import com.liquid.liquidlounge.preferences.PackageListAdapter;
-import com.liquid.liquidlounge.preferences.PackageListAdapter.PackageItem;
 
 public class HeadsUpSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
@@ -244,7 +242,6 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                 return null;
             }
         }
-
     };
 
     private void refreshCustomApplicationPrefs() {

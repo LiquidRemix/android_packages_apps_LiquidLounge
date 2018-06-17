@@ -21,19 +21,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.ContentResolver;
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
-import android.text.TextUtils;
-import android.view.View;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,14 +43,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
-
-public class QuickSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+public class QuickSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";

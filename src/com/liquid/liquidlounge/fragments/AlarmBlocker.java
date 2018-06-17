@@ -22,9 +22,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,16 +37,16 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
 
 public class AlarmBlocker extends SettingsPreferenceFragment {
 
@@ -108,7 +106,6 @@ public class AlarmBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("maxwen", "running");
     }
 
     @Override
@@ -190,7 +187,6 @@ public class AlarmBlocker extends SettingsPreferenceFragment {
 
     private void updateSeenAlarmsList() {
         AlarmManager pm = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-        Log.d("AlarmBlocker", pm.getSeenAlarms());
 
         String seenAlarms =  pm.getSeenAlarms();
         mSeenAlarms = new ArrayList<String>();

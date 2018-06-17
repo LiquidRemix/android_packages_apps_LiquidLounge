@@ -16,32 +16,23 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.Context;
-import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 import com.liquid.liquidlounge.recents.HAFRAppChooserDialog;
 import com.liquid.liquidlounge.recents.HAFRAppChooserAdapter.AppItem;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 
-public class CarbonGesturesSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class CarbonGesturesSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "CarbonGestures";
     private CustomSeekBarPreference mCarbonGestureFingers;
@@ -55,8 +46,6 @@ public class CarbonGesturesSettings extends SettingsPreferenceFragment implement
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.carbon_gestures);
-
-        ContentResolver resolver = getActivity().getContentResolver();
 
         mCarbonGestureFingers = (CustomSeekBarPreference) findPreference("carbon_gestures_fingers");
         mCarbonGestureFingers.setOnPreferenceChangeListener(this);
@@ -123,11 +112,6 @@ public class CarbonGesturesSettings extends SettingsPreferenceFragment implement
     }
 
     @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.LIQUID;
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
     }
@@ -163,7 +147,6 @@ public class CarbonGesturesSettings extends SettingsPreferenceFragment implement
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
         if (preference.equals(mCarbonGestureFingers)) {
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.CARBON_CUSTOM_GESTURE_FINGERS, (Integer) objValue, UserHandle.USER_CURRENT);
@@ -227,5 +210,10 @@ public class CarbonGesturesSettings extends SettingsPreferenceFragment implement
         }
 
         return false;
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.LIQUID;
     }
 }

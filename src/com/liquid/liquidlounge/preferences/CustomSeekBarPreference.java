@@ -29,7 +29,9 @@ import android.widget.TextView;
 
 import com.android.settings.R;
 
-public class CustomSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener {
+public class CustomSeekBarPreference extends Preference
+        implements SeekBar.OnSeekBarChangeListener {
+
     private final String TAG = getClass().getName();
     private static final String SETTINGS_NS = "http://schemas.android.com/apk/res/com.android.settings";
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";

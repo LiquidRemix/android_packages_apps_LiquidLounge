@@ -17,21 +17,20 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 
-import com.android.settings.R;
-import com.android.internal.util.liquid.LiquidUtils;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class GesturesSettings extends SettingsPreferenceFragment implements
-          Preference.OnPreferenceChangeListener {
+import com.android.internal.util.liquid.LiquidUtils;
+
+public class GesturesSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
 
@@ -43,7 +42,6 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.gestures_settings);
 
-        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         if (!LiquidUtils.deviceHasFlashlight(getContext())) {
@@ -53,7 +51,7 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
             }
         } else {
             mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
-            int mTorchPowerButtonValue = Settings.Secure.getInt(resolver,
+            int mTorchPowerButtonValue = Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.TORCH_POWER_BUTTON_GESTURE, 0);
             mTorchPowerButton.setValue(Integer.toString(mTorchPowerButtonValue));
             mTorchPowerButton.setSummary(mTorchPowerButton.getEntry());
@@ -62,19 +60,16 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-
         if (preference == mTorchPowerButton) {
             int mTorchPowerButtonValue = Integer.valueOf((String) newValue);
             int index = mTorchPowerButton.findIndexOfValue((String) newValue);
             mTorchPowerButton.setSummary(
                     mTorchPowerButton.getEntries()[index]);
-            Settings.Secure.putInt(resolver, Settings.Secure.TORCH_POWER_BUTTON_GESTURE,
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.TORCH_POWER_BUTTON_GESTURE,
                     mTorchPowerButtonValue);
             if (mTorchPowerButtonValue == 1) {
                 //if doubletap for torch is enabled, switch off double tap for camera
-                Settings.Secure.putInt(resolver, Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
-                        1);
+                Settings.Secure.putInt(getContentResolver(), Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, 1);
             }
             return true;
         }

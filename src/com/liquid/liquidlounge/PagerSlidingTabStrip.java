@@ -16,7 +16,6 @@
 
 package com.liquid.liquidlounge;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -43,11 +42,10 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.Locale;
-
+import com.android.settings.R;
 import com.android.settings.Utils;
 
-import com.android.settings.R;
+import java.util.Locale;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 

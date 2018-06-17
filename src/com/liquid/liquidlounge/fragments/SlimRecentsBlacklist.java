@@ -19,41 +19,33 @@ package com.liquid.liquidlounge.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceGroup;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.RadioButton;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 import com.liquid.liquidlounge.preferences.PackageListAdapter;
 import com.liquid.liquidlounge.preferences.PackageListAdapter.PackageItem;
 
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceClickListener {
+public class SlimRecentsBlacklist extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceClickListener {
 
     private static final String TAG = "SlimRecentsBlacklist";
 
@@ -72,7 +64,9 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.slim_recents_blacklist);
+
         initializeAllPreferences();
     }
 
@@ -106,7 +100,7 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
     public int getDialogMetricsCategory(int dialogId) {
         switch (dialogId) {
             case DIALOG_BLACKLIST_APPS:
-                return MetricsEvent.LIQUID;
+                return MetricsProto.MetricsEvent.LIQUID;
             default:
                 return 0;
         }
@@ -126,11 +120,6 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
         mBlacklistPackages = new HashMap<String, Package>();
         mAddBlacklistPref = findPreference("add_blacklist_packages");
         mAddBlacklistPref.setOnPreferenceClickListener(this);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.LIQUID;
     }
 
     @Override
@@ -186,7 +175,6 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
                 return null;
             }
         }
-
     };
 
     private void refreshCustomApplicationPrefs() {
@@ -276,7 +264,6 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
         }
     }
 
-
     private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
         String setting = Settings.System.SLIM_RECENTS_BLACKLIST_VALUES;
 
@@ -290,5 +277,10 @@ public class SlimRecentsBlacklist extends SettingsPreferenceFragment implements
         }
         Settings.System.putString(getContentResolver(),
                 setting, value);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.LIQUID;
     }
 }

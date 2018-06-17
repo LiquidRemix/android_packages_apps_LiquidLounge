@@ -16,32 +16,25 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import java.util.ArrayList;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
 
-import com.android.settings.SettingsPreferenceFragment;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.utils.du.ActionConstants;
-import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.DUActionUtils;
-import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-public class NavbarSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+
+public class NavbarSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
     private static final String NAVBAR_VISIBILITY = "navbar_visibility";
     private static final String KEY_NAVBAR_MODE = "navbar_mode";
     private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
@@ -73,6 +66,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements Prefer
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.navbar_settings);
 
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
@@ -90,8 +84,8 @@ public class NavbarSettings extends SettingsPreferenceFragment implements Prefer
         updateBarVisibleAndUpdatePrefs(showing);
         mNavbarVisibility.setOnPreferenceChangeListener(this);
 
-        int mode = Settings.Secure.getInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_MODE,
-                0);
+        int mode = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.NAVIGATION_BAR_MODE, 0);
 
         updateBarModeSettings(mode);
         mNavbarMode.setOnPreferenceChangeListener(this);

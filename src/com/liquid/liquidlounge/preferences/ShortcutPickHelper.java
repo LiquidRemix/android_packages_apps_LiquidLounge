@@ -16,12 +16,6 @@
 
 package com.liquid.liquidlounge.preferences;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -41,7 +35,14 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.android.settings.R;
+
 import com.liquid.liquidlounge.preferences.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class ShortcutPickHelper {
 
@@ -224,7 +225,6 @@ public class ShortcutPickHelper {
             }
         }
 
-
         public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
                 View convertView, ViewGroup parent) {
             if (convertView == null) {
@@ -267,7 +267,6 @@ public class ShortcutPickHelper {
         public boolean hasStableIds() {
             return true;
         }
-
     }
 
     private void completeSetCustomApp(Intent data) {
@@ -321,7 +320,6 @@ public class ShortcutPickHelper {
             return getFriendlyShortcutName(intent);
         } catch (URISyntaxException e) {
         }
-
         return uri;
     }
 }

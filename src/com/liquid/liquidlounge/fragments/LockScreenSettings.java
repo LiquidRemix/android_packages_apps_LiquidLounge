@@ -17,30 +17,24 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.app.Activity;
-import android.app.WallpaperManager;
 import android.content.Context;
-import android.content.ContentResolver;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
 
-public class LockScreenSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class LockScreenSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
@@ -61,7 +55,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.lockscreen_settings);
 
-        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
 
@@ -85,14 +78,14 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         mLockClockFonts.setOnPreferenceChangeListener(this);
 
         mLockscreenClockSelection = (ListPreference) findPreference(KEY_LOCKSCREEN_CLOCK_SELECTION);
-        int clockSelection = Settings.System.getIntForUser(resolver,
+        int clockSelection = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.LOCKSCREEN_CLOCK_SELECTION, 0, UserHandle.USER_CURRENT);
         mLockscreenClockSelection.setValue(String.valueOf(clockSelection));
         mLockscreenClockSelection.setSummary(mLockscreenClockSelection.getEntry());
         mLockscreenClockSelection.setOnPreferenceChangeListener(this);
 
         mLockscreenDateSelection = (ListPreference) findPreference(KEY_LOCKSCREEN_DATE_SELECTION);
-        int dateSelection = Settings.System.getIntForUser(resolver,
+        int dateSelection = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.LOCKSCREEN_DATE_SELECTION, 0, UserHandle.USER_CURRENT);
         mLockscreenDateSelection.setValue(String.valueOf(dateSelection));
         mLockscreenDateSelection.setSummary(mLockscreenDateSelection.getEntry());
@@ -100,7 +93,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
@@ -115,14 +107,14 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         } else if (preference == mLockscreenClockSelection) {
             int clockSelection = Integer.valueOf((String) newValue);
             int index = mLockscreenClockSelection.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.LOCKSCREEN_CLOCK_SELECTION, clockSelection, UserHandle.USER_CURRENT);
             mLockscreenClockSelection.setSummary(mLockscreenClockSelection.getEntries()[index]);
             return true;
         } else if (preference == mLockscreenDateSelection) {
             int dateSelection = Integer.valueOf((String) newValue);
             int index = mLockscreenDateSelection.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver,
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.LOCKSCREEN_DATE_SELECTION, dateSelection, UserHandle.USER_CURRENT);
             mLockscreenDateSelection.setSummary(mLockscreenDateSelection.getEntries()[index]);
             return true;

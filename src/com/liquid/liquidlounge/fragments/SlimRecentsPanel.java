@@ -19,57 +19,50 @@ package com.liquid.liquidlounge.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-//import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
-//import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-//import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-import android.provider.Settings;
-//import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ListView;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
-
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-
-public class SlimRecentsPanel extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
+public class SlimRecentsPanel extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
 
     private static final String TAG = "SlimRecentsPanelSettings";
 
@@ -113,7 +106,9 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.slim_recents_panel_settings);
+
         initializeAllPreferences();
 
         setHasOptionsMenu(true);
@@ -146,7 +141,7 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
     public int getDialogMetricsCategory(int dialogId) {
         switch (dialogId) {
             case DIALOG_RESET_CONFIRM:
-                return MetricsEvent.LIQUID;
+                return MetricsProto.MetricsEvent.LIQUID;
             default:
                 return 0;
         }
@@ -171,13 +166,13 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
     }
 
     private void resetSettings() {
-        Settings.System.putInt(getContext().getContentResolver(),
+        Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_BG_COLOR,
                 0x763367d6);
         mRecentPanelBgColor.setSummary(R.string.default_string);
         mRecentPanelBgColor.setNewPreviewColor(0x763367d6);
 
-        Settings.System.putInt(getContext().getContentResolver(),
+        Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_CARD_BG_COLOR,
                 0x00ffffff);
         mRecentCardBgColor.setSummary(R.string.default_auto_string);
@@ -186,17 +181,17 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRecentPanelLeftyMode) {
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_GRAVITY,
                     ((Boolean) newValue) ? Gravity.START : Gravity.END);
             return true;
         } else if (preference == mRecentPanelScale) {
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_SCALE_FACTOR, Integer.valueOf(String.valueOf(newValue)));
             return true;
         } else if (preference == mRecentPanelExpandedMode) {
             int value = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
             int index = mRecentPanelExpandedMode.findIndexOfValue((String) newValue);
             mRecentPanelExpandedMode.setSummary(
@@ -211,7 +206,7 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
                 preference.setSummary(hex);
             }
             int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_BG_COLOR,
                     intHex);
             return true;
@@ -224,12 +219,12 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
                 preference.setSummary(hex);
             }
             int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_CARD_BG_COLOR,
                     intHex);
             return true;
         } else if (preference == mMaxApps) {
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENTS_MAX_APPS, Integer.valueOf(String.valueOf(newValue)));
             return true;
         }
@@ -243,19 +238,19 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
     }
 
     private void updateRecentPanelPreferences() {
-        final boolean recentLeftyMode = Settings.System.getInt(getContext().getContentResolver(),
+        final boolean recentLeftyMode = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.END) == Gravity.START;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
 
-        mMaxApps.setValue(Settings.System.getIntForUser(getContext().getContentResolver(),
+        mMaxApps.setValue(Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.RECENTS_MAX_APPS, 15,
                 UserHandle.USER_CURRENT));
 
-        final int recentScale = Settings.System.getInt(getContext().getContentResolver(),
+        final int recentScale = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_SCALE_FACTOR, 115);
         mRecentPanelScale.setValue(recentScale);
 
-        final int recentExpandedMode = Settings.System.getInt(getContext().getContentResolver(),
+        final int recentExpandedMode = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_EXPANDED_MODE, 1);
         mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
         mRecentPanelExpandedMode.setSummary(mRecentPanelExpandedMode.getEntry());
@@ -273,7 +268,7 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
         mRecentPanelBgColor =
                 (ColorPickerPreference) findPreference(RECENT_PANEL_BG_COLOR);
         mRecentPanelBgColor.setOnPreferenceChangeListener(this);
-        final int intColor = Settings.System.getInt(getContext().getContentResolver(),
+        final int intColor = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_BG_COLOR, 0x763367d6);
         String hexColor = String.format("#%08x", (0x00ffffff & intColor));
         if (hexColor.equals("#763367d6")) {
@@ -287,7 +282,7 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
         mRecentCardBgColor =
                 (ColorPickerPreference) findPreference(RECENT_CARD_BG_COLOR);
         mRecentCardBgColor.setOnPreferenceChangeListener(this);
-        final int intColorCard = Settings.System.getInt(getContext().getContentResolver(),
+        final int intColorCard = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_CARD_BG_COLOR, 0x00ffffff);
         String hexColorCard = String.format("#%08x", (0x00ffffff & intColorCard));
         if (hexColorCard.equals("#00ffffff")) {
@@ -304,11 +299,6 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.LIQUID;
     }
 
     @Override
@@ -354,7 +344,7 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
                     return;
                 }
                 String selectedPackage = adapter.getItem(position);
-                Settings.System.putString(getContext().getContentResolver(),
+                Settings.System.putString(getContentResolver(),
                         Settings.System.SLIM_RECENTS_ICON_PACK, selectedPackage);
                 mDialog.dismiss();
             }
@@ -475,5 +465,10 @@ public class SlimRecentsPanel extends SettingsPreferenceFragment implements
             this.icon = icon;
             this.packageName = packageName;
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.LIQUID;
     }
 }

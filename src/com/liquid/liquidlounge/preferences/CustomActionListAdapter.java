@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomActionListAdapter extends BaseAdapter {
+
     private LayoutInflater mInflater;
     private Context mContext;
     private List<ActionConfig> mCustomActions = new ArrayList<ActionConfig>();
@@ -120,7 +121,6 @@ public class CustomActionListAdapter extends BaseAdapter {
         holder.summary.setVisibility(View.GONE);
 
         return convertView;
-
     }
 
     private static class ViewHolder {

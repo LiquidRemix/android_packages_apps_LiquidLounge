@@ -17,30 +17,26 @@
  */
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
 import android.content.res.Resources;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.Vibrator;
-import android.support.v7.preference.PreferenceCategory;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
-import android.provider.Settings;
-
-import com.android.settings.R;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.DUActionUtils;
+import com.android.settings.R;
 
 import com.liquid.liquidlounge.preferences.ActionFragment;
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 
-public class ButtonsSettings extends ActionFragment implements OnPreferenceChangeListener {
+public class ButtonsSettings extends ActionFragment
+        implements Preference.OnPreferenceChangeListener {
 
     //Keys
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
@@ -76,10 +72,10 @@ public class ButtonsSettings extends ActionFragment implements OnPreferenceChang
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
         addPreferencesFromResource(R.xml.buttons_settings);
 
         final Resources res = getResources();
-        final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
@@ -192,11 +188,10 @@ public class ButtonsSettings extends ActionFragment implements OnPreferenceChang
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBacklightTimeout) {
             String BacklightTimeout = (String) newValue;
             int BacklightTimeoutValue = Integer.parseInt(BacklightTimeout);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, BacklightTimeoutValue);
             int BacklightTimeoutIndex = mBacklightTimeout
                     .findIndexOfValue(BacklightTimeout);
@@ -205,12 +200,12 @@ public class ButtonsSettings extends ActionFragment implements OnPreferenceChang
             return true;
         } else if (preference == mButtonBrightness) {
             int value = (Integer) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_BRIGHTNESS, value * 1);
             return true;
         } else if (preference == mButtonBrightness_sw) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_BRIGHTNESS, value ? 1 : 0);
             return true;
         } else if (preference == mHwKeyDisable) {

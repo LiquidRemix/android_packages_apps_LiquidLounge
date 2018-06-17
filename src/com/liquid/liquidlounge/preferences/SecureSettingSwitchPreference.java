@@ -23,6 +23,7 @@ import android.support.v14.preference.SwitchPreference;
 import android.util.AttributeSet;
 
 public class SecureSettingSwitchPreference extends SwitchPreference {
+
     public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }

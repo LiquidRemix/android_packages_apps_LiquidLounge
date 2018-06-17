@@ -17,23 +17,21 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
 import android.os.Bundle;
-import android.os.UserHandle;
+import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
-import com.android.settings.R;
-import android.provider.Settings;
-import com.liquid.liquidlounge.preferences.Utils;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.liquid.liquidlounge.preferences.Utils;
+
 public class NotificationSettings extends SettingsPreferenceFragment
-                        implements OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 	private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";

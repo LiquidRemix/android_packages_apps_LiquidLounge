@@ -17,37 +17,27 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.res.Configuration;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.util.Log;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.development.DevelopmentSettings;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import com.android.settings.R;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.development.DevelopmentSettings;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-
-public class LockScreenWeatherSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class LockScreenWeatherSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_OMNIJAWS = "omnijaws";
 
@@ -58,13 +48,12 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
     private ListPreference mWeatherIconPack;
 
-    private ContentResolver mResolver;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.ls_weather_settings);
-        mResolver = getActivity().getContentResolver();
+
         PreferenceScreen prefs = getPreferenceScreen();
 
         if (!isOmniJawsServiceInstalled()) {
@@ -124,7 +113,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
          i.setAction("org.omnirom.WeatherIconPack");
          for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
              String packageName = r.activityInfo.packageName;
-             Log.d("maxwen", packageName);
              if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
                  values.add(0, r.activityInfo.name);
              } else {

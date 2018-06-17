@@ -16,38 +16,30 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import android.app.ActivityManager;
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MenuInflater;
-import java.util.ArrayList;
-import java.util.List;
 
-import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.ListPreference;
-import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
 
-import android.provider.SearchIndexableResource;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-public class PulseSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, Indexable {
+import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
+public class PulseSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
     private static final String CUSTOM_DIMEN = "pulse_custom_dimen";
@@ -91,6 +83,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.pulse_settings);
 
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.pulse_help_policy_notice_summary);
@@ -357,7 +350,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     }
 
     private void resetValues() {
-	ContentResolver resolver = getActivity().getContentResolver();
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_PULSE_LAVALAMP_COLOR_TO, DEFAULT_TO);
         mLavaLampColorTo.setNewPreviewColor(DEFAULT_TO);
@@ -376,29 +368,8 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     public void onResume() {
         super.onResume();
     }
+
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.LIQUID;
     }
-
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-             new BaseSearchIndexProvider() {
-                 @Override
-                 public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                                                                             boolean enabled) {
-                     ArrayList<SearchIndexableResource> result =
-                             new ArrayList<SearchIndexableResource>();
- 
-                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.pulse_settings;
-                     result.add(sir);
- 
-                     return result;
-                 }
- 
-                 @Override
-                 public List<String> getNonIndexableKeys(Context context) {
-                     final List<String> keys = new ArrayList<String>();
-                     return keys;
-                 }
-         };
 }

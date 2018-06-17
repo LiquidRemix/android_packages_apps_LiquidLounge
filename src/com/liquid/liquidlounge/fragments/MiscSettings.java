@@ -17,33 +17,19 @@
 
 package com.liquid.liquidlounge.fragments;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.Context;
-import android.content.ContentResolver;
-import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
 
-import java.util.Arrays;
-import java.util.HashSet;
-
-import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class MiscSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+public class MiscSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
@@ -60,7 +46,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.misc_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
 
 		mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
@@ -77,7 +62,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
 		if (preference == mScrollingCachePref) {
             if (objValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
