@@ -354,7 +354,7 @@
     <string name="volume_answer_call_summary">Answer the call when volume keys pressed</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
     <string name="wakelock_blocker_reload">Reload</string>
@@ -511,5 +511,12 @@
     <!-- Disabling FC notifications -->
     <string name="disable_fc_notifications_title">Diable FC Notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
+
+    <!-- Activity blacklist -->
+    <string name="chooser_activity_blacklist_title">Activity blacklist</string>
+    <string name="chooser_activity_blacklist_summary">Apps to not show when tapping on a Share button</string>
+    <string name="chooser_activity_blacklist_cat_title">Blacklist</string>
+    <string name="chooser_activity_blacklist_pref_title">Add app</string>
+    <string name="chooser_activity_blacklist_pref_summary">Tap here to add, tap on added app to remove it</string>
 
 </resources>
