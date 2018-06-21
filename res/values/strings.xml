@@ -959,4 +959,8 @@
     <string name="qs_edit_title">QS edit icon</string>
     <string name="qs_edit_summary">Disable the tile edit icon in the footer</string>
 
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+
 </resources>
