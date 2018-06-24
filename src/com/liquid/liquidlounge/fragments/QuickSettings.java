@@ -53,7 +53,6 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
-    private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
     private static final String FILE_HEADER_SELECT = "file_header_select";
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
@@ -102,7 +101,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
         mHeaderBrowse = findPreference(CUSTOM_HEADER_BROWSE);
 
-        mHeaderEnabled = (SystemSettingSwitchPreference) findPreference(CUSTOM_HEADER_ENABLED);
+        mHeaderEnabled = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
         mHeaderEnabled.setOnPreferenceChangeListener(this);
 
         mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
@@ -163,12 +162,8 @@ public class QuickSettings extends SettingsPreferenceFragment
         if (headerEnabled) {
             String settingHeaderPackage = Settings.System.getString(getContentResolver(),
                     Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
-            int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
-            if (valueIndex == -1) {
-                // no longer found
-                Settings.System.putInt(getContentResolver(),
-                        Settings.System.STATUS_BAR_CUSTOM_HEADER, 0);
-            } else {
+            if (settingHeaderPackage != null) {
+                int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
                 mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
                 mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
             }
