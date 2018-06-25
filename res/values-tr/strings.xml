@@ -31,27 +31,27 @@
 
     <!-- Navigation -->
     <string name="navbar_title">Gezinme çubuğu</string>
-    <string name="navbar_summary">Ekran gezinme tuşlarını özelleştir</string>
+    <string name="navbar_summary">Ekranda gezinme tuşlarını özelleştirme</string>
 
     <!-- Notifications -->
     <string name="notifications_title">Bildirimler</string>
-    <string name="notifications_summary">Kontrol cihazı ışıkları ve uyarıları yakar</string>
+    <string name="notifications_summary">Pil ışığı ve bildirim pencereleri</string>
 
     <!-- Power menu -->
     <string name="powermenu_title">Güç menüsü</string>
-    <string name="powermenu_summary">Güvenli kilit ekranında diğer menüler ve kontrol</string>
+    <string name="powermenu_summary">Güvenli kilit ekranında menüler</string>
 
     <!-- Quick settings -->
     <string name="quicksettings_title">Hızlı ayarlar</string>
-    <string name="quicksettings_summary">Sütunları ve satırları yeniden boyutlandırma ve açılır menüyü hızlandırma</string>
+    <string name="quicksettings_summary">Sütunları ve satırları yeniden boyutlandırma</string>
 
     <!-- Recents panel -->
     <string name="recents_title">Son uygulamalar</string>
-    <string name="recents_summary">Konumu temizleme tuşu ve bazı sürükleyici stili</string>
+    <string name="recents_summary">Uygulama temizleme tuşu stilleri</string>
 
     <!-- Status bar -->
     <string name="statusbar_title">Durum çubuğu</string>
-    <string name="statusbar_summary">Sistem simgelerini ve ağ trafiğini gizle veya göster</string>
+    <string name="statusbar_summary">Sistem simgelerini ve ağ trafiğini gizleme</string>
 
     <!-- Other categories -->
     <string name="buttons_title">Tuşlar</string>
@@ -117,7 +117,7 @@
     <string name="incall_vibrate_disconnect_title">Bağlantı kesildiğinde titre</string>
 
     <!-- Lock screen weather -->
-    <string name="ls_weather_title">Kilit ekranında hava durumu</string>
+    <string name="ls_weather_title">Hava durumu</string>
     <string name="weather_show_weather_title">Hava durumunu göster</string>
     <string name="weather_show_weather_summary">Hava durumu bilgilerini gösterme özelliği</string>
     <string name="weather_show_location_title">Konumu göster</string>
@@ -127,7 +127,7 @@
 
     <!-- Wake And Unlock -->
     <string name="fp_wake_and_unlock_title">Uyandırma ve kilit açma</string>
-    <string name="fp_wake_and_unlock_summary">Bunu devre dışı bırakmak, parmak izi sensörünün yalnızca ekran açıkken çalışmasını sağlar.</string>
+    <string name="fp_wake_and_unlock_summary">Bunu devre dışı bırakmak parmak izi sensörünün yalnızca ekran açıkken çalışmasını sağlar</string>
 
     <!-- Status bar tuner -->
     <string name="statusbar_items_title">Durum çubuğu öğeleri</string>
@@ -173,7 +173,7 @@
 
     <!-- Button backlight -->
     <string name="button_backlight_on_touch_only_title">Arka ışık</string>
-    <string name="button_backlight_on_touch_only_summary">Arka ışığı sadece tuş üzerindeki zaman aşımıyla etkinleştir</string>
+    <string name="button_backlight_on_touch_only_summary">Arka ışığı sadece zaman aşımıyla etkinleştir</string>
 
     <!-- Incall home button behavior -->
     <string name="allow_incall_home_title">Zil sesi</string>
@@ -211,7 +211,7 @@
     <string name="hide_apps_from_recents_summary">Son uygulamalar panelinden hariç tutulacak uygulamaları seçin</string>
 
     <!-- CPU info -->
-    <string name="show_cpu_info">İşlemci bilgisini göster</string>
+    <string name="show_cpu_info">İşlemci bilgisi</string>
 
     <!-- Usage summary -->
     <string name="show_cpu_info_summary">Geçerli işlemci bilgisini gösteren ekran paylaşımı</string>
@@ -688,7 +688,7 @@
     <string name="notification_sound_vib_screen_on_summary">Ekran açıkken bildirimler için ses ve titreşim kullan</string>
 
     <!-- Lock Clock Fonts -->
-    <string name="lock_clock_font_title">Saat yazı tipi seçenekleri</string>
+    <string name="lock_clock_font_title">Saat yazı tipi</string>
     <string name="lock_clock_font_summary">Kilit ekranı saat widgeti\'nin varsayılan yazı tipini değiştirme</string>
     <string name="lock_clock_font_dialog_title">Saat yazı tipi seçin</string>
     <string name="lock_clock_font_stock">Normal (varsayılan)</string>
@@ -783,11 +783,11 @@
     <!-- Carbon gestures -->
     <string name="carbon_gesture_preference_title">Carbon hareketleri</string>
     <string name="carbon_gestures_summary">Özel genel hareketleri yapılandır</string>
-    <string name="carbon_gestures_fingers_title">Parmakları hareketler için kullan</string>
+    <string name="carbon_gestures_fingers_title">Parmak hareketleri için kullan</string>
     <string name="carbon_gestures_right_title">Sağ hareket</string>
     <string name="carbon_gestures_left_title">Sol hareket</string>
     <string name="carbon_gestures_up_title">Yukarı hareket</string>
-    <string name="carbon_gestures_down_title">Aşşağı hareket</string>
+    <string name="carbon_gestures_down_title">Aşağı hareket</string>
     <string name="carbon_gesture_disabled">Devre dışı</string>
     <string name="carbon_gesture_back">Geri</string>
     <string name="carbon_gesture_home">Ana ekran</string>
@@ -840,10 +840,13 @@
     <string name="lockscreen_clock_selection_analog_deadpool">Analog (deadpool)</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
     <string name="lockscreen_clock_selection_sammy_bold">Sammy (kalın)</string>
+    <string name="lockscreen_clock_selection_small">Küçük dijital</string>
+    <string name="lockscreen_clock_selection_analog_spidey">Analog (örümcek)</string>
     <string name="show_lockscreen_date_title">Tarih widgeti</string>
     <string name="show_lockscreen_date_summary">Tarih widgeti\'ni kilit ekranında göster</string>
     <string name="lockscreen_date_selection_title">Tarih stili</string>
-    <string name="lockscreen_date_selection_default">Varsayılan</string>
+    <string name="lockscreen_date_selection_default_aosp">Varsayılan</string>
+    <string name="lockscreen_date_selection_default">Varsayılan (büyük boy)</string>
     <string name="lockscreen_date_selection_str_box">Yarı şeffaf kutu</string>
     <string name="lockscreen_date_selection_str_round">Yarı şeffaf kutu (yuvarlak)</string>
     <string name="show_lockscreen_alarm_title">Alarm widgeti</string>
@@ -935,5 +938,21 @@
     <string name="omniswitch_first_time_title">Bilgiler</string>
     <string name="omniswitch_first_time_message">OmniSwitch'i etkinleştirdiğinizden emin olun. Bunu aşağıdaki \"Ayarları\" kullanarak yapabilirsiniz.</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
+
+    <!-- QS edit icon -->
+    <string name="qs_edit_title">Düzenleme simgesi</string>
+    <string name="qs_edit_summary">Başlıkta düzenleme simgesini devre dışı bırak</string>
+
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Bildirimleri genişletmeye zorla</string>
+    <string name="force_expanded_notifications_summary">Yalnızca genişletilmiş bildirimleri destekleyen uygulamalar için kullanılabilir</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Parmak izi ile kilit açma</string>
+    <string name="fp_unlock_keystore_summary">PIN/Şifre/Desen olmadan yeniden başlatıldıktan sonra parmak izi ile cihazın kilidini açın\nNot: kendi sorumluluğunuzda kullanın!</string>
+
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Bildirim sayısı</string>
+    <string name="status_bar_notif_count_summary">Bekleyen bildirimlerin sayısını görüntüle</string>
 
 </resources>
