@@ -34,6 +34,7 @@ import com.android.settings.gestures.GestureSettings;
 import com.liquid.liquidlounge.PagerSlidingTabStrip;
 import com.liquid.liquidlounge.fragments.CarbonGesturesSettings;
 import com.liquid.liquidlounge.fragments.GesturesSettings;
+import com.liquid.liquidlounge.fragments.EdgeGesturesSettings;
 
 public class GesturesTab extends SettingsPreferenceFragment {
 
@@ -75,6 +76,7 @@ public class GesturesTab extends SettingsPreferenceFragment {
             frags[0] = new GesturesSettings();
             frags[1] = new GestureSettings();
             frags[2] = new CarbonGesturesSettings();
+            frags[3] = new EdgeGesturesSettings();
         }
 
         @Override
@@ -98,7 +100,8 @@ public class GesturesTab extends SettingsPreferenceFragment {
         titleString = new String[]{
                 getString(R.string.gestures_title),
                 getString(R.string.gesture_preference),
-                getString(R.string.carbon_gesture_preference_title)};
+                getString(R.string.carbon_gesture_preference_title),
+                getString(R.string.edge_gestures_title)};
 
         return titleString;
     }
