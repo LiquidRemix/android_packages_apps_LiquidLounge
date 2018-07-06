@@ -116,7 +116,8 @@ public class CustomActionListAdapter extends BaseAdapter {
 
         ActionConfig config = getItem(position);
         holder.title.setText(config.getLabel());
-        holder.icon.setBackgroundResource(isUsingWhiteAccent() ? R.drawable.fab_white : R.drawable.fab_accent);
+//        holder.icon.setBackgroundResource(isUsingWhiteAccent() ? R.drawable.fab_white : R.drawable.fab_accent);
+        holder.icon.setBackgroundResource(R.drawable.fab_accent);
         holder.icon.setImageDrawable(config.getDefaultIcon(ctx));
         holder.summary.setVisibility(View.GONE);
 
