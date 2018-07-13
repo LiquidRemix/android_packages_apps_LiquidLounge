@@ -887,6 +887,8 @@
     <string name="qs_running_services_title">Running services icon</string>
     <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
 
+    <string name="volume_dialog_dim">Volume dialog dim background amount</string>
+
     <!-- System theme -->
     <string name="accent_picker_dialog_title">Select an accent color</string>
     <string name="theme_accent_picker_title">Accent color</string>
