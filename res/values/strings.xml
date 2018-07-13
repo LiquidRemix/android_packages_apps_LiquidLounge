@@ -975,7 +975,7 @@
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
     <!-- Gesture anywhere -->
-    <string name="gesture_anywhere_title">Anywhere</string>
+    <string name="gesture_anywhere_title">Gesture Anywhere</string>
     <string name="gesture_anywhere_summary">Launch activities by drawing gestures on the screen</string>
     <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
     <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
