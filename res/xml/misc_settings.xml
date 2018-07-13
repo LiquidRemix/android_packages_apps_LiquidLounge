@@ -59,6 +59,11 @@
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="transparent_volume_dialog_dim"
+        android:title="@string/volume_dialog_dim"
+        android:defaultValue="false" />
+
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="show_cpu_overlay"
         android:title="@string/show_cpu_info"
