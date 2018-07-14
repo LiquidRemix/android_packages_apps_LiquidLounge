@@ -344,7 +344,7 @@
     <string name="three_finger_gesture_summary">Ekran görüntüsü almak için üç parmağınızı ekran üzerinde kaydırın</string>
 
     <!-- Gesture preference -->
-    <string name="gesture_preference">Aosp hareketleri</string>
+    <string name="gesture_preference">Aosp</string>
 
     <!-- Quick settings headers -->
     <string name="status_bar_header_title">Başlıklar</string>
@@ -481,7 +481,7 @@
     <string name="fling_keyboard_cursors_title">Dinamik klavye imleçleri eylemi</string>
     <string name="fling_keyboard_cursors_summary">Klavye açıksa sola ve sağa iki kez hafifçe vurun, sol ve sağ klavye imleç hareketi işlemleri gerçekleşir</string>
     <string name="fling_logo_opacity_title">Fling logo şeffaflığı</string>
-  	<string name="fling_factory_reset_title">Varsayılana sıfırla</string>
+    <string name="fling_factory_reset_title">Varsayılana sıfırla</string>
     <string name="fling_factory_reset_confirm">Fling\'i varsayılan ayarlarına sıfırlamak istediğinizden emin misiniz?</string>
     <string name="fling_backup_current_config_title">Profili kaydet</string>
     <string name="fling_restore_config_title">Profili geri yükle</string>
@@ -520,8 +520,8 @@
     <string name="fling_lavalamp_color_to">Lav lambası son rengi</string>
     <string name="pulse_colors_reset_title">Pulse renklerini sıfırla</string>
     <string name="pulse_colors_reset_message">Bu renkleri varsayılana sıfırlamak istediğinize emin misiniz?</string>
-   	<string name="fling_smoothing_enabled_title">Yumuşatmayı aç</string>
-   	<string name="fling_smoothing_enabled_summary">Her çubuk daha sorunsuz animasyonlu</string>
+    <string name="fling_smoothing_enabled_title">Yumuşatmayı aç</string>
+    <string name="fling_smoothing_enabled_summary">Her çubuk daha sorunsuz animasyonlu</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Çubuk genişliği</string>
@@ -618,7 +618,7 @@
     <string name="pref_scrollingcache_default_disable">Varsayılan devre dışı</string>
     <string name="pref_scrollingcache_force_disable">Zorla devre dışı</string>
 
-	<!-- Custom carrier label and position -->
+    <!-- Custom carrier label and position -->
     <string name="carrier_label_title">Operatör etiketi</string>
     <string name="custom_carrier_label_title">Liquid operatör etiketi</string>
     <string name="custom_carrier_label_explain">Özel bir etiket girin. Ağ adınızı kullanmak için boş bırakın</string>
@@ -629,11 +629,11 @@
     <string name="show_carrier_statusbar">Durum çubuğu</string>
     <string name="show_carrier_enabled">Etkin</string>
 
-	<!-- Pocket judge -->
+    <!-- Pocket judge -->
     <string name="pocket_judge_title">Cep algılama</string>
     <string name="pocket_judge_summary">Cihaz cebinizde olduğunda ekran ve tuş girişlerini engelle</string>
 
-	<!-- Less Notification sounds -->
+    <!-- Less Notification sounds -->
     <string name="less_notification_sounds_title">Daha az sıklıkta bildirim sesleri</string>
     <string name="less_notification_sounds_summary">Her uygulamanın bildirim sesini belirlenen süre başına yalnızca bir kez oynat</string>
     <string name="less_notification_sounds_default">Varsayılan</string>
@@ -725,7 +725,7 @@
     <string name="notification_guts_kill_app_button_summary">Bildirimlere uzun basma menüsünde uygulama sonlandırma tuşunu göster</string>
 
     <!-- Allow vibration instead of beep for in-call notifications -->
-	<string name="incall_notifications_vibrate">Ses yerine titreşim</string>
+    <string name="incall_notifications_vibrate">Ses yerine titreşim</string>
     <string name="incall_notifications_vibrate_summary">Arama içi bildirimler için bir ses çalmak yerine titret</string>
 
     <!-- Screen off animation -->
@@ -738,7 +738,7 @@
     <!-- On-The-Go -->
     <string name="onthego_title">Yürüme modu</string>
     <string name="global_actions_onthego_title">Yürüme</string>
-    <string name="onthego_alpha_title">Yürüme Alpha</string>
+    <string name="onthego_alpha_title">Yürüme alpha</string>
     <string name="onthego_alpha_summary">Yürüme kaplamasına ait alpha değeri.</string>
 
     <!-- QS Panel Opacity -->
@@ -781,7 +781,7 @@
     <string name="system_default_animation_summary">Android P \"Varsayılan\" animasyonları etkinleştir</string>
 
     <!-- Carbon gestures -->
-    <string name="carbon_gesture_preference_title">Carbon hareketleri</string>
+    <string name="carbon_gesture_preference_title">Carbon</string>
     <string name="carbon_gestures_summary">Özel genel hareketleri yapılandır</string>
     <string name="carbon_gestures_fingers_title">Parmak hareketleri için kullan</string>
     <string name="carbon_gestures_right_title">Sağ hareket</string>
@@ -954,5 +954,44 @@
     <!-- Notification count -->
     <string name="status_bar_notif_count_title">Bildirim sayısı</string>
     <string name="status_bar_notif_count_summary">Bekleyen bildirimlerin sayısını görüntüle</string>
+
+    <!-- Gesture anywhere -->
+    <string name="gesture_anywhere_title">Her yerde hareket</string>
+    <string name="gesture_anywhere_summary">Ekranda hareketler çizerek aktiviteler başlatın</string>
+    <string name="gesture_anywhere_enabled_title">Her yerde hareket</string>
+    <string name="gesture_anywhere_enabled_summary">Her yerde hareket özelliğini etkinleştir</string>
+    <string name="gesture_anywhere_position_title">Konum</string>
+    <string name="gesture_anywhere_position_left">Sol kenar</string>
+    <string name="gesture_anywhere_position_right">Sağ kenar</string>
+    <string name="gesture_anywhere_gestures_title">Hareketler</string>
+    <string name="gesture_anywhere_gestures_summary">Hareketleri ekle, kaldır veya düzenle</string>
+    <string name="ga_button_add">Hareket ekle</string>
+    <string name="ga_button_reload">Tekrar yükle</string>
+    <string name="ga_button_discard">Tekrar atla</string>
+    <string name="ga_button_done">Bitti</string>
+    <string name="ga_prompt_gesture_name">İsim</string>
+    <string name="ga_error_missing_name">Bir isim girmelisiniz</string>
+    <string name="ga_save_success">Hareket %s kaydedildi</string>
+    <string name="ga_rename_action">Tamam</string>
+    <string name="ga_cancel_action">İptal</string>
+    <string name="ga_gestures_loading">Hareketler yükleniyor...</string>
+    <string name="ga_gestures_empty">Hareket yok</string>
+    <string name="ga_gestures_activity">Hareketler</string>
+    <string name="ga_gestures_edit">Düzenle</string>
+    <string name="ga_gestures_delete">Sil</string>
+    <string name="ga_gestures_delete_success">Hareket silindi</string>
+    <string name="ga_gestures_rename_title">Hareketi yeniden adlandır</string>
+    <string name="ga_gestures_rename_label">Hareket adı</string>
+    <string name="ga_gestures_error_loading">%s yüklenemedi. Depolama alanınızın mevcut olduğundan emin olun.</string>
+    <string name="trigger_category">Tetik bölgesi</string>
+    <string name="trigger_width_title">Tetik genişliği</string>
+    <string name="trigger_width_summary">Tetik alanının genişliğini ayarlayın</string>
+    <string name="trigger_top_title">Tetik konumu</string>
+    <string name="trigger_top_summary">Tetik alanının dikey konumunu ayarlayın</string>
+    <string name="trigger_bottom_title">Tetik yüksekliği</string>
+    <string name="trigger_bottom_summary">Tetik bölgesinin yüksekliğini ayarlayın</string>
+
+    <!-- Volume dialog dim -->
+    <string name="volume_dialog_dim">Ses iletişim kutusunun arkaplan miktarını kısar</string>
 
 </resources>
