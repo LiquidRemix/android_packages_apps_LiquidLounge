@@ -1060,4 +1060,11 @@
     <string name="use_bottom_gesture_title">Use swipe up gestures for navigation</string>
     <string name="use_bottom_gesture_summary">Works only with navigation bar disable</string>
 
+    <!-- QS Tile Theme/Tinting -->
+    <string name="qs_tile_theme_title">QS Tile Accents</string>
+    <string name="qs_tile_theme_summary">It will enable Device Accent on QS Tiles n Titles</string>
+
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_toast">This feature requires a SystemUI restart to be applied. Restart SystemUI now?</string>
+
 </resources>

@@ -82,6 +82,12 @@
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="qs_tile_tinting_enable"
+        android:title="@string/qs_tile_theme_title"
+        android:summary="@string/qs_tile_theme_summary"
+        android:defaultValue="true" />
+
     <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
         android:key="qs_panel_alpha"
         android:title="@string/qs_panel_alpha_title"

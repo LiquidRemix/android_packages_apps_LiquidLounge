@@ -25,10 +25,12 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.content.ContentResolver;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -36,6 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
 import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
+import com.liquid.liquidlounge.preferences.Utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,6 +58,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String FILE_HEADER_SELECT = "file_header_select";
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
+    private static final String QS_TILE_TINTING = "qs_tile_tinting_enable";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
@@ -71,6 +75,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private Preference mFileHeader;
     private String mFileHeaderProvider;
     private CustomSeekBarPreference mQsPanelAlpha;
+    private SwitchPreference mEnableQsTileTinting;
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
@@ -88,6 +93,7 @@ public class QuickSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.qs_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+	ContentResolver resolver = getActivity().getContentResolver();
 
         mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
         mFileHeaderProvider = getResources().getString(R.string.file_header_provider);
@@ -134,6 +140,12 @@ public class QuickSettings extends SettingsPreferenceFragment
         mQsPanelAlpha.setValue(qsPanelAlpha);
         mQsPanelAlpha.setOnPreferenceChangeListener(this);
 
+        //QS Tile Theme
+        mEnableQsTileTinting = (SwitchPreference) findPreference(QS_TILE_TINTING);
+        mEnableQsTileTinting.setChecked(Settings.System.getInt(resolver,
+                Settings.System.QS_TILE_TINTING_ENABLE, 1) == 1);
+        mEnableQsTileTinting.setOnPreferenceChangeListener(this);
+
 		mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
         int tileAnimationStyle = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.ANIM_TILE_STYLE, 0, UserHandle.USER_CURRENT);
@@ -172,6 +184,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
 	@Override
     public boolean onPreferenceTreeClick(Preference preference) {
+	ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mFileHeader) {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
@@ -214,6 +227,11 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
                     UserHandle.USER_CURRENT);
+        } else if (preference == mEnableQsTileTinting) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_TILE_TINTING_ENABLE, value ? 1 : 0);
+             Utils.restartSystemUi(getContext());
         } else if (preference == mTileAnimationStyle) {
 		    int tileAnimationStyle = Integer.valueOf((String) newValue);
 		    Settings.System.putIntForUser(getContentResolver(),
