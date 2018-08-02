@@ -888,7 +888,7 @@
     <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
 
     <!-- Volume dialog dim -->
-    <string name="volume_dialog_dim">Volume dialog dim background amount</string>
+    <string name="volume_dialog_dim">Volume dialog dim background</string>
 
     <!-- System theme -->
     <string name="accent_picker_dialog_title">Select an accent color</string>
@@ -966,7 +966,7 @@
     <string name="qs_edit_summary">Disable the tile edit icon in the footer</string>
 
     <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_title">Force expanded notifications</string>
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
 
     <!-- Fingerprint unlock keystore -->
@@ -978,10 +978,10 @@
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
     <!-- Gesture anywhere -->
-    <string name="gesture_anywhere_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_title">Gesture anywhere</string>
     <string name="gesture_anywhere_summary">Launch activities by drawing gestures on the screen</string>
-    <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
-    <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
+    <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the gesture anywhere feature</string>
     <string name="gesture_anywhere_position_title">Location</string>
     <string name="gesture_anywhere_position_left">Left edge</string>
     <string name="gesture_anywhere_position_right">Right edge</string>
@@ -1049,20 +1049,20 @@
     <string name="gesture_anywhere_64">64px</string>
     <string name="gesture_anywhere_68">68px</string>
 
-    <!-- Circle app bar -->
+    <!-- App circle bar -->
     <string name="category_app_circle_bar_title">App launcher</string>
-    <string name="app_circle_bar_title">App Circle Bar</string>
-    <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
+    <string name="app_circle_bar_title">App circle bar</string>
+    <string name="app_circle_bar_summary">Show circle app launcher after touching right side</string>
     <string name="app_circle_bar_included_apps_title">Included apps</string>
     <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
 
-    <!-- Bottom Navigations -->
+    <!-- Bottom navigations -->
     <string name="use_bottom_gesture_title">Use swipe up gestures for navigation</string>
     <string name="use_bottom_gesture_summary">Works only with navigation bar disable</string>
 
-    <!-- QS Tile Theme/Tinting -->
-    <string name="qs_tile_theme_title">QS Tile Accents</string>
-    <string name="qs_tile_theme_summary">It will enable Device Accent on QS Tiles n Titles</string>
+    <!-- QS tile accents -->
+    <string name="qs_tile_theme_title">QS tile accents</string>
+    <string name="qs_tile_theme_summary">It will enable device accent on QS tiles</string>
 
     <!-- SystemUI Restart -->
     <string name="systemui_restart_toast">This feature requires a SystemUI restart to be applied. Restart SystemUI now?</string>

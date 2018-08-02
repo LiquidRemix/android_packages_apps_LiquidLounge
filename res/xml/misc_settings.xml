@@ -20,12 +20,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/misc_title">
 
-    <ListPreference
-        android:key="screen_off_animation"
-        android:title="@string/screen_off_animation_title"
-        android:entries="@array/screen_off_animation_entries"
-        android:entryValues="@array/screen_off_animation_values"
-        android:persistent="false"/>
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
 
 	<ListPreference
         android:key="pref_scrollingcache"
@@ -35,11 +34,12 @@
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />	
 
-    <PreferenceScreen
-        android:key="app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary"
-        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
+    <ListPreference
+        android:key="screen_off_animation"
+        android:title="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values"
+        android:persistent="false"/>
 
 	<com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="system_default_animation"
@@ -65,15 +65,15 @@
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="transparent_volume_dialog_dim"
-        android:title="@string/volume_dialog_dim"
-        android:defaultValue="false" />
-
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="show_cpu_overlay"
         android:title="@string/show_cpu_info"
         android:summary="@string/show_cpu_info_summary" 
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="transparent_volume_dialog_dim"
+        android:title="@string/volume_dialog_dim"
         android:defaultValue="false" />
 
 </PreferenceScreen>
