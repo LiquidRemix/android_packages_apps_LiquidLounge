@@ -43,4 +43,8 @@
     <string name="longpress_info">Удерживайте, чтобы сохранить цвет</string>
     <string name="set">Выбрать</string>
     <string name="color_default">По умолчанию</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Информация о зарядке</string>
+    <string name="lockscreen_battery_info_summary">Отображение тока зарядки, вольтажа, температуры батареи на экране блокировки</string>
 </resources>
