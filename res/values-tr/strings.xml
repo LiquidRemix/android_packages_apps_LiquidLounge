@@ -75,7 +75,7 @@
     <string name="color_default">Varsayılan</string>
 
     <!-- MTP dirty hack -->
-    <string name="enable_mtp_dirtyhack_title">MTP yerine şarj</string>
+    <string name="enable_mtp_dirtyhack_title">Şarj yerine MTP</string>
     <string name="enable_mtp_dirtyhack_summary">PC ye bağlandıktan sonra MTP\'yi etkinleştir</string>
 
     <!-- Wakelock blocker -->
@@ -599,11 +599,11 @@
     <string name="hardware_keys_disable_title">Tuşları devre dışı bırak</string>
 
     <!-- ANBI -->
-    <string name="anbi_title">Yanlış dokunma</string>
+    <string name="anbi_title">Yanlışlıkla dokunma</string>
     <string name="anbi_summary">Ekrana dokunulduğunda gezinme tuşları ile etkileşimi önle</string>
 
     <!-- QS haptic feedback -->
-    <string name="quick_settings_vibrate_title">Dokunmada titreşim</string>
+    <string name="quick_settings_vibrate_title">Dokunulduğunda titreşim</string>
     <string name="quick_settings_vibrate_summary">Hızlı ayarlar karelerine dokunulduğunda titret</string>
 
     <!-- QS footer warnings -->
@@ -717,8 +717,8 @@
     <string name="battery_style_hidden">Gizli</string>
     <string name="show_battery_percent_title">Pil yüzdesini göster</string>
     <string name="battery_percent_none">Gösterme</string>
-    <string name="battery_percent_outside">Simge içinde göster</string>
-    <string name="battery_percent_inside">Simge yanında göster</string>
+    <string name="battery_percent_outside">Simge yanında göster</string>
+    <string name="battery_percent_inside">Simge içinde göster</string>
 
     <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">Uygulama sonlandırma tuşu</string>
@@ -736,8 +736,8 @@
     <string name="screen_off_animation_title">Ekran kapanma animasyonu</string>
 
     <!-- On-The-Go -->
-    <string name="onthego_title">Yürüme modu</string>
-    <string name="global_actions_onthego_title">Yürüme</string>
+    <string name="onthego_title">Yürüme</string>
+    <string name="global_actions_onthego_title">Yürüme modu</string>
     <string name="onthego_alpha_title">Yürüme alpha</string>
     <string name="onthego_alpha_summary">Yürüme kaplamasına ait alpha değeri.</string>
 
@@ -992,6 +992,24 @@
     <string name="trigger_bottom_summary">Tetik bölgesinin yüksekliğini ayarlayın</string>
 
     <!-- Volume dialog dim -->
-    <string name="volume_dialog_dim">Ses iletişim kutusunun arkaplan miktarını kısar</string>
+    <string name="volume_dialog_dim">Sesli iletişim kutusunun arkaplan miktarını azalt</string>
+
+    <!-- Circle app bar -->
+    <string name="category_app_circle_bar_title">Uygulama başlatıcısı</string>
+    <string name="app_circle_bar_title">Uygulama daire çubuğu</string>
+    <string name="app_circle_bar_summary">Ekranın sağ tarafına dokunduktan sonra daire uygulaması başlatıcısını göster</string>
+    <string name="app_circle_bar_included_apps_title">Dahil edilen uygulamalar</string>
+    <string name="app_circle_bar_included_apps_summary">Uygulamalar daire çubuğunda gösterilecek</string>
+
+    <!-- Bottom navigations -->
+    <string name="use_bottom_gesture_title">Gezinme için yukarı hareketleri kullan</string>
+    <string name="use_bottom_gesture_summary">Çalışması için gezinme çubuğunu devre dışı bırakın</string>
+
+    <!-- QS tile accents -->
+    <string name="qs_tile_theme_title">Kare renkleri</string>
+    <string name="qs_tile_theme_summary">Hızlı ayarlar karelerinde vurgu renklerini etkinleştir</string>
+ 
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_toast">Bu özelliğin etkin olması için sistem arayüzünü yeniden başlatma gerekir. Şimdi sistem arayüzünü yeniden başlatacağız.</string>
 
 </resources>
