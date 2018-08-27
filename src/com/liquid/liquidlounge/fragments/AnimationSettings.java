@@ -69,11 +69,15 @@ public class AnimationSettings extends SettingsPreferenceFragment
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
 
     private ListPreference mScreenOffAnimation;
     private ListPreference mToastAnimation;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mScrollingCachePref;
     private SystemSettingSeekBarPreference mAnimDuration;
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
@@ -134,6 +138,13 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
         mListViewInterpolator.setEnabled(listviewanimation > 0);
         mListViewInterpolator.setOnPreferenceChangeListener(this);
+
+        // Scrolling cache
+        mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setSummary(mScrollingCachePref.getEntry());
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
 
         mAnimDuration = (SystemSettingSeekBarPreference) findPreference(ANIMATION_DURATION);
         int animdef = Settings.System.getInt(resolver,
@@ -258,6 +269,12 @@ public class AnimationSettings extends SettingsPreferenceFragment
             Settings.System.putInt(resolver,
                     Settings.System.LISTVIEW_INTERPOLATOR, value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+            return true;
+        } else if (preference == mScrollingCachePref) {
+            String value = (String) newValue;
+            int index = mScrollingCachePref.findIndexOfValue(value);
+            SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, value);
+            mScrollingCachePref.setSummary(mScrollingCachePref.getEntries()[index]);
             return true;
         } else if (preference == mAnimDuration) {
             int value = (Integer) newValue;
@@ -402,6 +419,7 @@ public class AnimationSettings extends SettingsPreferenceFragment
         Settings.System.putInt(resolver,
                 Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], 0);
         Animations.reset(mContext);
+        SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT);
     }
 
     @Override
