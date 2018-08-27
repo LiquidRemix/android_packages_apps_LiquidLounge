@@ -74,6 +74,7 @@ public class AnimationSettings extends SettingsPreferenceFragment
     private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
+    private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
 
     private ListPreference mScreenOffAnimation;
     private ListPreference mToastAnimation;
@@ -82,6 +83,7 @@ public class AnimationSettings extends SettingsPreferenceFragment
     private ListPreference mScrollingCachePref;
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
+    private ListPreference mTileAnimationInterpolator;
     private SystemSettingSeekBarPreference mAnimDuration;
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
@@ -166,6 +168,15 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
         updateTileAnimationDurationSummary(tileAnimationDuration);
         mTileAnimationDuration.setOnPreferenceChangeListener(this);
+
+        // QS interpolator
+        mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
+        mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
+        int tileAnimationInterpolator = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.ANIM_TILE_INTERPOLATOR, 0, UserHandle.USER_CURRENT);
+        mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
+        updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
+        mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
         mAnimDuration = (SystemSettingSeekBarPreference) findPreference(ANIMATION_DURATION);
         int animdef = Settings.System.getInt(resolver,
@@ -311,6 +322,12 @@ public class AnimationSettings extends SettingsPreferenceFragment
                     tileAnimationDuration, UserHandle.USER_CURRENT);
             updateTileAnimationDurationSummary(tileAnimationDuration);
             return true;
+        } else if (preference == mTileAnimationInterpolator) {
+            int tileAnimationInterpolator = Integer.valueOf((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
+                    tileAnimationInterpolator, UserHandle.USER_CURRENT);
+            updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
+            return true;
         } else if (preference == mAnimDuration) {
             int value = (Integer) newValue;
             Settings.System.putInt(resolver,
@@ -398,6 +415,12 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mTileAnimationDuration.setSummary(getResources().getString(R.string.qs_set_animation_duration, prefix));
     }
 
+    private void updateTileAnimationInterpolatorSummary(int tileAnimationInterpolator) {
+        String prefix = (String) mTileAnimationInterpolator.getEntries()[mTileAnimationInterpolator.findIndexOfValue(String
+                .valueOf(tileAnimationInterpolator))];
+        mTileAnimationInterpolator.setSummary(getResources().getString(R.string.qs_set_animation_interpolator, prefix));
+    }
+
     private String getProperSummary(Preference preference) {
         String mString = "";
         if (preference == mActivityOpenPref) {
@@ -443,6 +466,8 @@ public class AnimationSettings extends SettingsPreferenceFragment
                 Settings.System.ANIM_TILE_STYLE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.ANIM_TILE_DURATION, 2000, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.ANIM_TILE_INTERPOLATOR, 0, UserHandle.USER_CURRENT);
         Settings.System.putInt(resolver,
                 Settings.System.DISABLE_TRANSITION_ANIMATIONS, 0);
         Settings.System.putInt(resolver,
