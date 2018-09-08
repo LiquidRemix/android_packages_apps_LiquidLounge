@@ -20,22 +20,28 @@
     android:title="@string/statusbar_title">
 
     <Preference
-            android:title="@string/statusbar_items_title" >
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+       android:title="@string/statusbar_items_title" >
+       <intent android:action="android.intent.action.MAIN"
+           android:targetPackage="com.android.systemui"
+           android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
     <Preference
-            android:key="battery_settings"
-            android:title="@string/battery_style_category_title"
-            android:fragment="com.liquid.liquidlounge.fragments.StatusBarBattery" />
+        android:key="battery_settings"
+        android:title="@string/battery_style_category_title"
+        android:fragment="com.liquid.liquidlounge.fragments.StatusBarBattery" />
+
+    <Preference
+        android:key="clock_settings"
+        android:title="@string/clock_style_category_title"
+        android:summary="@string/clock_style_category_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.ClockSettings" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="adb_notify"
-            android:title="@string/adb_notify"
-            android:summary="@string/adb_notify_summary"
-            android:defaultValue="true" />
+        android:key="adb_notify"
+        android:title="@string/adb_notify"
+        android:summary="@string/adb_notify_summary"
+        android:defaultValue="true" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="network_traffic_state"
