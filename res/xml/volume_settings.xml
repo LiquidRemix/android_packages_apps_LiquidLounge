@@ -27,6 +27,12 @@
         android:fragment="com.liquid.liquidlounge.fragments.VolumeSteps" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="volume_button_music_control"
         android:summary="@string/volume_rocker_music_controls_summary"
         android:title="@string/volume_rocker_music_controls_title"
