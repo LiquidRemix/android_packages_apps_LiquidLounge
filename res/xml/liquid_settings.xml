@@ -20,7 +20,7 @@
     android:title="@string/app_settings_title">
 
     <!-- Buttons -->
-    <PreferenceScreen
+    <Preference
         android:key="button_category"
         android:title="@string/button_title"
         android:summary="@string/button_summary"
@@ -28,7 +28,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.ButtonSettings" />
 
     <!-- Gestures -->
-    <PreferenceScreen
+    <Preference
         android:key="gesture_category"
         android:title="@string/gesture_title"
         android:summary="@string/gesture_summary"
@@ -36,7 +36,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.GestureSettings" />
 
     <!-- Lock screen -->
-    <PreferenceScreen
+    <Preference
         android:key="lockscreen_category"
         android:title="@string/lockscreen_title"
         android:summary="@string/lockscreen_summary"
@@ -44,7 +44,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.LockScreenSettings" />
 
     <!-- Miscellaneous -->
-    <PreferenceScreen
+    <Preference
         android:key="misc_category"
         android:title="@string/misc_title"
         android:summary="@string/misc_summary"
@@ -52,7 +52,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.MiscSettings" />
 
     <!-- Navigation -->
-    <PreferenceScreen
+    <Preference
         android:key="navigation_category"
         android:title="@string/navigation_title"
         android:summary="@string/navigation_summary"
@@ -60,7 +60,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.NavigationSettings" />
 
     <!-- Notifications -->
-    <PreferenceScreen
+    <Preference
         android:key="notification_category"
         android:title="@string/notification_title"
         android:summary="@string/notification_summary"
@@ -68,7 +68,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.NotificationSettings" />
 
     <!-- Power menu -->
-    <PreferenceScreen
+    <Preference
         android:key="powermenu__category"
         android:title="@string/powermenu_title"
         android:summary="@string/powermenu_summary"
@@ -76,7 +76,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.PowerMenuSettings" />
 
     <!-- Quick settings -->
-    <PreferenceScreen
+    <Preference
         android:key="quicksettings_category"
         android:title="@string/quicksettings_title"
         android:summary="@string/quicksettings_summary"
@@ -84,7 +84,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.QuickSettings" />
 
     <!-- Recents panel -->
-    <PreferenceScreen
+    <Preference
         android:key="recents_category"
         android:title="@string/recents_title"
         android:summary="@string/recents_summary"
@@ -92,7 +92,7 @@
         android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings" />
 
     <!-- Status bar -->
-    <PreferenceScreen
+    <Preference
         android:key="statusbar_category"
         android:title="@string/statusbar_title"
         android:summary="@string/statusbar_summary"
