@@ -60,7 +60,7 @@
 
     <Preference
         android:key="clock_settings"
-        android:title="@string/clock_style_category_title"
+        android:title="@string/status_bar_clock_title"
         android:fragment="com.liquid.liquidlounge.fragments.ClockSettings" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
