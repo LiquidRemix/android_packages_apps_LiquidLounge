@@ -40,22 +40,25 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.liquid.liquidlounge.preferences.Utils;
 
-public class LockScreenSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class LockScreenSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String KEY_FACE_AUTO_UNLOCK = "face_auto_unlock";
     private static final String KEY_FACE_UNLOCK_PACKAGE = "com.android.facelock";
     private static final String LOCK_SCREEN_VISUALIZER_CUSTOM_COLOR = "lock_screen_visualizer_custom_color";
+    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFaceUnlock;
     private ColorPickerPreference mVisualizerColor;
+    ListPreference mLockClockFonts;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
         addPreferencesFromResource(R.xml.lockscreen_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
@@ -90,6 +93,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         mVisualizerColor.setNewPreviewColor(visColor);
         mVisualizerColor.setAlphaSliderEnabled(true);
         mVisualizerColor.setOnPreferenceChangeListener(this);
+
+        // Lockscren Clock Fonts
+        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
+        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 17)));
+        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+        mLockClockFonts.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -111,6 +121,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.LOCK_SCREEN_VISUALIZER_CUSTOM_COLOR, intHex);
             preference.setSummary(hex);
+            return true;
+        } else if (preference == mLockClockFonts) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONTS,
+                    Integer.valueOf((String) newValue));
+            mLockClockFonts.setValue(String.valueOf(newValue));
+            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
             return true;
         }
         return false;
