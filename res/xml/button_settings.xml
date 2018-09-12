@@ -17,6 +17,12 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/powermenu_title">
+    android:title="@string/button_title">
+
+    <PreferenceScreen
+        android:key="volume_key"
+    	 android:title="@string/volume_title"
+    	 android:summary="@string/volume_summary"
+    	 android:fragment="com.liquid.liquidlounge.fragments.VolumeRockerSettings" />
 
 </PreferenceScreen>

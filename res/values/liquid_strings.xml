@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The Liquid Remix Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App title -->
+    <string name="app_settings_title">Liquid Lounge</string>
+
+    <!-- Buttons -->
+    <string name="button_title">Buttons</string>
+    <string name="button_summary">Use hardware keys or control volume rocker switch</string>
+
+    <!-- Gestures -->
+    <string name="gesture_title">Gestures</string>
+    <string name="gesture_summary">Quick gestures to perform actions on your device</string>
+
+    <!-- Lock screen -->
+    <string name="lockscreen_title">Lock screen</string>
+    <string name="lockscreen_summary">Customize weather service or change shortcuts</string>
+
+    <!-- Miscellaneous -->
+    <string name="misc_title">Miscellaneous</string>
+    <string name="misc_summary">App ops security and block alarms or wakelocks</string>
+
+    <!-- Navigation -->
+    <string name="navigation_title">Navigation</string>
+    <string name="navigation_summary">Force on screen navbar and customize buttons</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">Notifications</string>
+    <string name="notification_summary">Control device lights and heads up notifications</string>
+
+    <!-- Power menu -->
+    <string name="powermenu_title">Power menu</string>
+    <string name="powermenu_summary">Other menus and control on secure lock screen</string>
+
+    <!-- Quick settings -->
+    <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_summary">Resize columns and rows and speed up pulldown</string>
+
+    <!-- Recents panel -->
+    <string name="recents_title">Recents panel</string>
+    <string name="recents_summary">Position clear button and some immersive style</string>
+
+    <!-- Status bar -->
+    <string name="statusbar_title">Status bar</string>
+    <string name="statusbar_summary">Hide or show system icons and network traffic</string>
+
+    <!-- Volume rocker -->
+    <string name="volume_title">Volume rocker</string>
+    <string name="volume_summary">Other volume options and volume rocker switch</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+</resources>

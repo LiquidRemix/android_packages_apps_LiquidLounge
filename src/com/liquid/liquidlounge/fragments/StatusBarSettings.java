@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2017 The Nitrogen Project
- * Copyright (C) 2017 The Liquid Remix Project
+ * Copyright (C) 2018 The Liquid Remix Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,33 +17,28 @@
 package com.liquid.liquidlounge.fragments;
 
 import android.os.Bundle;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
-import android.provider.Settings;
+import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.PreferenceFragment;
+import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
-import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
+import com.android.internal.logging.nano.MetricsProto;
 
 public class StatusBarSettings extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
-
-    private static final String BATTERY_STYLE = "battery_style";
-    private static final String BATTERY_PERCENT = "show_battery_percent";
-    private static final String STATUS_BAR_WEATHER = "statusbar_show_weather_temp";
-
-    private CustomSeekBarPreference mThreshold;
-    private SystemSettingSwitchPreference mNetMonitor;
-    private ListPreference mTickerMode;
-    private ListPreference mTickerAnimation;
-    private ListPreference mBatteryIconStyle;
-    private ListPreference mBatteryPercentage;
-    private ListPreference mStatusBarWeather;
+        implements OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -53,137 +47,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.statusbar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        boolean isNetMonitorEnabled = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
-        mNetMonitor.setChecked(isNetMonitorEnabled);
-        mNetMonitor.setOnPreferenceChangeListener(this);
-
-        int value = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
-        mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
-        mThreshold.setValue(value);
-        mThreshold.setOnPreferenceChangeListener(this);
-        mThreshold.setEnabled(isNetMonitorEnabled);
-
-        mTickerMode = (ListPreference) findPreference("ticker_mode");
-        mTickerMode.setOnPreferenceChangeListener(this);
-        int tickerMode = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.STATUS_BAR_SHOW_TICKER,
-                0, UserHandle.USER_CURRENT);
-        updatePrefs();
-        mTickerMode.setValue(String.valueOf(tickerMode));
-        mTickerMode.setSummary(mTickerMode.getEntry());
-
-        mTickerAnimation = (ListPreference) findPreference("status_bar_ticker_animation_mode");
-        mTickerAnimation.setOnPreferenceChangeListener(this);
-        int tickerAnimationMode = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.STATUS_BAR_TICKER_ANIMATION_MODE,
-                1, UserHandle.USER_CURRENT);
-        mTickerAnimation.setValue(String.valueOf(tickerAnimationMode));
-        mTickerAnimation.setSummary(mTickerAnimation.getEntry());
-
-        int batteryStyle = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
-        mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
-        mBatteryIconStyle.setValue(Integer.toString(batteryStyle));
-        int valueIndex = mBatteryIconStyle.findIndexOfValue(String.valueOf(batteryStyle));
-        mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
-        mBatteryIconStyle.setOnPreferenceChangeListener(this);
-
-        int showPercent = Settings.System.getInt(getContentResolver(),
-                Settings.System.SHOW_BATTERY_PERCENT, 0);
-        mBatteryPercentage = (ListPreference) findPreference(BATTERY_PERCENT);
-        mBatteryPercentage.setValue(Integer.toString(showPercent));
-        valueIndex = mBatteryPercentage.findIndexOfValue(String.valueOf(showPercent));
-        mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[valueIndex]);
-        mBatteryPercentage.setOnPreferenceChangeListener(this);
-        boolean hideForcePercentage = batteryStyle == 7 || batteryStyle == 8; /*text or hidden style*/
-        mBatteryPercentage.setEnabled(!hideForcePercentage);
-
-        int statusbarWeather = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUSBAR_SHOW_WEATHER_TEMP, 0);
-        mStatusBarWeather = (ListPreference) findPreference(STATUS_BAR_WEATHER);
-        mStatusBarWeather.setValue(Integer.toString(statusbarWeather));
-        int val = mStatusBarWeather.findIndexOfValue(String.valueOf(statusbarWeather));
-        mStatusBarWeather.setSummary(mStatusBarWeather.getEntries()[val]);
-        mStatusBarWeather.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mNetMonitor) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            mNetMonitor.setChecked(value);
-            mThreshold.setEnabled(value);
-            return true;
-        } else if (preference == mThreshold) {
-            int val = (Integer) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
-                    UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mTickerMode) {
-            int tickerMode = Integer.parseInt(((String) objValue).toString());
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.STATUS_BAR_SHOW_TICKER,
-                    tickerMode, UserHandle.USER_CURRENT);
-            updatePrefs();
-            int index = mTickerMode.findIndexOfValue((String) objValue);
-            mTickerMode.setSummary(mTickerMode.getEntries()[index]);
-            return true;
-        } else if (preference == mTickerAnimation) {
-            int tickerAnimationMode = Integer.parseInt(((String) objValue).toString());
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.STATUS_BAR_TICKER_ANIMATION_MODE,
-                    tickerAnimationMode, UserHandle.USER_CURRENT);
-            int index = mTickerAnimation.findIndexOfValue((String) objValue);
-            mTickerAnimation.setSummary(mTickerAnimation.getEntries()[index]);
-            return true;
-        } else if (preference == mBatteryIconStyle) {
-            int value = Integer.valueOf((String) objValue);
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
-            int valueIndex = mBatteryIconStyle
-                    .findIndexOfValue((String) objValue);
-            mBatteryIconStyle
-                    .setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
-            boolean hideForcePercentage = value == 7 || value == 8;/*text or hidden style*/
-            mBatteryPercentage.setEnabled(!hideForcePercentage);
-            return true;
-        } else if (preference == mBatteryPercentage) {
-            int value = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SHOW_BATTERY_PERCENT, value);
-            int valueIndex = mBatteryPercentage
-                    .findIndexOfValue((String) objValue);
-            mBatteryPercentage
-                    .setSummary(mBatteryPercentage.getEntries()[valueIndex]);
-            return true;
-        } else if (preference == mStatusBarWeather) {
-            int value = Integer.parseInt(((String) objValue).toString());
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.STATUSBAR_SHOW_WEATHER_TEMP,
-                    value, UserHandle.USER_CURRENT);
-            int index = mStatusBarWeather.findIndexOfValue((String) objValue);
-            mStatusBarWeather.setSummary(mStatusBarWeather.getEntries()[index]);
-            return true;
-        }
-        return false;
-    }
 
-    private void updatePrefs() {
-        boolean enabled = (Settings.Global.getInt(getContentResolver(),
-                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 0) == 1);
-        if (enabled) {
-            Settings.System.putInt(getContentResolver(),
-                Settings.System.STATUS_BAR_SHOW_TICKER, 0);
-            mTickerMode.setEnabled(false);
-        }
+        return false;
     }
 
     @Override

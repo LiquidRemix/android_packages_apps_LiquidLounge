@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The Nitrogen Project
-     Copyright (C) 2017 The Liquid Remix Project
+     Copyright (C) 2018 The Liquid Remix Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,61 +18,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/misc_title">
-
-    <PreferenceScreen
-        android:key="app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary"
-        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
-
-	<ListPreference
-        android:key="pref_scrollingcache"
-        android:dialogTitle="@string/pref_scrollingcache_title"
-        android:title="@string/pref_scrollingcache_title"
-        android:summary="@string/pref_scrollingcache_summary"
-        android:entries="@array/entries_scrollingcache"
-        android:entryValues="@array/values_scrollingcache" />	
-
-    <ListPreference
-        android:key="screen_off_animation"
-        android:title="@string/screen_off_animation_title"
-        android:entries="@array/screen_off_animation_entries"
-        android:entryValues="@array/screen_off_animation_values"
-        android:persistent="false"/>
-
-	<com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
-        android:key="system_default_animation"
-        android:title="@string/system_default_animation_title"
-        android:summary="@string/system_default_animation_summary"
-        android:defaultValue="false" /> 
-
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="mtp_dirty_hack"
-        android:title="@string/enable_mtp_dirtyhack_title"
-        android:summary="@string/enable_mtp_dirtyhack_summary"
-        android:defaultValue="true" />
-
-    <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wakeup_when_plugged_unplugged_title"
-        android:summary="@string/wakeup_when_plugged_unplugged_summary"
-        android:defaultValue="true" />
-
-	<com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference	
-	    android:key="pocket_judge"
-        android:title="@string/pocket_judge_title"
-        android:summary="@string/pocket_judge_summary"
-        android:defaultValue="false" />
-
-    <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
-        android:key="show_cpu_overlay"
-        android:title="@string/show_cpu_info"
-        android:summary="@string/show_cpu_info_summary" 
-        android:defaultValue="false" />
-
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="transparent_volume_dialog_dim"
-        android:title="@string/volume_dialog_dim"
-        android:defaultValue="false" />
 
 </PreferenceScreen>

@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2017 The Nitrogen Project
- * Copyright (C) 2017 The Liquid Remix Project
+ * Copyright (C) 2018 The Liquid Remix Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +16,16 @@
 
 package com.liquid.liquidlounge;
 
+import com.android.internal.logging.nano.MetricsProto;
+
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Surface;
-
-import com.android.internal.logging.nano.MetricsProto;
+import android.preference.Preference;
 import com.android.settings.R;
+
 import com.android.settings.SettingsPreferenceFragment;
 
 public class LiquidLoungeSettings extends SettingsPreferenceFragment {
