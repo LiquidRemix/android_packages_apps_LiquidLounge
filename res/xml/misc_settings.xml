@@ -27,7 +27,7 @@
         <Preference
              android:id="@+id/alarm_blocker"
              android:fragment="com.liquid.liquidlounge.fragments.AlarmBlocker"
-             android:title="@string/alarm_blocker" />
+             android:title="@string/alarm_blocker_title" />
 
         <Preference
             android:title="@string/app_ops_settings"
