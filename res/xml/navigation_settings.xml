@@ -19,4 +19,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/navigation_title">
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="navigation_bar_show"
+        android:title="@string/navigation_title"
+        android:summary="@string/navigation_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
