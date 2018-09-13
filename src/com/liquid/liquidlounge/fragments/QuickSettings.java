@@ -64,10 +64,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 Settings.System.OMNI_QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
         mQsPanelAlpha.setValue(qsPanelAlpha);
         mQsPanelAlpha.setOnPreferenceChangeListener(this);
-        }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mQsPanelAlpha) {
             int bgAlpha = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),

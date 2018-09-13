@@ -83,7 +83,7 @@ public class MiscSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = mContext.getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mMSOB) {
             int value = Integer.parseInt(((String) newValue).toString());
             Settings.System.putInt(getContentResolver(),

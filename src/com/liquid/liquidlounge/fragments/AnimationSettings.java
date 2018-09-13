@@ -494,7 +494,7 @@ public class AnimationSettings extends SettingsPreferenceFragment
                 Settings.System.ACTIVITY_ANIMATION_CONTROLS[9], 0);
         Settings.System.putInt(resolver,
                 Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], 0);
-        Animations.reset(mContext);
+        AnimationSettings.reset(mContext);
         SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT);
     }
 
