@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.liquid.liquidlounge.fragments;
+
+import com.android.internal.logging.nano.MetricsProto;
 
 import android.app.Activity;
 import android.content.Context;
@@ -30,11 +31,10 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.provider.Settings;
 
+import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto;
 
 import com.liquid.liquidlounge.preferences.Utils;
 
@@ -52,7 +52,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
         addPreferencesFromResource(R.xml.lockscreen_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
@@ -61,12 +60,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
-        if (!mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
         } else {
-        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
-        mFingerprintVib.setOnPreferenceChangeListener(this);
+            mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+                    Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
+            mFingerprintVib.setOnPreferenceChangeListener(this);
         }
 
         mFaceUnlock = (SwitchPreference) findPreference(KEY_FACE_AUTO_UNLOCK);
