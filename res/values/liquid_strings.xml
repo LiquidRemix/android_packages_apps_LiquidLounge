@@ -725,4 +725,9 @@
     <string name="battery_bar_high_color">High level color"</string>
     <string name="battery_bar_low_color">Low level color"</string>
 
+    <!-- Screenshot type -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_fullscreen">Fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Partial screenshots</string>
+
 </resources>

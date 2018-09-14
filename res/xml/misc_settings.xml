@@ -57,6 +57,12 @@
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
         android:defaultValue="true" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingListPreference
+        android:key="screenshot_type"
+        android:entries="@array/screenshot_type_entries"
+        android:entryValues="@array/screenshot_type_values"
+        android:title="@string/screenshot_type_title" />
+
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="show_cpu_overlay"
         android:title="@string/show_cpu_info"
