@@ -26,6 +26,7 @@
     <!-- Gestures -->
     <string name="gesture_title">Gestures</string>
     <string name="gesture_summary">Quick gestures to perform actions on your device</string>
+    <string name="gesture_preference_liquid">AOSP gestures</string>
 
     <!-- Lock screen -->
     <string name="lockscreen_title">Lock screen</string>
