@@ -61,11 +61,11 @@
 
     <!-- Notifications -->
     <Preference
-        android:key="notification_category"
-        android:title="@string/notification_title"
-        android:summary="@string/notification_summary"
-        android:icon="@drawable/ic_settings_notification"
-        android:fragment="com.liquid.liquidlounge.fragments.NotificationSettings" />
+        android:key="notifications_category"
+        android:title="@string/notifications_title"
+        android:summary="@string/notifications_summary"
+        android:icon="@drawable/ic_settings_notifications"
+        android:fragment="com.liquid.liquidlounge.fragments.NotificationsSettings" />
 
     <!-- Power menu -->
     <Preference

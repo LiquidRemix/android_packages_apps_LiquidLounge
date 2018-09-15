@@ -41,8 +41,8 @@
     <string name="navigation_summary">Force on screen navbar and customize buttons</string>
 
     <!-- Notifications -->
-    <string name="notification_title">Notifications</string>
-    <string name="notification_summary">Control device lights and heads up notifications</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_summary">Control device lights and heads up notifications</string>
 
     <!-- Power menu -->
     <string name="powermenu_title">Power menu</string>

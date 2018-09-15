@@ -28,7 +28,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.liquid.liquidlounge.preferences.Utils;
 
-public class NotificationSettings extends SettingsPreferenceFragment {
+public class NotificationsSettings extends SettingsPreferenceFragment {
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
     private Preference mChargingLeds;
@@ -37,7 +37,7 @@ public class NotificationSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.notification_settings);
+        addPreferencesFromResource(R.xml.notifications_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -52,7 +52,6 @@ public class NotificationSettings extends SettingsPreferenceFragment {
                         com.android.internal.R.bool.config_intrusiveBatteryLed)) {
             prefScreen.removePreference(mChargingLeds);
         }
-
     }
 
     @Override
