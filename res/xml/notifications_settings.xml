@@ -25,10 +25,11 @@
         android:title="@string/heads_up_notifications"
         android:fragment="com.liquid.liquidlounge.fragments.HeadsUpSettings" />
 
+    <!-- Battery Light -->
     <Preference
         android:key="charging_light"
-        android:fragment="com.liquid.liquidlounge.BatteryLightSettings"
-        android:title="@string/battery_light_settings" />
+        android:title="@string/battery_light_settings"
+        android:fragment="com.liquid.liquidlounge.fragments.BatteryLightSettings" />
 
     <PreferenceCategory
         android:key="incall_vib_options"

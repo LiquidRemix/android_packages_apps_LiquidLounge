@@ -13,9 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/battery_light_settings">
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="battery_light_enabled"
@@ -35,6 +36,7 @@
     <PreferenceCategory
         android:key="battery_light_cat"
         android:title="@string/battery_light_cat">
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="battery_light_low_color"
             android:title="@string/battery_light_low_color"
@@ -58,6 +60,7 @@
             android:title="@string/battery_light_reallyfull_color"
             ledPreview="true"
             settings:defaultColorValue="0xFF00FF00" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
