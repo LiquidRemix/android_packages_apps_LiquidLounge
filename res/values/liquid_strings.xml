@@ -883,4 +883,15 @@
     <string name="swap_navigation_keys_title">Swap keys</string>
     <string name="swap_navigation_keys_title_summary">Swap back and recents hardware keys</string>
 
+    <!-- Status bar weather -->
+    <string name="statusbar_weather_title">Statusbar weather</string>
+    <string name="statusbar_weather_summary">Disabled</string>
+    <string name="statusbar_weather_dialog_title">Statusbar Weather</string>
+    <string name="status_bar_weather_hidden">Disabled</string>
+    <string name="status_bar_temperature_image_show_scale">Temp with image and scale</string>
+    <string name="status_bar_temperature_image_hide_scale">Temp with image</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Temp with scale</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Temp</string>
+    <string name="status_bar_show_image">Image</string>
+
 </resources>
