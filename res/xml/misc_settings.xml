@@ -56,6 +56,7 @@
         android:title="@string/burn_in_protection_interval_title"
         android:max="90"
         android:min="45"
+        android:defaultValue="60"
         android:persistent="false" />
 
     <ListPreference

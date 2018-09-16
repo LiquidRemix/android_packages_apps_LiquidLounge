@@ -91,7 +91,6 @@
                 android:dependency="global_actions_onthego"
                 android:defaultValue="50"
                 android:max="100"
-                settings:min="0"
-                settings:units="" />
+                android:min="0" />
 
 </PreferenceScreen>

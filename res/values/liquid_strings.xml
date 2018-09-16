@@ -550,6 +550,7 @@
 
     <!-- Screen off animation -->
     <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_summary">%1$s</string> 
     <string name="screen_off_animation_fade">Simple fade</string>
     <string name="screen_off_animation_color">Color fade</string>
     <string name="screen_off_animation_crt">CRT</string>
