@@ -45,6 +45,19 @@
         android:title="@string/wakelock_blocker_title"
         android:fragment="com.liquid.liquidlounge.fragments.WakeLockBlocker" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="burn_in_protection"
+        android:title="@string/burn_in_protection_title"
+        android:summary="@string/burn_in_protection_summary"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+        android:key="burn_in_protection_interval"
+        android:title="@string/burn_in_protection_interval_title"
+        android:max="90"
+        android:min="45"
+        android:persistent="false" />
+
     <ListPreference
         android:key="media_scanner_on_boot"
         android:title="@string/media_scanner_on_boot_title"

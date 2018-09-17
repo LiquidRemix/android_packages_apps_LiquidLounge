@@ -37,6 +37,7 @@ import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
+import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
 
 public class MiscSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -44,14 +45,18 @@ public class MiscSettings extends SettingsPreferenceFragment
     public static final String TAG = "MiscSettings";
 
     private static final String MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+    private static final String BURN_INTERVAL_KEY = "burn_in_protection_interval";
 
     private ListPreference mMSOB;
+    private SystemSettingSeekBarPreference mBurnInterval;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.misc_settings);
+
+        ContentResolver resolver = getActivity().getContentResolver();
 
         boolean enableSmartPixels = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
@@ -68,16 +73,28 @@ public class MiscSettings extends SettingsPreferenceFragment
         mMSOB.setValue(String.valueOf(mMSOBValue));
         mMSOB.setSummary(mMSOB.getEntry());
         mMSOB.setOnPreferenceChangeListener(this);
+
+        mBurnInterval = (SystemSettingSeekBarPreference) findPreference(BURN_INTERVAL_KEY);
+        int burninterval = Settings.System.getInt(resolver,
+                Settings.System.BURN_IN_PROTECTION_INTERVAL, 60);
+        mBurnInterval.setValue(burninterval);
+        mBurnInterval.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = mContext.getContentResolver();
         if (preference == mMSOB) {
             int value = Integer.parseInt(((String) newValue).toString());
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MEDIA_SCANNER_ON_BOOT, value);
             mMSOB.setValue(String.valueOf(value));
             mMSOB.setSummary(mMSOB.getEntries()[value]);
+            return true;
+        } else if (preference == mBurnInterval) {
+            int interval = (Integer) newValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.BURN_IN_PROTECTION_INTERVAL, interval, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
