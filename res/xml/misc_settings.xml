@@ -59,6 +59,12 @@
         android:defaultValue="60"
         android:persistent="false" />
 
+    <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
+        android:key="allow_signature_fake"
+        android:title="@string/allow_signature_fake"
+        android:summary="@string/allow_signature_fake_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="media_scanner_on_boot"
         android:title="@string/media_scanner_on_boot_title"
