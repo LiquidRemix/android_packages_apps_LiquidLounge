@@ -53,7 +53,7 @@
         android:key="network_traffic_state"
         android:title="@string/network_traffic_state_title"
         android:summary="@string/network_traffic_state_summary"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
     <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
