@@ -939,4 +939,9 @@
     <string name="pixel_navbar_anim_title">Pixel animation</string>
     <string name="pixel_navbar_anim_summary">Toggle home button animation</string>
 
+    <!-- Hide notch -->
+    <string name="statusbar_notch">Notch</string>
+    <string name="hide_notch_title">Hide notch</string>
+    <string name="hide_notch_summary">If enabled it hides notch and fills in side gaps</string>
+    
 </resources>
