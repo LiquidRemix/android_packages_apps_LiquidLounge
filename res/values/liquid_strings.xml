@@ -50,6 +50,8 @@
     <string name="tilt_sensor_title">Tilt sensor</string>
     <string name="pickup_sensor_title">Pick up sensor</string>
     <string name="proximity_sensor_title">Proximity sensor</string>
+    <string name="stock_recents_title" >Stock recents</string>
+    <string name="hide_apps_title" >Hide apps</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -943,7 +945,7 @@
     <string name="statusbar_notch">Notch</string>
     <string name="hide_notch_title">Hide notch</string>
     <string name="hide_notch_summary">If enabled it hides notch and fills in side gaps</string>
-    
+
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE icon</string>
     <string name="volte_icon_summary">Display VoLTE icon in statusbar</string>
@@ -951,5 +953,10 @@
     <!-- Notifications while screen on -->
     <string name="notification_sound_vib_screen_on_title">Noisy notifications if screen on</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
+
+    <!-- Recents style -->
+    <string name="recents_component_type_title">Recents style</string>
+    <string name="recents_pie">Pie</string>
+    <string name="recents_oreo">Oreo</string>
 
 </resources>

@@ -19,27 +19,47 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/recents_title">
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="show_clear_all_recents"
-        android:title="@string/show_clear_all_recents_button_title"
-        android:summary="@string/show_clear_all_recents_button_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="stock_recents"
+        android:title="@string/stock_recents_title" >
 
-    <ListPreference
-        android:key="recents_clear_all_location"
-        android:title="@string/recents_clear_all_location_title"
-        android:entries="@array/recents_clear_all_location_entries"
-        android:entryValues="@array/recents_clear_all_location_values"
-        android:defaultValue="3"
-        android:dependency="show_clear_all_recents" />
+        <ListPreference
+            android:key="recents_component"
+            android:title="@string/recents_component_type_title"
+            android:dialogTitle="@string/recents_component_type_title"
+            android:entries="@array/recents_component_type_title_entries"
+            android:defaultValue="0"
+            android:entryValues="@array/recents_component_type_title_values" />
 
-    <Preference
-        android:key="hide_app_from_recents"
-        android:title="@string/hide_apps_from_recents_title"
-        android:summary="@string/hide_apps_from_recents_summary" >
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.settings"
-            android:targetClass="com.liquid.liquidlounge.recents.HAFRAppListActivity" />
-    </Preference>
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="show_clear_all_recents"
+            android:title="@string/show_clear_all_recents_button_title"
+            android:summary="@string/show_clear_all_recents_button_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="recents_clear_all_location"
+            android:title="@string/recents_clear_all_location_title"
+            android:entries="@array/recents_clear_all_location_entries"
+            android:entryValues="@array/recents_clear_all_location_values"
+            android:defaultValue="3"
+            android:dependency="show_clear_all_recents" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="hide_apps"
+        android:title="@string/hide_apps_title" >
+
+        <Preference
+            android:key="hide_app_from_recents"
+            android:title="@string/hide_apps_from_recents_title"
+            android:summary="@string/hide_apps_from_recents_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.liquid.liquidlounge.recents.HAFRAppListActivity" />
+        </Preference>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
