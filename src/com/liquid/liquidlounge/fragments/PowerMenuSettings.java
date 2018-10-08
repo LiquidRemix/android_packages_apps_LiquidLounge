@@ -37,7 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.liquid.liquidlounge.preferences.Utils;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
 
 public class PowerMenuSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -50,7 +50,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
     private SwitchPreference mPowermenuLogout;
     private SwitchPreference mPowermenuTorch;
     private SwitchPreference mPowermenuUsers;
-    private CustomSeekBarPreference mOnTheGoAlphaPref;
+    private SystemSettingSeekBarPreference mOnTheGoAlphaPref;
 
     private UserManager mUserManager;
 
@@ -86,7 +86,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
                     Settings.System.POWERMENU_USERS, 0) == 1));
         }
 
-        mOnTheGoAlphaPref = (CustomSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
+        mOnTheGoAlphaPref = (SystemSettingSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
         float otgAlpha = Settings.System.getFloat(getContentResolver(),
                 Settings.System.ON_THE_GO_ALPHA, 0.5f);
         final int alpha = ((int) (otgAlpha * 100));

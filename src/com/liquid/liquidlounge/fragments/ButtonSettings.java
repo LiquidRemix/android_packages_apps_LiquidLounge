@@ -33,7 +33,7 @@ import android.provider.Settings;
 import com.android.settings.R;
 
 import com.liquid.liquidlounge.preferences.ActionFragment;
-import com.liquid.liquidlounge.preferences.CustomSeekBarPreference;
+import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.hwkeys.ActionConstants;
@@ -68,7 +68,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     public static final int KEY_MASK_VOLUME = 0x40;
 
     private ListPreference mBacklightTimeout;
-    private CustomSeekBarPreference mButtonBrightness;
+    private SystemSettingSeekBarPreference mButtonBrightness;
     private SwitchPreference mButtonBrightness_sw;
     private SwitchPreference mHwKeyDisable;
 
@@ -101,7 +101,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
                     (ListPreference) findPreference(KEY_BACKLIGHT_TIMEOUT);
 
             mButtonBrightness =
-                    (CustomSeekBarPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
+                    (SystemSettingSeekBarPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
 
             mButtonBrightness_sw =
                     (SwitchPreference) findPreference(KEY_BUTTON_BRIGHTNESS_SW);

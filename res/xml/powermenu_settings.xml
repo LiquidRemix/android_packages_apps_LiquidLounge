@@ -84,7 +84,7 @@
                 android:title="@string/global_actions_onthego_title"
                 android:defaultValue="false" />
 
-            <com.liquid.liquidlounge.preferences.CustomSeekBarPreference
+            <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
                 android:key="on_the_go_alpha"
                 android:title="@string/onthego_alpha_title"
                 android:summary="@string/onthego_alpha_summary"
