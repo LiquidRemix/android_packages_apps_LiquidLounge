@@ -68,6 +68,12 @@
         android:defaultValue="true" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="bluetooth_qs_show_battery"
+        android:title="@string/bluetooth_battery_title"
+        android:summary="@string/bluetooth_battery_summary"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="qs_footer_show_services"
         android:title="@string/qs_footer_services_title"
         android:summary="@string/qs_footer_services_summary"
