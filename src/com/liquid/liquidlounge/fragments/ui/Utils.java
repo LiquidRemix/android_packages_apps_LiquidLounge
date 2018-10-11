@@ -32,21 +32,21 @@ public final class Utils {
     private static final boolean DEBUG = false;
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
-    protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
+    public static final String CATEG_PROX_SENSOR = "proximity_sensor";
 
-    protected static void startService(Context context) {
+    public static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");
         context.startServiceAsUser(new Intent(context, DozeService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static void stopService(Context context) {
+    public static void stopService(Context context) {
         if (DEBUG) Log.d(TAG, "Stopping service");
         context.stopServiceAsUser(new Intent(context, DozeService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static boolean getProxCheckBeforePulse(Context context) {
+    public static boolean getProxCheckBeforePulse(Context context) {
         try {
             Context con = context.createPackageContext("com.android.systemui", 0);
             int id = con.getResources().getIdentifier("doze_proximity_check_before_pulse",
@@ -57,19 +57,19 @@ public final class Utils {
         }
     }
 
-    protected static boolean isDozeEnabled(Context context) {
+    public static boolean isDozeEnabled(Context context) {
         return Settings.Secure.getIntForUser(context.getContentResolver(),
                 DOZE_ENABLED, context.getResources().getBoolean(
                 com.android.internal.R.bool.config_doze_enabled_by_default) ? 1 : 0,
                 UserHandle.USER_CURRENT) != 0;
     }
 
-    protected static boolean aodEnabled(Context context) {
+    public static boolean aodEnabled(Context context) {
         return Settings.Secure.getIntForUser(context.getContentResolver(),
                 Settings.Secure.DOZE_ALWAYS_ON, 0, UserHandle.USER_CURRENT) == 1;
     }
 
-    protected static void enableService(boolean enable, Context context) {
+    public static void enableService(boolean enable, Context context) {
         if (enable) {
             startService(context);
         } else {
@@ -77,33 +77,33 @@ public final class Utils {
         }
     }
 
-    protected static void launchDozePulse(Context context) {
+    public static void launchDozePulse(Context context) {
         if (DEBUG) Log.d(TAG, "Launch doze pulse");
         context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
                 new UserHandle(UserHandle.USER_CURRENT));
     }
 
-    protected static boolean tiltEnabled(Context context) {
+    public static boolean tiltEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(),
                 Settings.System.DOZE_TRIGGER_TILT, 0, UserHandle.USER_CURRENT) == 1;
     }
 
-    protected static boolean pickUpEnabled(Context context) {
+    public static boolean pickUpEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(),
                 Settings.System.DOZE_TRIGGER_PICKUP, 0, UserHandle.USER_CURRENT) == 1;
     }
 
-    protected static boolean handwaveGestureEnabled(Context context) {
+    public static boolean handwaveGestureEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(),
                 Settings.System.DOZE_TRIGGER_HANDWAVE, 0, UserHandle.USER_CURRENT) == 1;
     }
 
-    protected static boolean pocketGestureEnabled(Context context) {
+    public static boolean pocketGestureEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(),
                 Settings.System.DOZE_TRIGGER_POCKET, 0, UserHandle.USER_CURRENT) == 1;
     }
 
-    protected static boolean sensorsEnabled(Context context) {
+    public static boolean sensorsEnabled(Context context) {
         return tiltEnabled(context) || pickUpEnabled(context) || handwaveGestureEnabled(context)
                 || pocketGestureEnabled(context);
     }
