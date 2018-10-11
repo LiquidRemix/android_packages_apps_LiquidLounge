@@ -136,7 +136,7 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
                 STATUS_BAR_CARRIER_FONT_STYLE, showCarrierFont);
             return true;
         }
-         return false;
+        return false;
     }
 
     public boolean onPreferenceTreeClick(Preference preference) {

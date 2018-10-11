@@ -17,39 +17,32 @@ package com.liquid.liquidlounge.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.res.Resources;
-import android.database.ContentObserver;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
 import android.text.format.DateFormat;
-import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
-
-import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
-import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.SettingsPreferenceFragment;
+
+import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
+import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.Date;
 
-public class ClockSettings extends SettingsPreferenceFragment implements
-	OnPreferenceChangeListener  {
+public class ClockSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener  {
 
     private static final String STATUS_BAR_CLOCK = "status_bar_clock";
     private static final String STATUS_BAR_CLOCK_SECONDS = "status_bar_clock_seconds";
@@ -187,11 +180,6 @@ public class ClockSettings extends SettingsPreferenceFragment implements
         mClockDatePosition.setOnPreferenceChangeListener(this);
 
         setDateOptions();
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.LIQUID;
     }
 
     @Override
@@ -360,5 +348,10 @@ public class ClockSettings extends SettingsPreferenceFragment implements
             mClockDateFormat.setEnabled(true);
             mClockDatePosition.setEnabled(true);
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.LIQUID;
     }
 }
