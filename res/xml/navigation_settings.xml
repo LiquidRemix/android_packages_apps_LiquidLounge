@@ -19,17 +19,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/navigation_title">
 
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="navigation_bar_show"
-        android:title="@string/navigation_title"
-        android:summary="@string/navigation_summary"
-        android:defaultValue="true" />
-
     <Preference
-            android:title="@string/navbar_tuner_title" >
-            <intent android:action="android.intent.action.MAIN"
+        android:title="@string/navbar_tuner_title" >
+        <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.NavBarActivity" />
     </Preference>
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="navigation_bar_show"
+        android:title="@string/navigation_title"
+        android:defaultValue="true" />
 
 </PreferenceScreen>

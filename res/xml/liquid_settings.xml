@@ -23,7 +23,6 @@
     <Preference
         android:key="ambient_category"
         android:title="@string/ambient_title"
-        android:summary="@string/ambient_summary"
         android:icon="@drawable/ic_settings_ambient"
         android:fragment="com.liquid.liquidlounge.fragments.AmbientSettings" />
 
@@ -31,7 +30,6 @@
     <Preference
         android:key="animation_category"
         android:title="@string/animation_title"
-        android:summary="@string/animation_summary"
         android:icon="@drawable/ic_settings_animation"
         android:fragment="com.liquid.liquidlounge.fragments.AnimationSettings" />
 
@@ -39,7 +37,6 @@
     <Preference
         android:key="button_category"
         android:title="@string/button_title"
-        android:summary="@string/button_summary"
         android:icon="@drawable/ic_settings_button"
         android:fragment="com.liquid.liquidlounge.fragments.ButtonSettings" />
 
@@ -48,7 +45,6 @@
         android:key="device_part"
         android:persistent="false"
          android:title="@string/device_title"
-         android:summary="@string/device_summary"
          android:icon="@drawable/ic_settings_device">
          <intent android:action="android.intent.action.MAIN"
             android:targetPackage="org.omnirom.device"
@@ -59,7 +55,6 @@
     <Preference
         android:key="gesture_category"
         android:title="@string/gesture_title"
-        android:summary="@string/gesture_summary"
         android:icon="@drawable/ic_settings_gesture"
         android:fragment="com.liquid.liquidlounge.fragments.GestureSettings" />
 
@@ -67,7 +62,6 @@
     <Preference
         android:key="keyboard_category"
         android:title="@string/keyboard_title"
-        android:summary="@string/keyboard_summary"
         android:icon="@drawable/ic_settings_keyboard"
         android:fragment="com.liquid.liquidlounge.fragments.KeyboardSettings" />
 
@@ -75,7 +69,6 @@
     <Preference
         android:key="lockscreen_category"
         android:title="@string/lockscreen_title"
-        android:summary="@string/lockscreen_summary"
         android:icon="@drawable/ic_settings_lockscreen"
         android:fragment="com.liquid.liquidlounge.fragments.LockScreenSettings" />
 
@@ -83,7 +76,6 @@
     <Preference
         android:key="misc_category"
         android:title="@string/misc_title"
-        android:summary="@string/misc_summary"
         android:icon="@drawable/ic_settings_misc"
         android:fragment="com.liquid.liquidlounge.fragments.MiscSettings" />
 
@@ -91,7 +83,6 @@
     <Preference
         android:key="navigation_category"
         android:title="@string/navigation_title"
-        android:summary="@string/navigation_summary"
         android:icon="@drawable/ic_settings_navigation"
         android:fragment="com.liquid.liquidlounge.fragments.NavigationSettings" />
 
@@ -99,7 +90,6 @@
     <Preference
         android:key="notifications_category"
         android:title="@string/notifications_title"
-        android:summary="@string/notifications_summary"
         android:icon="@drawable/ic_settings_notifications"
         android:fragment="com.liquid.liquidlounge.fragments.NotificationsSettings" />
 
@@ -107,7 +97,6 @@
     <Preference
         android:key="powermenu__category"
         android:title="@string/powermenu_title"
-        android:summary="@string/powermenu_summary"
         android:icon="@drawable/ic_settings_powermenu"
         android:fragment="com.liquid.liquidlounge.fragments.PowerMenuSettings" />
 
@@ -115,7 +104,6 @@
     <Preference
         android:key="quicksettings_category"
         android:title="@string/quicksettings_title"
-        android:summary="@string/quicksettings_summary"
         android:icon="@drawable/ic_settings_quicksettings"
         android:fragment="com.liquid.liquidlounge.fragments.QuickSettings" />
 
@@ -123,7 +111,6 @@
     <Preference
         android:key="recents_category"
         android:title="@string/recents_title"
-        android:summary="@string/recents_summary"
         android:icon="@drawable/ic_settings_recents"
         android:fragment="com.liquid.liquidlounge.fragments.RecentsSettings" />
 
@@ -131,7 +118,6 @@
     <Preference
         android:key="statusbar_category"
         android:title="@string/statusbar_title"
-        android:summary="@string/statusbar_summary"
         android:icon="@drawable/ic_settings_statusbar"
         android:fragment="com.liquid.liquidlounge.fragments.StatusBarSettings" />
 
@@ -139,7 +125,6 @@
     <Preference
         android:key="weather_category"
         android:title="@string/weather_title"
-        android:summary="@string/weather_summary"
         android:icon="@drawable/ic_settings_weather"
         android:fragment="com.liquid.liquidlounge.fragments.WeatherSettings" />
 

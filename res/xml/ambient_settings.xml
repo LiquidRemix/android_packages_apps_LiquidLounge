@@ -22,7 +22,7 @@
 
     <PreferenceCategory
         android:key="ambient_element"
-        android:title="@string/ambient_element" >
+        android:title="@string/ambient_element_title" >
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
             android:key="ambient_battery_percent" 
@@ -32,8 +32,8 @@
    </PreferenceCategory>
 
    <PreferenceCategory
-        android:key="battery_actions"
-        android:title="@string/advanced_doze_settings">
+        android:key="advanced_doze"
+        android:title="@string/advanced_doze_title">
     
         <Preference
             android:key="time_in_state"

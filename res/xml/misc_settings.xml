@@ -22,7 +22,6 @@
     <Preference
         android:key="chooser_activity_blacklist"
         android:title="@string/chooser_activity_blacklist_title"
-        android:summary="@string/chooser_activity_blacklist_summary"
         android:fragment="com.liquid.liquidlounge.fragments.ChooserActivityBlacklist"
         android:persistent="false" />
 

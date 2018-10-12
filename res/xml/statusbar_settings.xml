@@ -37,8 +37,8 @@
     <Preference
        android:title="@string/statusbar_items_title" >
        <intent android:action="android.intent.action.MAIN"
-           android:targetPackage="com.android.systemui"
-           android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+               android:targetPackage="com.android.systemui"
+               android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
     <ListPreference

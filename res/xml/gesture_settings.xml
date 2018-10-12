@@ -21,7 +21,7 @@
 
     <Preference
         android:key="gesture_settings"
-        android:title="@string/gesture_preference_liquid"
+        android:title="@string/gesture_liquid"
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController" />
 
