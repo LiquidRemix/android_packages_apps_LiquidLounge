@@ -307,10 +307,6 @@
     <string name="network_traffic_hidearrow">Hide arrows</string>
     <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
 
-    <!-- ADB debugging notifications -->
-    <string name="adb_notify">ADB notification</string>
-    <string name="adb_notify_summary">Display a notification when android debugging is enabled</string>
-
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Show CPU info</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
