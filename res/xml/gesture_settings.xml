@@ -23,7 +23,7 @@
         android:key="gesture_settings"
         android:title="@string/gesture_preference_liquid"
         android:fragment="com.android.settings.gestures.GestureSettings"
-        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController" />
 
     <Preference
         android:key="carbon_gestures"
@@ -37,17 +37,17 @@
         android:summary="@string/gesture_settings_summary"
         android:fragment="com.liquid.liquidlounge.fragments.OmniGestureSettings" />
 
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+        android:key="three_finger_gesture" 
+        android:title="@string/three_finger_gesture" 
+        android:summary="@string/three_finger_gesture_summary" 
+        android:defaultValue="false" /> 
+
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="torch_long_press_power_gesture"
         android:title="@string/torch_long_press_power_gesture_title"
         android:summary="@string/torch_long_press_power_gesture_desc"
         android:defaultValue="false" />
-
-    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
-            android:key="three_finger_gesture" 
-            android:title="@string/three_finger_gesture" 
-            android:summary="@string/three_finger_gesture_summary" 
-            android:defaultValue="false" /> 
 
     <ListPreference
         android:key="torch_long_press_power_timeout"
@@ -60,8 +60,8 @@
         android:persistent="false" />
 
     <PreferenceCategory
-         android:key="dtts_category"
-         android:title="@string/dtts_category_header" >
+        android:key="dtts_category"
+        android:title="@string/dtts_category_header" >
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
@@ -76,4 +76,5 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>
