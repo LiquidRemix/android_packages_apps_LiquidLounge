@@ -20,6 +20,12 @@
     android:title="@string/gesture_title">
 
     <Preference
+        android:key="app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
+
+    <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_liquid"
         android:fragment="com.android.settings.gestures.GestureSettings"
