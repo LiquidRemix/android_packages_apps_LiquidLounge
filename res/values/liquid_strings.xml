@@ -1074,4 +1074,8 @@
     <string name="lockscreen_hide_shortcuts_title">Hide bottom shortcuts</string>
     <string name="lockscreen_hide_shortcuts_summary">Hide left-right shortcuts on secure lock screens</string>
 
+    <!-- Hide Lockscreen indicator text -->
+    <string name="hide_lockscreen_indicator_display_title">Hide bottom status text</string>
+    <string name="hide_lockscreen_indicator_display_summary">Hide charging information and unlock hints</string>
+
 </resources>
