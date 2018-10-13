@@ -20,6 +20,12 @@
     xmlns:liquidns="http://schemas.android.com/apk/res-auto"
     android:title="@string/ambient_title">
 
+    <Preference
+        android:key="ambient_play_cat"
+        android:title="@string/ambient_play_cat"
+        android:summary="@string/ambient_recognition_summary"
+        android:fragment="com.android.settings.AmbientPlaySettings" />
+
     <PreferenceCategory
         android:key="ambient_element"
         android:title="@string/ambient_element_title" >
@@ -29,6 +35,7 @@
             android:title="@string/ambient_battery_percent_title" 
             android:summary="@string/ambient_battery_percent_summary" 
             android:defaultValue="false" />
+
    </PreferenceCategory>
 
    <PreferenceCategory
