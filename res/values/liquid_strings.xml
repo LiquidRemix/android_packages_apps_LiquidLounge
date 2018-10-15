@@ -935,4 +935,8 @@
     <string name="carbon_gesture_customapp">Launch application</string>
     <string name="carbon_gesture_launch">Launch</string>
 
+    <!-- Navbar Animation -->
+    <string name="pixel_navbar_anim_title">Pixel animation</string>
+    <string name="pixel_navbar_anim_summary">Toggle home button animation</string>
+
 </resources>
