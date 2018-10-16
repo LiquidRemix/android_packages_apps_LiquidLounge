@@ -43,6 +43,12 @@
         android:summary="@string/gesture_settings_summary"
         android:fragment="com.liquid.liquidlounge.fragments.OmniGestureSettings" />
 
+    <Preference
+        android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:summary="@string/pa_pie_control_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.PieSettings" />
+
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
         android:key="three_finger_gesture" 
         android:title="@string/three_finger_gesture" 
