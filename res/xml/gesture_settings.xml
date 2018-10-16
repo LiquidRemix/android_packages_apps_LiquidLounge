@@ -20,22 +20,28 @@
     android:title="@string/gesture_title">
 
     <Preference
-        android:key="app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary"
-        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
-
-    <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_liquid"
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController" />
 
     <Preference
+        android:key="app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.AppCircleBar" />
+
+    <Preference
         android:key="carbon_gestures"
         android:title="@string/carbon_gestures_title"
         android:summary="@string/carbon_gestures_summary"
         android:fragment="com.liquid.liquidlounge.fragments.CarbonGesturesSettings" />
+
+    <Preference
+        android:key="edge_gestures"
+        android:title="@string/edge_gestures_title"
+        android:summary="@string/edge_gestures_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.EdgeGesturesSettings" />
 
     <Preference
         android:key="omni_gestures"
