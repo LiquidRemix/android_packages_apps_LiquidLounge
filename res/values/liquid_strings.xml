@@ -1086,4 +1086,8 @@
     <string name="one_hand_mode_title">One-handed mode</string>
     <string name="one_hand_mode_summary">Allow swiping across right or left on navbar to enable</string>
 
+    <!-- Toast icon -->
+    <string name="toast_icon_title">Toast icon</string>
+    <string name="toast_icon_summary">Display icon of activity that generates toast message</string>
+
 </resources>
