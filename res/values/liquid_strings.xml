@@ -53,6 +53,7 @@
     <string name="stock_recents_title" >Stock recents</string>
     <string name="hide_apps_title" >Hide apps</string>
     <string name="statusbar_ticker" >Ticker</string>
+    <string name="ls_clock" >Widget Styles</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -1235,5 +1236,8 @@
     <string name="ticker_animation_mode_alpha_fade">Fade</string>
     <string name="ticker_animation_mode_scroll">Scroll</string>
     <string name="ticker_tick_duration_title">Ticker duration</string>
+
+    <!-- Lock Date Fonts -->
+    <string name="lock_date_font_title">Date font style</string>
 
 </resources>
