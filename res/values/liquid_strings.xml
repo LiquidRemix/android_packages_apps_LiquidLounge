@@ -944,4 +944,7 @@
     <string name="hide_notch_title">Hide notch</string>
     <string name="hide_notch_summary">If enabled it hides notch and fills in side gaps</string>
     
+    <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">VoLTE icon</string>
+    <string name="volte_icon_summary">Display VoLTE icon in statusbar</string>
 </resources>
