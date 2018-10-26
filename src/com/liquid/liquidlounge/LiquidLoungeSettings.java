@@ -37,7 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class LiquidLoungeSettings extends SettingsPreferenceFragment {
 
-    private static final String RECENTS_CATEGORY = "recents_category";
+    //private static final String RECENTS_CATEGORY = "recents_category";
     private static final String ACTION_QUICKSTEP = "android.intent.action.QUICKSTEP_SERVICE";
 
     @Override
@@ -58,9 +58,9 @@ public class LiquidLoungeSettings extends SettingsPreferenceFragment {
         ContentResolver resolver = getActivity().getContentResolver();
         Context context = getActivity().getApplicationContext();
 
-        if (isNewRecents(context)) {
-            prefSet.removePreference(findPreference(RECENTS_CATEGORY));
-        }
+        //if (isNewRecents(context)) {
+            //prefSet.removePreference(findPreference(RECENTS_CATEGORY));
+        //}
     }
 
     @Override
@@ -97,7 +97,7 @@ public class LiquidLoungeSettings extends SettingsPreferenceFragment {
         activity.setRequestedOrientation(frozenRotation);
     }
 
-    boolean isNewRecents(Context context) {
+    /* boolean isNewRecents(Context context) {
 
         final ComponentName recentsComponentName = ComponentName.unflattenFromString(
                 context.getString(com.android.internal.R.string.config_recentsComponentName));
@@ -108,5 +108,5 @@ public class LiquidLoungeSettings extends SettingsPreferenceFragment {
             return false;
         }
         return true;
-    }
+    } */
 }
