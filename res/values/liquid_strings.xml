@@ -176,7 +176,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
-    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
+    <string name="lockscreen_battery_info_summary">Display negotiated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call vibration options</string>
@@ -297,7 +297,7 @@
     <string name="qs_brightness_position_bottom_title">Brightness slider on bottom</string>
     <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
     <string name="brightness_icon_title">Auto Brightness Icon</string>
-    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
+    <string name="brightness_icon_summary">Show a brightness icon to the left of the brightness slider to adjust auto-brightness</string>
 
     <!-- Torch Power gestures -->
     <string name="torch_long_press_power_gesture_title">Screen off power button torch</string>
@@ -434,7 +434,7 @@
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Hide apps from recents</string>
     <string name="hide_from_recents_add_app">Add App</string>
-    <string name="hide_apps_from_recents_summary">Select certian apps to hide in recents</string>
+    <string name="hide_apps_from_recents_summary">Select certain apps to hide in recents</string>
 
     <!-- Keyboard and IME  --> 
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string> 
@@ -754,7 +754,7 @@
     <string name="DESC_LOCATION_ACCURACY">The desired maximum accuracy (in meters) we consider the location to be good enough to go on to idle. We will be trying to get an accuracy fix at least this good or until locating_to expires</string> 
     <string name="DESC_MOTION_INACTIVE_TIMEOUT">This is the time, after seeing motion, that we wait after becoming inactive from that until we start looking for motion again</string> 
     <string name="DESC_IDLE_AFTER_INACTIVE_TIMEOUT">This is the time, after the inactive timeout elapses, that we will wait looking for significant motion until we truly consider the device to be idle</string> 
-    <string name="DESC_IDLE_PENDING_TIMEOUT">This is the initial time, after being idle, that we will allow ourself to be back in the IDLE_PENDING state allowing the system to run normally until we return to idle</string> 
+    <string name="DESC_IDLE_PENDING_TIMEOUT">This is the initial time, after being idle, that we will allow ourselves to be back in the IDLE_PENDING state allowing the system to run normally until we return to idle</string> 
     <string name="DESC_MAX_IDLE_PENDING_TIMEOUT">Maximum pending idle timeout (time spent running) we will be allowed to use</string> 
     <string name="DESC_IDLE_PENDING_FACTOR">Scaling factor to apply to current pending idle timeout each time we cycle through that state</string> 
     <string name="DESC_IDLE_TIMEOUT">This is the initial time that we want to sit in the idle state before waking up again to return to pending idle and allowing normal work to run</string> 
@@ -768,7 +768,7 @@
     <string name="DESC_LIGHT_PRE_IDLE_TIMEOUT">This is amount of time we will wait from the point where we decide we would like to go idle until we actually do, while waiting for jobs and other current activity to finish</string> 
     <string name="DESC_LIGHT_IDLE_TIMEOUT">This is the initial time that we will run in idle maintenance mode</string> 
     <string name="DESC_LIGHT_IDLE_FACTOR">Scaling factor to apply to the light idle mode time each time we complete a cycle</string> 
-    <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">This is the maximum time we will run in idle maintenence mode</string> 
+    <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">This is the maximum time we will run in idle maintenance mode</string> 
     <string name="DESC_LIGHT_IDLE_MAINTENANCE_MIN_BUDGET">This is the minimum amount of time we want to make available for maintenance mode when lightly idling</string> 
     <string name="DESC_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">This is the maximum amount of time we want to make available for maintenance mode when lightly idling</string> 
     <string name="DESC_MIN_LIGHT_MAINTENANCE_TIME">This is the minimum amount of time that we will stay in maintenance mode after a light doze</string> 
@@ -894,7 +894,7 @@
     <string name="smart_pulldown_none_summary">Open quick settings when there are no notifications</string>
     <string name="smart_pulldown_off">Off</string>
     <string name="smart_pulldown_none">No notifications</string>
-    <string name="smart_pulldown_dismissable">No dismissable</string>
+    <string name="smart_pulldown_dismissable">No dismissible</string>
     <string name="smart_pulldown_ongoing">No ongoing</string>
 
     <!-- QS footer icons -->
@@ -966,7 +966,7 @@
     <string name="trigger_width_title">Trigger width</string> 
     <string name="trigger_width_summary">Adjust the width of the trigger area</string> 
     <string name="trigger_top_title">Trigger position</string> 
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string> 
+    <string name="trigger_top_summary">Adjust the vertical position of the trigger area</string> 
     <string name="trigger_bottom_title">Trigger height</string> 
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string> 
 
@@ -1052,21 +1052,21 @@
     <string name="button26">Timer</string>
     <string name="button27">Android N</string>
     <string name="button28">Android Stock</string>
-    <string name="animation0">Rotation </string>
+    <string name="animation0">Rotation</string>
     <string name="animation1">Recents Exit</string>
-    <string name="animation2">Transluscent Exit </string>
-    <string name="animation3">Transluscent Exit Ribbon</string>
+    <string name="animation2">Translucent Exit</string>
+    <string name="animation3">Translucent Exit Ribbon</string>
     <string name="animation4">Toast Exit</string>
-    <string name="animation5">Slide Out Down </string>
-    <string name="animation6">Xylon Exit </string>
+    <string name="animation5">Slide Out Down</string>
+    <string name="animation6">Xylon Exit</string>
     <string name="animation7">Honami Toast Exit</string>
-    <string name="animation8">Slide Out Right </string>
+    <string name="animation8">Slide Out Right</string>
     <string name="animation9">Toast Exit</string>
-    <string name="animation10">Fade Out Slow </string>
+    <string name="animation10">Fade Out Slow</string>
     <string name="animation11">Slide Out Left</string>
     <string name="animation12">Fade Out</string>
-    <string name="animation13">Fast Fade Out </string>
-    <string name="animation14">Slide Out Up </string>
+    <string name="animation13">Fast Fade Out</string>
+    <string name="animation14">Slide Out Up</string>
     <string name="animation15">Fast Rotation</string>
     <string name="reset_message">Reset all entries to default?</string>
 
