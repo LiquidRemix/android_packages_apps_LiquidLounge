@@ -1456,4 +1456,9 @@
     <string name="volume_keys_control_ring_tone_title">Control ring volume</string>
     <string name="volume_keys_control_ring_tone_summary">Keys control media slider by default. Enable to switch to ring tone slider.</string>
 
+    <!-- Weather -->
+    <string name="lockscreen_weather_category">Weather</string>
+    <string name="weather_unit">Temperature unit</string>
+    <string name="weather_unit_metric" translatable="false">Celsius</string>
+    <string name="weather_unit_imperial" translatable="false">Fahrenheit</string>
 </resources>
