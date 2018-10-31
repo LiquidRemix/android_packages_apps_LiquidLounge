@@ -156,4 +156,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="ls_weather"
+        android:title="@string/ls_weather" >
+
+        <com.liquid.liquidlounge.preferences.SystemSettingListPreference
+            android:key="weather_lockscreen_unit"
+            android:dialogTitle="@string/weather_unit"
+            android:title="@string/weather_unit"
+            android:summary="%s"
+            android:entries="@array/weather_unit_entries"
+            android:entryValues="@array/weather_unit_values"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
