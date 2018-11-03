@@ -69,6 +69,11 @@ public final class Utils {
                 Settings.Secure.DOZE_ALWAYS_ON, 0, UserHandle.USER_CURRENT) == 1;
     }
 
+    public static boolean aodAvailable(Context context) {
+        return context.getResources().getBoolean(
+                com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable);
+    }
+
     public static void enableService(boolean enable, Context context) {
         if (enable) {
             startService(context);
