@@ -65,6 +65,7 @@ public class AmbientSettings extends SettingsPreferenceFragment
     private static final String KEY_DOZE_VIBRATE_TILT = "doze_vibrate_tilt";
     private static final String KEY_DOZE_VIBRATE_PICKUP = "doze_vibrate_pickup";
     private static final String KEY_DOZE_VIBRATE_PROX = "doze_vibrate_prox";
+    private static final String KEY_AMBIENT_DISPLAY_WHEN = "ambient_display_category_when_to_show";
 
     private SwitchPreference mDozePreference;
     private SwitchPreference mAODPreference;
@@ -91,10 +92,7 @@ public class AmbientSettings extends SettingsPreferenceFragment
 
         mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
         mDozePreference.setOnPreferenceChangeListener(this);
-
-        mAODPreference = (SwitchPreference) findPreference(KEY_AOD);
-        mAODPreference.setOnPreferenceChangeListener(this);
-
+ 
         mTiltPreference = (SwitchPreference) findPreference(KEY_DOZE_TRIGGER_TILT);
         mTiltPreference.setOnPreferenceChangeListener(this);
 
@@ -116,13 +114,22 @@ public class AmbientSettings extends SettingsPreferenceFragment
         mVibrateProximity = (SystemSettingSeekBarPreference) findPreference(KEY_DOZE_VIBRATE_PROX);
         mVibrateProximity.setOnPreferenceChangeListener(this);
 
-        updateState();
-        updateVibOptions();
-
         // Hide proximity sensor related features if the device doesn't support them
         if (!Utils.getProxCheckBeforePulse(getActivity())) {
             getPreferenceScreen().removePreference(proximitySensorCategory);
         }
+
+        // Hide AOD if config is false
+        if (!Utils.aodAvailable(getActivity())) {
+            PreferenceCategory ambientCategory = (PreferenceCategory) getPreferenceScreen().findPreference(KEY_AMBIENT_DISPLAY_WHEN);
+            ambientCategory.removePreference(getPreferenceScreen().findPreference(KEY_AOD));
+        } else {
+            mAODPreference = (SwitchPreference) findPreference(KEY_AOD);
+            mAODPreference.setOnPreferenceChangeListener(this);
+        }
+        
+        updateState();
+        updateVibOptions();
     }
 
     private void updateVibOptions() {
