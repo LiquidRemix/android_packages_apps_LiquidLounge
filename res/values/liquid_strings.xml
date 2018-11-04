@@ -1126,4 +1126,8 @@
     <string name="edge_gestures_back_show_ui_feedback_title">Back gesture animation</string>
     <string name="edge_gestures_back_show_ui_feedback_summary">Show animated feedback on edges when back gesture is used</string>
 
+    <!-- Wi-Fi activity indicator -->
+    <string name="statusbar_show_wifi_activity_title">Show Wi-Fi data indicators</string>
+    <string name="statusbar_show_wifi_activity_summary">Show indicators when Wi-Fi is sending/receiving data like mobile</string>
+
 </resources>
