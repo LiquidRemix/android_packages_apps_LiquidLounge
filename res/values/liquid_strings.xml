@@ -52,6 +52,7 @@
     <string name="proximity_sensor_title">Proximity sensor</string>
     <string name="stock_recents_title" >Stock recents</string>
     <string name="hide_apps_title" >Hide apps</string>
+    <string name="statusbar_ticker" >Ticker</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -1225,5 +1226,14 @@
     <!-- Notification count -->
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
+    <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_summary">Notification preview in status bar</string>
+    <string name="ticker_animation_mode_title">Ticker animation</string>
+    <string name="ticker_animation_mode_alpha_fade">Fade</string>
+    <string name="ticker_animation_mode_scroll">Scroll</string>
+    <string name="ticker_tick_duration_title">Ticker duration</string>
 
 </resources>
