@@ -1240,4 +1240,8 @@
     <!-- Lock Date Fonts -->
     <string name="lock_date_font_title">Date font style</string>
 
+    <!-- Heads up options -->
+    <string name="less_boring_heads_up_title">Less boring heads up</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer or messaging app</string>
+
 </resources>
