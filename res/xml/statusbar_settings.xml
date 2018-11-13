@@ -97,7 +97,7 @@
         android:key="statusbar_show_wifi_activity"
         android:title="@string/statusbar_show_wifi_activity_title"
         android:summary="@string/statusbar_show_wifi_activity_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="status_bar_brightness_control"
