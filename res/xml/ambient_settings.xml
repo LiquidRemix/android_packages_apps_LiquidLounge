@@ -20,39 +20,15 @@
     xmlns:liquidns="http://schemas.android.com/apk/res-auto"
     android:title="@string/ambient_title">
 
-    <Preference
-        android:key="ambient_play_cat"
-        android:title="@string/ambient_play_cat"
-        android:summary="@string/ambient_recognition_summary"
-        android:fragment="com.android.settings.AmbientPlaySettings" />
-
     <PreferenceCategory
-        android:key="ambient_element"
-        android:title="@string/ambient_element_title" >
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
-            android:key="ambient_battery_percent" 
-            android:title="@string/ambient_battery_percent_title" 
-            android:summary="@string/ambient_battery_percent_summary" 
-            android:defaultValue="false" />
-
-   </PreferenceCategory>
-
-   <PreferenceCategory
-        android:key="advanced_doze"
-        android:title="@string/advanced_doze_title">
-    
-        <Preference
-            android:key="time_in_state"
-            android:title="@string/time_in_state_title"
-            android:summary="@string/time_in_state_summary"
-            android:fragment="com.liquid.liquidlounge.fragments.TimeInState" />
+        android:key="ambient_play"
+        android:title="@string/ambient_play" >
 
         <Preference
-            android:key="doze_settings"
-            android:title="@string/doze_settings_title"
-            android:summary="@string/doze_settings_summary"
-            android:fragment="com.liquid.liquidlounge.fragments.DozeSettings" />
+            android:key="ambient_play"
+            android:title="@string/ambient_play_title"
+            android:summary="@string/ambient_play_summary"
+            android:fragment="com.android.settings.AmbientPlaySettings" />
 
     </PreferenceCategory>
 
@@ -61,21 +37,36 @@
         android:title="@string/ambient_display_category_triggers">
 
         <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
-            android:key="doze_always_on"
-            android:title="@string/doze_always_on_title"
-            android:summary="@string/doze_always_on_summary" />
-
-        <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
             android:key="doze_enabled"
             android:title="@string/doze_title"
             android:summary="@string/doze_summary"
             android:persistent="false" />
 
+        <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
+            android:key="doze_always_on"
+            android:title="@string/doze_always_on_title"
+            android:summary="@string/doze_always_on_summary"
+            android:dependency="doze_enabled" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ambient_element"
+        android:title="@string/ambient_element_title"
+        android:dependency="doze_enabled" >
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
+            android:key="ambient_battery_percent" 
+            android:title="@string/ambient_battery_percent_title" 
+            android:summary="@string/ambient_battery_percent_summary" 
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="tilt_sensor"
-        android:title="@string/tilt_sensor_title" >
+        android:title="@string/tilt_sensor_title"
+        android:dependency="doze_enabled" >
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="doze_trigger_tilt"
@@ -99,7 +90,8 @@
 
     <PreferenceCategory
         android:key="pickup"
-        android:title="@string/pickup_sensor_title" >
+        android:title="@string/pickup_sensor_title"
+        android:dependency="doze_enabled" >
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="doze_trigger_pickup"
@@ -123,7 +115,8 @@
 
     <PreferenceCategory
         android:key="proximity_sensor"
-        android:title="@string/proximity_sensor_title" >
+        android:title="@string/proximity_sensor_title" 
+        android:dependency="doze_enabled">
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="doze_trigger_handwave"

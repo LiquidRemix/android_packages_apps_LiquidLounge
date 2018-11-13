@@ -54,6 +54,7 @@
     <string name="hide_apps_title" >Hide apps</string>
     <string name="statusbar_ticker" >Ticker</string>
     <string name="ls_clock" >Widget Styles</string>
+    <string name="ambient_play">Music</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
