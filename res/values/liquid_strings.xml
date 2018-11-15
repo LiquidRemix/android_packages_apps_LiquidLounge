@@ -55,6 +55,7 @@
     <string name="statusbar_ticker" >Ticker</string>
     <string name="ls_clock" >Widget Styles</string>
     <string name="ambient_play">Music</string>
+    <string name="statusbar_traffic" >Traffic</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -272,6 +273,10 @@
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
     <string name="network_traffic_hidearrow">Hide arrows</string>
     <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
+    <string name="network_traffic_type">Select net activity type</string>
+    <string name="show_network_traffic_up">Uplink</string>
+    <string name="show_network_traffic_down">Downlink</string>
+    <string name="show_network_traffic_all">Uplink and Downlink</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Show CPU info</string>

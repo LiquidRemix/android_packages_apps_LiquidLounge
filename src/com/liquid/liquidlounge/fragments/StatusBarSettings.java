@@ -47,6 +47,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     private SystemSettingSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
+    private ListPreference mNetTrafficType;
     private ListPreference mStatusBarBatteryShowPercent;
     private ListPreference mStatusBarBattery;
 
@@ -105,6 +106,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
+            mNetTrafficType.setEnabled(value);
             mThreshold.setEnabled(value);
             return true;
         } else if (preference == mThreshold) {
@@ -128,6 +130,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     Settings.Secure.STATUS_BAR_BATTERY_STYLE, batteryStyle);
             mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
             enableStatusBarBatteryDependents(batteryStyle);
+            return true;
+        } else if (preference == mNetTrafficType) {
+            int val = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_TYPE, val,
+                    UserHandle.USER_CURRENT);
+            int index = mNetTrafficType.findIndexOfValue((String) objValue);
+            mNetTrafficType.setSummary(mNetTrafficType.getEntries()[index]);
             return true;
         }
         return false;
