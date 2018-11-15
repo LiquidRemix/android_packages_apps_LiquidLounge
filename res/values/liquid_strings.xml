@@ -1262,4 +1262,7 @@
     <string name="lockdate_font_size_title">Date font size</string>
     <string name="lockclock_font_size_title">Clock font size</string>
 
+    <!-- Privacy guard -->
+    <string name="app_ops_settings_title">Privacy guard</string>
+
 </resources>
