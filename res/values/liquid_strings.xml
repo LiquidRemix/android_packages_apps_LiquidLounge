@@ -57,6 +57,7 @@
     <string name="ambient_play">Music</string>
     <string name="statusbar_traffic" >Traffic</string>
     <string name="power_menu_title" >Power menu</string>
+    <string name="statusbar_notifications">Notifications</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -1232,7 +1233,7 @@
     <string name="pulse_blacklist_add_apps_summary">Tap here to add, tap on added app to remove it</string>
 
     <!-- Notification count -->
-    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_title">Notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
     <!-- Statusbar ticker -->
@@ -1281,5 +1282,13 @@
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
     <string name="power_menu_animation_rotate">Rotate</string>
+
+    <!-- Breathing notifications -->
+    <string name="sms_breath_title">Breathing SMS</string>
+    <string name="sms_breath_summary">Will give your sms notifications a breathing effect in the status bar</string>
+    <string name="missed_call_breath_title">Breathing missed call</string>
+    <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the statusbar</string>
+    <string name="voicemail_breath_title">Breathing voicemail</string>
+    <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
 
 </resources>
