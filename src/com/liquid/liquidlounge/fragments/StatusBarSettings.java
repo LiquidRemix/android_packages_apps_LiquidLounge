@@ -17,6 +17,9 @@
 package com.liquid.liquidlounge.fragments;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.res.Resources;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -41,6 +44,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
+    private static final String SMS_BREATH = "sms_breath";
+    private static final String MISSED_CALL_BREATH = "missed_call_breath";
+    private static final String VOICEMAIL_BREATH = "voicemail_breath";
 
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 3;
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
@@ -50,6 +56,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mNetTrafficType;
     private ListPreference mStatusBarBatteryShowPercent;
     private ListPreference mStatusBarBattery;
+    private SwitchPreference mSmsBreath;
+    private SwitchPreference mMissedCallBreath;
+    private SwitchPreference mVoicemailBreath;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -58,7 +67,30 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.statusbar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        final ContentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        // Breathing notifications
+        mSmsBreath = (SwitchPreference) findPreference(SMS_BREATH);
+        mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
+        mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
+        ConnectivityManager cm = (ConnectivityManager)
+                getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+            mSmsBreath.setChecked(Settings.Global.getInt(resolver,
+                    Settings.Global.KEY_SMS_BREATH, 0) == 1);
+            mSmsBreath.setOnPreferenceChangeListener(this);
+            mMissedCallBreath.setChecked(Settings.Global.getInt(resolver,
+                    Settings.Global.KEY_MISSED_CALL_BREATH, 0) == 1);
+            mMissedCallBreath.setOnPreferenceChangeListener(this);
+            mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
+            mVoicemailBreath.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mSmsBreath);
+            prefSet.removePreference(mMissedCallBreath);
+            prefSet.removePreference(mVoicemailBreath);
+        }
 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT) == 1;
@@ -138,6 +170,18 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     UserHandle.USER_CURRENT);
             int index = mNetTrafficType.findIndexOfValue((String) objValue);
             mNetTrafficType.setSummary(mNetTrafficType.getEntries()[index]);
+            return true;
+        } else  if (preference == mSmsBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.Global.putInt(getContentResolver(), SMS_BREATH, value ? 1 : 0);
+            return true;
+        } else if (preference == mMissedCallBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.Global.putInt(getContentResolver(), MISSED_CALL_BREATH, value ? 1 : 0);
+            return true;
+        } else if (preference == mVoicemailBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), VOICEMAIL_BREATH, value ? 1 : 0);
             return true;
         }
         return false;
