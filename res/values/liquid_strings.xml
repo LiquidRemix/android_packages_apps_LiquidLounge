@@ -53,9 +53,10 @@
     <string name="stock_recents_title" >Stock recents</string>
     <string name="hide_apps_title" >Hide apps</string>
     <string name="statusbar_ticker" >Ticker</string>
-    <string name="ls_clock" >Widget Styles</string>
+    <string name="ls_clock" >Widget styles</string>
     <string name="ambient_play">Music</string>
     <string name="statusbar_traffic" >Traffic</string>
+    <string name="power_menu_title" >Power menu</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -1264,5 +1265,20 @@
 
     <!-- Privacy guard -->
     <string name="app_ops_settings_title">Privacy guard</string>
+
+    <!-- Power menu animations  -->
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_dialog_title">Select power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
+    <string name="power_menu_animation_xylon">Fly</string>
+    <string name="power_menu_animation_slide">Slide</string>
+    <string name="power_menu_animation_turn">Turn</string>
+    <string name="power_menu_animation_fly">Glow</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
+    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
 </resources>
