@@ -38,7 +38,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.android.settings.slim.util.ShortcutPickerHelper.AppExpandableAdapter.GroupInfo;
+import com.liquid.liquidlounge.preferences.dslv.ShortcutPickerHelper.AppExpandableAdapter.GroupInfo;
 import com.android.settings.R;
 
 import com.android.internal.util.slim.AppHelper;
@@ -341,5 +341,4 @@ public class ShortcutPickerHelper {
         mListener.shortcutPicked(appUri,
                 AppHelper.getFriendlyShortcutName(mParent, mPackageManager, intent), bmp, false);
     }
-
 }

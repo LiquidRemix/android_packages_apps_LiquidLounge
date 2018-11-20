@@ -1258,8 +1258,6 @@
 
     <!-- Slim DSLV -->
     <string name="shortcut_action_none">None</string>
-    <string name="shortcut_action_longpress">Longpress:</string>
-    <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
     <string name="shortcut_action_select_action">Choose action:</string>
     <string name="shortcut_action_select_action_newaction">Choose new action:</string>
     <string name="shortcut_action_reset">Reset</string>
@@ -1469,4 +1467,10 @@
     <string name="yahoo">Yahoo</string>
     <string name="youtube">Youtube</string>
     <string name="zedge">Zedge</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
+    <string name="shortcut_picker_choose_longpress_action">Choose longpress action:</string>
+    <string name="help">Help</string>
+
 </resources>

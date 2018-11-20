@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package ccom.liquid.liquidlounge.preferences.dslv;
+package com.liquid.liquidlounge.preferences.dslv;
 
 import android.content.Context;
 import android.content.res.TypedArray;
