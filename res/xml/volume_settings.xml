@@ -17,6 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:liquidns="http://schemas.android.com/apk/res-auto"
     android:title="@string/volume_title">
 
     <!-- Volume steps -->
@@ -25,6 +26,16 @@
         android:title="@string/volume_steps_title"
         android:summary="@string/volume_steps_summary"
         android:fragment="com.liquid.liquidlounge.fragments.VolumeSteps" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+        android:key="volume_dialog_timeout"
+        android:title="@string/volume_dialog_timeout_title"
+        android:min="500"
+        android:max="10000"
+        android:defaultValue="3000"
+        liquidns:interval="100"
+        settings:unitsLeft=""
+        settings:unitsRight="ms" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"

@@ -1473,4 +1473,7 @@
     <string name="shortcut_picker_choose_longpress_action">Choose longpress action:</string>
     <string name="help">Help</string>
 
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">Volume dialog timeout</string>
+
 </resources>
