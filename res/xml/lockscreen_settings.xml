@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_title">
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
         android:key="lockscreen_shortcuts"
         android:fragment="com.liquid.liquidlounge.preferences.dslv.ActionListViewSettings"
         android:summary="@string/lockscreen_shortcuts_summary"
@@ -29,7 +29,14 @@
             <extra android:name="disableLongpress" android:value="true" />
             <extra android:name="useAppPickerOnly" android:value="true" />
             <extra android:name="fragment" android:value="com.liquid.liquidlounge.fragments.LockScreenShortcuts" />
-    </PreferenceScreen>
+    </PreferenceScreen> -->
+
+    <Preference
+        android:title="@string/lockscreen_tuner_title" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
+    </Preference>
 
     <PreferenceCategory
         android:key="ls_clock"

@@ -81,7 +81,7 @@ public class LockScreenShortcuts extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_SHORTCUTS_LONGPRESS,
                     (Boolean) newValue ? 1 : 0);
-                    Integer.valueOf((String) newValue));
+                    Integer.valueOf((String) newValue);
         }
         return true;
     }
