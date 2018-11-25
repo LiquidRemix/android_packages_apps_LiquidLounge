@@ -43,7 +43,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     private static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-    private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
+    private static final String KEY_HIDE_NOTCH = "statusbar_notch";
     private static final String SMS_BREATH = "sms_breath";
     private static final String MISSED_CALL_BREATH = "missed_call_breath";
     private static final String VOICEMAIL_BREATH = "voicemail_breath";
@@ -132,9 +132,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if(displayCutout.isEmpty()) {
-            final Preference hideNotchPref =
-                (Preference) getPreferenceScreen().findPreference(KEY_HIDE_NOTCH);
-            getPreferenceScreen().removePreference(hideNotchPref);
+            final PreferenceCategory hideNotchPref = (PreferenceCategory) prefSet.findPreference(KEY_HIDE_NOTCH);
+                 prefSet.removePreference(hideNotchPref);
         }
     }
 
