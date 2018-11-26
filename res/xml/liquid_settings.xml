@@ -84,7 +84,7 @@
         android:key="navigation_category"
         android:title="@string/navigation_title"
         android:icon="@drawable/ic_settings_navigation"
-        android:fragment="com.liquid.liquidlounge.fragments.NavigationSettings" />
+        android:fragment="com.android.settings.smartnav.NavigationBarSettings" />
 
     <!-- Notifications -->
     <Preference
