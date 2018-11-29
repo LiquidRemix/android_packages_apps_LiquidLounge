@@ -57,6 +57,11 @@
             android:summary="@string/recent_styles_summary"
             android:fragment="com.liquid.liquidlounge.fragments.RecentsStyles" />
 
+		<Preference
+        	android:key="recents_icon_pack"
+        	android:title="@string/recents_icon_pack_title"
+        	android:summary="@string/recents_icon_pack_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
