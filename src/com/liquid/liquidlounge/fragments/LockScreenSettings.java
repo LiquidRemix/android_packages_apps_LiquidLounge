@@ -35,6 +35,7 @@ import android.support.v7.preference.PreferenceScreen;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import android.provider.Settings;
+import com.android.internal.util.ambient.weather.WeatherClient;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -52,6 +53,8 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     private static final String LOCK_DATE_FONTS = "lock_date_fonts";
     private static final String CLOCK_FONT_SIZE  = "lockclock_font_size";
     private static final String DATE_FONT_SIZE  = "lockdate_font_size";
+
+    private static final String WEATHER_LS_CAT = "lockscreen_weather";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -126,6 +129,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment
                 getContentResolver(), Settings.System.LOCK_DATE_FONTS, 0)));
         mLockDateFonts.setSummary(mLockDateFonts.getEntry());
         mLockDateFonts.setOnPreferenceChangeListener(this);
+
+        final PreferenceCategory weatherCategory = (PreferenceCategory) prefScreen
+                .findPreference(WEATHER_LS_CAT);
+
+        if (!WeatherClient.isAvailable(getContext())) {
+            prefScreen.removePreference(weatherCategory);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

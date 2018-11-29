@@ -143,6 +143,21 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+	android:key="lockscreen_weather"
+	android:title="@string/lockscreen_weather_category" >
+
+	<com.liquid.liquidlounge.preferences.SecureSettingListPreference
+	    android:key="weather_lockscreen_unit"
+            android:dialogTitle="@string/weather_unit"
+            android:title="@string/weather_unit"
+            android:summary="%s"
+            android:entries="@array/weather_unit_entries"
+            android:entryValues="@array/weather_unit_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_visualizer"
         android:title="@string/lockscreen_visualizer_category" >
 
