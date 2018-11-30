@@ -19,83 +19,106 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/powermenu_title">
 
-        <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
-            android:key="lockscreen_power_menu_disabled"
-            android:title="@string/lockscreen_power_menu_disabled_title"
-            android:summary="@string/lockscreen_power_menu_disabled_summary"
-            android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/panel_porn_title">
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            android:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight="%"
+            android:defaultValue="100" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:max="100"
+            android:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight="%"
+            android:defaultValue="50" />
+
+    </PreferenceCategory>
+
+    <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
+        android:key="lockscreen_power_menu_disabled"
+        android:title="@string/lockscreen_power_menu_disabled_title"
+        android:summary="@string/lockscreen_power_menu_disabled_summary"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_power"
+        android:title="@string/powermenu_power"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_restart"
+        android:title="@string/powermenu_restart"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_restart_recovery"
+        android:title="@string/powermenu_restart_recovery"
+        android:defaultValue="true" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_screenshot"
+        android:title="@string/powermenu_screenshot"
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_screenrecord"
+        android:title="@string/powermenu_screenrecord"
+        android:defaultValue="false" />
+
+    <SwitchPreference
+        android:key="powermenu_torch"
+        android:title="@string/powermenu_torch"
+        android:persistent="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_airplane"
+        android:title="@string/powermenu_airplane"
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_settings"
+        android:title="@string/powermenu_settings"
+        android:defaultValue="false" />
+
+    <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_lockdown"
+        android:title="@string/powermenu_lockdown"
+        android:defaultValue="false" />
+
+    <SwitchPreference
+        android:key="powermenu_users"
+        android:title="@string/powermenu_users"
+        android:defaultValue="false" />
+
+    <SwitchPreference
+        android:key="powermenu_logout"
+        android:title="@string/powermenu_logout"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="onthego_category"
+        android:title="@string/onthego_title"/>
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_power"
-            android:title="@string/powermenu_power"
-            android:defaultValue="true" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_restart"
-            android:title="@string/powermenu_restart"
-            android:defaultValue="true" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_restart_recovery"
-            android:title="@string/powermenu_restart_recovery"
-            android:defaultValue="true" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_screenshot"
-            android:title="@string/powermenu_screenshot"
+            android:key="global_actions_onthego"
+            android:title="@string/global_actions_onthego_title"
             android:defaultValue="false" />
 
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_screenrecord"
-            android:title="@string/powermenu_screenrecord"
-            android:defaultValue="false" />
-
-        <SwitchPreference
-            android:key="powermenu_torch"
-            android:title="@string/powermenu_torch"
-            android:persistent="false" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_airplane"
-            android:title="@string/powermenu_airplane"
-            android:defaultValue="false" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_settings"
-            android:title="@string/powermenu_settings"
-            android:defaultValue="false" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_lockdown"
-            android:title="@string/powermenu_lockdown"
-            android:defaultValue="false" />
-
-        <SwitchPreference
-            android:key="powermenu_users"
-            android:title="@string/powermenu_users"
-            android:defaultValue="false" />
-
-        <SwitchPreference
-            android:key="powermenu_logout"
-            android:title="@string/powermenu_logout"
-            android:defaultValue="false" />
-
-        <PreferenceCategory
-            android:key="onthego_category"
-            android:title="@string/onthego_title"/>
-
-            <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-                android:key="global_actions_onthego"
-                android:title="@string/global_actions_onthego_title"
-                android:defaultValue="false" />
-
-            <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
-                android:key="on_the_go_alpha"
-                android:title="@string/onthego_alpha_title"
-                android:summary="@string/onthego_alpha_summary"
-                android:dependency="global_actions_onthego"
-                android:defaultValue="50"
-                android:max="100"
-                android:min="0" />
+        <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+            android:key="on_the_go_alpha"
+            android:title="@string/onthego_alpha_title"
+            android:summary="@string/onthego_alpha_summary"
+            android:dependency="global_actions_onthego"
+            android:defaultValue="50"
+            android:max="100"
+            android:min="0" />
 
 </PreferenceScreen>
