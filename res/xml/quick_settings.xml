@@ -62,6 +62,27 @@
         android:defaultValue="false" />
 
     <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
+        android:key="qs_show_auto_brightness"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:dependency="qs_show_brightness"
+        android:defaultValue="false"/>
+
+    <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
+        android:key="qs_auto_brightness_right"
+        android:title="@string/qs_auto_brightness_right_title"
+        android:summary="@string/qs_auto_brightness_right_summary"
+        android:dependency="qs_show_auto_brightness"
+        android:defaultValue="true"/>
+
+    <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
+        android:key="qs_show_brightness_buttons"
+        android:title="@string/qs_show_brightness_buttons_title"
+        android:summary="@string/qs_show_brightness_buttons_summary"
+        android:dependency="qs_show_brightness"
+        android:defaultValue="true"/>
+
+    <com.liquid.liquidlounge.preferences.SecureSettingSwitchPreference
         android:key="qs_show_drag_handle"
         android:title="@string/tuner_show_drag_handle_title"
         android:summary="@string/tuner_show_drag_handle_summary"

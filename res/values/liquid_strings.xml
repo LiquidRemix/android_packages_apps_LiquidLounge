@@ -1304,5 +1304,13 @@
     <string name="donate_liquid_summary">Donate to support development and our server</string>
     <string name="donate_dev_title" translatable="false">Ryan Birnesser (liquid0624)</string>
     <string name="donate_dev_summary">Lead Developer and Founder - Donate for a beer or a coffee!</string>
-	
+
+    <!-- QS Auto brightness toggle -->
+    <string name="brightness_icon_title">Auto brightness icon</string>
+    <string name="brightness_icon_summary">Show an icon to toggle auto-brightness</string>
+    <string name="qs_auto_brightness_right_title">Auto brightness icon on right</string>
+    <string name="qs_auto_brightness_right_summary">Show the icon on right of the brightness slider</string>
+    <string name="qs_show_brightness_buttons_title">Brightness control buttons</string>
+    <string name="qs_show_brightness_buttons_summary">Show buttons beside the brightness slider to adjust brightness</string>
+
 </resources>
