@@ -22,7 +22,7 @@
 
     <PreferenceCategory
         android:key="ambient_play"
-        android:title="@string/ambient_play" >
+        android:title="@string/ambient_play">
 
         <Preference
             android:key="ambient_play"
@@ -70,8 +70,7 @@
 
     <PreferenceCategory
         android:key="ambient_element"
-        android:title="@string/ambient_element_title"
-        android:dependency="doze_enabled" >
+        android:title="@string/ambient_element_title">
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference 
             android:key="ambient_battery_percent" 
@@ -84,7 +83,7 @@
     <PreferenceCategory
         android:key="tilt_sensor"
         android:title="@string/tilt_sensor_title"
-        android:dependency="doze_enabled" >
+        android:dependency="doze_enabled">
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="doze_trigger_tilt"
@@ -109,7 +108,7 @@
     <PreferenceCategory
         android:key="pickup"
         android:title="@string/pickup_sensor_title"
-        android:dependency="doze_enabled" >
+        android:dependency="doze_enabled">
 
         <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
             android:key="doze_trigger_pickup"
