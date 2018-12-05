@@ -58,6 +58,7 @@
     <string name="statusbar_traffic" >Traffic</string>
     <string name="power_menu_title" >Power menu</string>
     <string name="statusbar_notifications">Notifications</string>
+    <string name="misc_screenshot">Screenshot</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -701,8 +702,8 @@
 
     <!-- Screenshot type -->
     <string name="screenshot_type_title">Screenshot type</string>
-    <string name="screenshot_type_fullscreen">Fullscreen screenshots</string>
-    <string name="screenshot_type_partial">Partial screenshots</string>
+    <string name="screenshot_type_fullscreen">Full</string>
+    <string name="screenshot_type_partial">Partial</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Clock font style</string>
@@ -1247,5 +1248,13 @@
     <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
+
+    <!-- ScreenRecord Shortcut -->
+    <string name="screen_record_shortcut">Screenrecord Shortcut</string>
+    <string name="screen_record_shortcut_summary">Power + Volume Up triggers Screenrecord when enabled</string>
+
+    <!-- ScreenShot Shortcut -->
+    <string name="screen_shot_shortcut">Screenshot Shortcut</string>
+    <string name="screen_shot_shortcut_summary">Power + Volume Down triggers screenshot when enabled</string>
 
 </resources>

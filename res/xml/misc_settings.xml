@@ -83,12 +83,6 @@
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
         android:defaultValue="true" />
 
-    <com.liquid.liquidlounge.preferences.SystemSettingListPreference
-        android:key="screenshot_type"
-        android:entries="@array/screenshot_type_entries"
-        android:entryValues="@array/screenshot_type_values"
-        android:title="@string/screenshot_type_title" />
-
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="show_cpu_overlay"
         android:title="@string/show_cpu_info"
@@ -100,5 +94,30 @@
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="misc_screenshot"
+        android:title="@string/misc_screenshot">
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="screen_record_shortcut"
+            android:title="@string/screen_record_shortcut"
+            android:summary="@string/screen_record_shortcut_summary"
+            android:defaultValue="true" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="screen_shot_shortcut"
+            android:title="@string/screen_shot_shortcut"
+            android:summary="@string/screen_shot_shortcut_summary"
+            android:defaultValue="true" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingListPreference
+            android:key="screenshot_type"
+            android:entries="@array/screenshot_type_entries"
+            android:entryValues="@array/screenshot_type_values"
+            android:title="@string/screenshot_type_title"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
