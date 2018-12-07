@@ -26,6 +26,11 @@
         android:entries="@array/recents_type_title_entries"
         android:defaultValue="0"
         android:entryValues="@array/recents_type_title_values"/>
+	
+    <Preference
+        android:key="recents_icon_pack"
+        android:title="@string/recents_icon_pack_title"
+        android:summary="@string/recents_icon_pack_summary" />
 
     <PreferenceCategory
         android:key="stock_recents"
@@ -57,10 +62,6 @@
             android:summary="@string/recent_styles_summary"
             android:fragment="com.liquid.liquidlounge.fragments.RecentsStyles" />
 
-		<Preference
-        	android:key="recents_icon_pack"
-        	android:title="@string/recents_icon_pack_title"
-        	android:summary="@string/recents_icon_pack_summary" />
 
     </PreferenceCategory>
 
