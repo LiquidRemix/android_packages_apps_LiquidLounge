@@ -185,7 +185,7 @@ public class RecentsSettings extends SettingsPreferenceFragment
                 Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
             }
-            LiquidUtils.restartSystemUi(getContext());
+            LiquidUtils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mImmersiveRecents) {
             int mode = Integer.valueOf((String) objValue); 
@@ -268,6 +268,7 @@ public class RecentsSettings extends SettingsPreferenceFragment
                 Settings.System.putString(getContext().getContentResolver(),
                         Settings.System.RECENTS_ICON_PACK, selectedPackage);
                 mDialog.dismiss();
+                LiquidUtils.showSystemUiRestartDialog(getContext());
             }
         });
 
