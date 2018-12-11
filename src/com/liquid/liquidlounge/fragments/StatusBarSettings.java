@@ -73,6 +73,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mSmsBreath = (SwitchPreference) findPreference(SMS_BREATH);
         mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
         mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
+        
         ConnectivityManager cm = (ConnectivityManager)
                 getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -99,6 +100,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mNetMonitor.setOnPreferenceChangeListener(this);
 
         int value = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_TYPE, 0, UserHandle.USER_CURRENT);
+        mNetTrafficType = (ListPreference) findPreference("network_traffic_type");
+        mNetTrafficType.setValue(String.valueOf(value));
+        mNetTrafficType.setSummary(mNetTrafficType.getEntry());
+        mNetTrafficType.setOnPreferenceChangeListener(this);
+        mNetTrafficType.setEnabled(isNetMonitorEnabled);
+
+        value = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT);
         mThreshold = (SystemSettingSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(value);
