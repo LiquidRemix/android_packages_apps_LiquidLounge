@@ -23,4 +23,21 @@
             android:title="@string/use_bottom_gesture_title"
             android:defaultValue="false" />
 
+        <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+            android:key="gesture_swipe_length"
+            android:title="@string/gesture_swipe_length_title"
+            android:max="250"
+            android:min="40"
+            android:persistent="false"
+            android:dependency="use_bottom_gesture_navigation" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
+            android:key="gesture_swipe_timeout"
+            android:title="@string/gesture_action_timeout_title"
+            android:max="500"
+            android:min="100"
+            android:defaultValue="250"
+            android:persistent="false"
+            android:dependency="use_bottom_gesture_navigation" />
+
 </PreferenceScreen>
