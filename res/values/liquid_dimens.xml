@@ -29,4 +29,7 @@
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
 
+    <!-- Color Blend -->
+    <dimen name="color_blend_preview_size">36dp</dimen>
+
 </resources>
