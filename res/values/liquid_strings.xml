@@ -1280,7 +1280,7 @@
 	<!-- The Drill -->
     <string name="drill_title">The Drill</string>
     <string name="drill_summary">Found a bug? Ran into an issue?</string>
-	
+
     <!-- Share LiquidRemix -->	
     <string name="share_liquid_title">Share LiquidRemix</string>
     <string name="share_liquid_summary">Let others know about LiquidRemix</string>
@@ -1300,11 +1300,18 @@
     <string name="maintainers_liquid_title">Devices and maintainers</string>
     <string name="maintainers_liquid_summary">List of supported devices and their official maintainers</string>
     <string name="maintainers_liquid_error">Unable to load devices and maintainers list</string>
-	
+
     <!-- Donate LiquidRemix -->
     <string name="donate_liquid_title">Donate</string>
     <string name="donate_liquid_summary">Donate to support development and our server</string>
     <string name="donate_dev_title" translatable="false">Ryan Birnesser (liquid0624)</string>
     <string name="donate_dev_summary">Lead Developer and Founder - Donate for a beer or a coffee!</string>
-	
+
+    <!-- FastCharge LED -->
+    <string name="fast_color_cat_title">Fast charging</string>
+    <string name="fast_charging_led_enabled_title">Enable fast charging color</string>
+    <string name="fast_charging_led_enabled_summary">When fast charging, use different color till 90% charged</string>
+    <string name="fast_charging_light_color_title">Color</string>
+    <string name="fast_charging_light_color_summary"></string>
+
 </resources>
