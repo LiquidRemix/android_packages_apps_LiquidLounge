@@ -732,7 +732,7 @@
 
     <!-- Burn-in Protection -->
     <string name="burn_in_protection_title">Burn-in Protection</string>
-    <string name="burn_in_protection_summary">Shift statusbar icons to prevent burn-in</string>
+    <string name="burn_in_protection_summary">Shift statusbar and navbar icons to prevent burn-in</string>
     <string name="burn_in_protection_interval_title">Interval of shift</string>
 
     <!-- Hide statusbar on lockscreen -->
@@ -1256,5 +1256,14 @@
     <!-- ScreenShot Shortcut -->
     <string name="screen_shot_shortcut">Screenshot Shortcut</string>
     <string name="screen_shot_shortcut_summary">Power + Volume Down triggers screenshot when enabled</string>
+
+    <!-- Audio Panel view  -->
+    <string name="audio_panel_view">Audio panel</string>
+    <string name="audio_panel_view_media_title">Media</string>
+    <string name="audio_panel_view_ringer_title">Ring</string>
+    <string name="audio_panel_view_notification_title">Notification</string>
+    <string name="audio_panel_view_alarm_title">Alarm</string>
+    <string name="audio_panel_view_voice_title">Voice</string>
+    <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
 
 </resources>
