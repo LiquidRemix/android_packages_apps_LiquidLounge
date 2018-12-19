@@ -26,12 +26,17 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.android.internal.util.liquid.LiquidUtils;
+import com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference;
+
 public class VolumeRockerSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String KEY_VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
 
     private ListPreference mVolumeKeyCursorControl;
+    private SystemSettingSwitchPreference mVolumePanelLeft;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -47,12 +52,17 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment
             mVolumeKeyCursorControl.setValue(Integer.toString(volumeRockerCursorControl));
             mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
         }
+
+        mVolumePanelLeft = (SystemSettingSwitchPreference) findPreference(KEY_VOLUME_PANEL_ON_LEFT);
+        mVolumePanelLeft.setChecked(Settings.System.getInt(getContentResolver(),
+                                Settings.System.VOLUME_PANEL_ON_LEFT, 0) == 1);
+        mVolumePanelLeft.setOnPreferenceChangeListener(this);
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object value) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mVolumeKeyCursorControl) {
-            String volumeKeyCursorControl = (String) value;
+            String volumeKeyCursorControl = (String) objValue;
             int volumeKeyCursorControlValue = Integer.parseInt(volumeKeyCursorControl);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL, volumeKeyCursorControlValue);
@@ -61,6 +71,12 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment
             mVolumeKeyCursorControl
                     .setSummary(mVolumeKeyCursorControl.getEntries()[volumeKeyCursorControlIndex]);
             return true;
+        } else if (preference == mVolumePanelLeft) {
+           boolean value = (Boolean) objValue;
+           Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_PANEL_ON_LEFT, value ? 0 : 1);
+           LiquidUtils.showSystemUiRestartDialog(getContext());
+           return true;
         }
         return false;
     }
