@@ -33,7 +33,7 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
-    private static final String KEY_VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+    private static final String KEY_VOLUME_PANEL_ON_LEFT = "audio_panel_view_position";
 
     private ListPreference mVolumeKeyCursorControl;
     private SystemSettingSwitchPreference mVolumePanelLeft;
@@ -55,7 +55,7 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment
 
         mVolumePanelLeft = (SystemSettingSwitchPreference) findPreference(KEY_VOLUME_PANEL_ON_LEFT);
         mVolumePanelLeft.setChecked(Settings.System.getInt(getContentResolver(),
-                                Settings.System.VOLUME_PANEL_ON_LEFT, 0) == 1);
+                                Settings.System.AUDIO_PANEL_VIEW_POSITION, 0) == 1);
         mVolumePanelLeft.setOnPreferenceChangeListener(this);
     }
 
@@ -74,7 +74,7 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment
         } else if (preference == mVolumePanelLeft) {
            boolean value = (Boolean) objValue;
            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.VOLUME_PANEL_ON_LEFT, value ? 0 : 1);
+                    Settings.System.AUDIO_PANEL_VIEW_POSITION, value ? 0 : 1);
            LiquidUtils.showSystemUiRestartDialog(getContext());
            return true;
         }

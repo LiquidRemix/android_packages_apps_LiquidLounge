@@ -69,7 +69,7 @@
         android:title="@string/volume_key_cursor_control_title" />
 
     <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-        android:key="volume_panel_on_left"
+        android:key="audio_panel_view_position"
         android:title="@string/volume_panel_on_left_title"
         android:summary="@string/volume_panel_on_left_summary"
         android:defaultValue="false" />
