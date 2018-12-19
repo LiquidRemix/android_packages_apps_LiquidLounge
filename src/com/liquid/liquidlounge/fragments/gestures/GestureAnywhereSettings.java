@@ -112,6 +112,7 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mPositionPref) {
             int position = Integer.valueOf((String) newValue);
+            updatePositionSummary(position);
             return true;
         } else if (preference == mEnabledPref) {
             Settings.System.putInt(getContentResolver(),
@@ -141,6 +142,12 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
     public boolean onPreferenceTreeClick(Preference preference) {
         boolean value;
         return true;
+    }
+
+    private void updatePositionSummary(int value) {
+        mPositionPref.setSummary(mPositionPref.getEntries()[mPositionPref.findIndexOfValue("" + value)]);
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.GESTURE_ANYWHERE_POSITION, value);
     }
 
     @Override
