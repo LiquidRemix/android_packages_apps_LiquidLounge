@@ -1333,4 +1333,10 @@
     <string name="battery_blend_end">Full</string>
     <string name="battery_blend_between">Between</string>
 
+    <!-- Screenrecord quality -->
+    <string name="screenrecord_quality_title">Screenrecord Quality</string>
+    <string name="screenrecord_quality_low">Low</string>
+    <string name="screenrecord_quality_medium">Medium</string>
+    <string name="screenrecord_quality_high">High</string>
+
 </resources>
