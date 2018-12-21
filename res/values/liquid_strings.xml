@@ -54,7 +54,6 @@
     <string name="statusbar_ticker" >Ticker</string>
     <string name="ls_clock" >Widget styles</string>
     <string name="ls_weather" >Weather</string>
-    <string name="ambient_play">Music</string>
     <string name="statusbar_traffic" >Traffic</string>
     <string name="power_menu_title" >Power menu</string>
     <string name="statusbar_notifications">Notifications</string>

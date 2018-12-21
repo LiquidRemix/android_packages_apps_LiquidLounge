@@ -21,18 +21,6 @@
     android:title="@string/ambient_title">
 
     <PreferenceCategory
-        android:key="ambient_play"
-        android:title="@string/ambient_play">
-
-        <Preference
-            android:key="ambient_play"
-            android:title="@string/ambient_play_title"
-            android:summary="@string/ambient_play_summary"
-            android:fragment="com.android.settings.AmbientPlaySettings" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="advanced_doze"
         android:title="@string/advanced_doze_title">
 
