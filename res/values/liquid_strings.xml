@@ -59,6 +59,7 @@
     <string name="power_menu_title" >Power menu</string>
     <string name="statusbar_notifications">Notifications</string>
     <string name="misc_screenshot">Screenshot</string>
+    <string name="ambient_play">Music</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -1342,5 +1343,9 @@
     <!-- USB configuration -->
     <string name="usb_default_config_title">USB configuration</string>
     <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
+
+    <!-- Ambient music ticker -->
+    <string name="force_ambient_for_media_title">Music ticker</string>
+    <string name="force_ambient_for_media_summary">Display the playing music track info within Ambient display</string>
 
 </resources>

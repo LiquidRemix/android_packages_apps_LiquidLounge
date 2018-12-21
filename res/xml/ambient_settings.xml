@@ -21,6 +21,18 @@
     android:title="@string/ambient_title">
 
     <PreferenceCategory
+        android:key="ambient_play"
+        android:title="@string/ambient_play" >
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="force_ambient_for_media"
+            android:title="@string/force_ambient_for_media_title"
+            android:summary="@string/force_ambient_for_media_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="advanced_doze"
         android:title="@string/advanced_doze_title">
 
