@@ -1339,4 +1339,8 @@
     <string name="screenrecord_quality_medium">Medium</string>
     <string name="screenrecord_quality_high">High</string>
 
+    <!-- USB configuration -->
+    <string name="usb_default_config_title">USB configuration</string>
+    <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
+
 </resources>

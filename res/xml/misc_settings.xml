@@ -77,6 +77,12 @@
         android:summary="@string/pocket_judge_summary" 
         android:defaultValue="false" /> 
 
+    <Preference
+        android:key="default_usb_configuration"
+        android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
+        android:title="@string/usb_default_config_title"
+        android:summary="@string/usb_default_config_summary"/>
+
     <com.liquid.liquidlounge.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wakeup_when_plugged_unplugged_title"
