@@ -101,32 +101,20 @@
         android:key="statusbar_traffic"
         android:title="@string/statusbar_traffic">
 
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="network_traffic_state"
+        <ListPreference
+            android:key="network_traffic_location"
             android:title="@string/network_traffic_state_title"
-            android:summary="@string/network_traffic_state_summary"
-            android:defaultValue="false" />
+            android:summary="%s"
+            android:entries="@array/network_traffic_location_entries"
+            android:entryValues="@array/network_traffic_location_values"
+            android:persistent="false" />
 
         <ListPreference
             android:key="network_traffic_type"
             android:title="@string/network_traffic_type"
             android:entries="@array/show_network_traffic_type_entries"
             android:entryValues="@array/show_network_traffic_type_values"
-            android:dependency="network_traffic_state"
             android:persistent="false" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="network_traffic_hidearrow"
-            android:title="@string/network_traffic_hidearrow"
-            android:summary="@string/network_traffic_hidearrow_summary"
-            android:dependency="network_traffic_state"
-            android:defaultValue="false" />
-
-        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
-            android:key="statusbar_show_wifi_activity"
-            android:title="@string/statusbar_show_wifi_activity_title"
-            android:summary="@string/statusbar_show_wifi_activity_summary"
-            android:defaultValue="false" />
 
         <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
             android:key="network_traffic_autohide_threshold"
@@ -134,6 +122,18 @@
             android:max="10"
             android:min="0"
             android:defaultValue="1" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_hidearrow"
+            android:title="@string/network_traffic_hidearrow"
+            android:summary="@string/network_traffic_hidearrow_summary"
+            android:defaultValue="true" />
+
+        <com.liquid.liquidlounge.preferences.SystemSettingSwitchPreference
+            android:key="statusbar_show_wifi_activity"
+            android:title="@string/statusbar_show_wifi_activity_title"
+            android:summary="@string/statusbar_show_wifi_activity_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
