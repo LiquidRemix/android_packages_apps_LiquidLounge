@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2018 LiquidRemix Android Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/maintainers_liquid_title">
+
+    <!-- ANDROİD ONE 
+    <PreferenceCategory
+        android:title="@string/device_category_one_title">
+    </PreferenceCategory> -->
+
+    <!-- ASUS -->
+    <PreferenceCategory
+        android:title="@string/device_category_asus_title">
+
+        <Preference
+            android:id="@+id/device_asus_X00T"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_asus_X00T"
+            android:summary="@string/device_asus_X00T_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <!-- BQ
+    <PreferenceCategory
+        android:title="@string/device_category_bq_title">
+    </PreferenceCategory> -->
+
+    <!-- COOLPAD 
+    <PreferenceCategory
+        android:title="@string/device_category_coolpad_title">
+    </PreferenceCategory> -->
+
+    <!-- HTC 
+    <PreferenceCategory
+        android:title="@string/device_category_htc_title">
+    </PreferenceCategory> -->
+
+    <!-- HUAWEİ 
+    <PreferenceCategory
+        android:title="@string/device_category_huawei_title">
+    </PreferenceCategory> -->
+
+    <!-- GOOGLE -->
+    <PreferenceCategory
+        android:title="@string/device_category_google_title">
+
+        <Preference
+            android:id="@+id/device_google_Marlin"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_google_Marlin"
+            android:summary="@string/device_google_Marlin_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <!-- LeEco 
+    <PreferenceCategory
+        android:title="@string/device_category_leeco_title">
+    </PreferenceCategory> -->
+
+    <!-- LENOVO -->
+    <PreferenceCategory
+        android:title="@string/device_category_lenovo_title">
+
+       <Preference
+            android:id="@+id/device_lenovo_Kuntao"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_lenovo_Kuntao"
+            android:summary="@string/device_lenovo_Kuntao_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <!-- LG -->
+    <PreferenceCategory
+        android:title="@string/device_category_lg_title">
+
+        <Preference
+            android:id="@+id/device_lg_d855"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_lg_d855"
+            android:summary="@string/device_lg_d855_summary"
+            android:selectable="false" />
+    </PreferenceCategory> 
+
+    <!-- MOTOROLA 
+    <PreferenceCategory
+        android:title="@string/device_category_motorola_title">
+    </PreferenceCategory> -->
+
+    <!-- NEXTBIT 
+    <PreferenceCategory
+        android:title="@string/device_category_nextbit_title">
+    </PreferenceCategory> -->
+
+    <!-- NVİDİA
+    <PreferenceCategory
+        android:title="@string/device_category_nvidia_title">
+    </PreferenceCategory> -->
+
+    <!-- ONEPLUS -->
+    <PreferenceCategory
+        android:title="@string/device_category_oneplus_title">
+
+        <Preference
+            android:id="@+id/device_oneplus_Enchilada"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_oneplus_Enchilada"
+            android:summary="@string/device_oneplus_Enchilada_summary"
+            android:selectable="false" />
+ 
+     <Preference
+            android:id="@+id/device_oneplus_oneplus3"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_oneplus_oneplus3"
+            android:summary="@string/device_oneplus_oneplus3_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <!-- OPPO 
+    <PreferenceCategory
+        android:title="@string/device_category_oppo_title">
+    </PreferenceCategory> -->
+
+    <!-- SAMSUNG -->
+    <PreferenceCategory
+        android:title="@string/device_category_samsung_title">
+
+        <Preference
+            android:id="@+id/device_samsung_on7xelte"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_samsung_on7xelte"
+            android:summary="@string/device_samsung_on7xelte_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <!-- SONY
+    <PreferenceCategory
+        android:title="@string/device_category_sony_title">
+    </PreferenceCategory> -->
+
+    <!-- WİLEYFOX 
+    <PreferenceCategory
+        android:title="@string/device_category_wileyfox_title">
+    </PreferenceCategory> -->
+     
+    <!-- YU 
+    <PreferenceCategory
+        android:title="@string/device_category_yu_title">
+    </PreferenceCategory> -->
+     
+    <!-- XIAOMI -->
+    <PreferenceCategory
+        android:title="@string/device_category_xiaomi_title">
+
+        <Preference
+            android:id="@+id/device_xiaomi_Santoni"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_xiaomi_Santoni"
+            android:summary="@string/device_xiaomi_Santoni_summary"
+            android:selectable="false" />
+         
+         <Preference
+            android:id="@+id/device_xiaomi_whyred"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_xiaomi_whyred"
+            android:summary="@string/device_xiaomi_whyred_summary"
+            android:selectable="false" />
+         
+    </PreferenceCategory>
+</PreferenceScreen>

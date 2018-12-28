@@ -120,5 +120,12 @@
         android:title="@string/statusbar_title"
         android:icon="@drawable/ic_settings_statusbar"
         android:fragment="com.liquid.liquidlounge.fragments.StatusBarSettings" />
+     
+     <!-- About LiquidRemix -->
+    <Preference
+        android:key="about_category"
+        android:title="@string/about_title"
+        android:icon="@drawable/ic_settings_about"
+        android:fragment="com.liquid.liquidlounge.fragments.About" />
 
 </PreferenceScreen>

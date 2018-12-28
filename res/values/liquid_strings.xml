@@ -20,6 +20,7 @@
     <string name="app_settings_title">Liquid Lounge</string>
 
     <!-- Title strings -->
+    <string name="about_title">About LiquidRemix</string>
     <string name="ambient_title">Ambient</string>
     <string name="animation_title">Animations</string>
     <string name="button_title">Buttons</string>
@@ -1274,4 +1275,34 @@
     <string name="power_menu_transparency">Power/reboot menu opacity</string>
     <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
 
+	<!-- The Drill -->
+    <string name="drill_title">The Drill</string>
+    <string name="drill_summary">Found a bug? Ran into an issue?</string>
+	
+    <!-- Share LiquidRemix -->	
+    <string name="share_liquid_title">Share LiquidRemix</string>
+    <string name="share_liquid_summary">Let others know about LiquidRemix</string>
+    <string name="share_message">Try LiquidRemix! https://plus.google.com/communities/115990749843435030575</string>
+    <string name="share_chooser_title">Share LiquidRemix</string>
+
+    <!-- Sites LiquidRemix -->
+    <string name="liquid_source_title">GitHub</string>
+    <string name="liquid_source_summary">We love open source, check us out</string>
+    <string name="liquid_google_plus_title">Google+</string>
+    <string name="liquid_google_plus_summary">Join us on G+ for quick updates and support</string>
+    <string name="liquid_telegram_title">Telegram</string>
+    <string name="liquid_telegram_summary">We are on telegram. Join us!</string>
+
+    <!-- Maintainers -->
+    <string name="maintainers">Maintainers</string>
+    <string name="maintainers_liquid_title">Devices and maintainers</string>
+    <string name="maintainers_liquid_summary">List of supported devices and their official maintainers</string>
+    <string name="maintainers_liquid_error">Unable to load devices and maintainers list</string>
+	
+    <!-- Donate LiquidRemix -->
+    <string name="donate_liquid_title">Donate</string>
+    <string name="donate_liquid_summary">Donate to support development and our server</string>
+    <string name="donate_dev_title" translatable="false">Ryan Birnesser (liquid0624)</string>
+    <string name="donate_dev_summary">Lead Developer and Founder - Donate for a beer or a coffee!</string>
+	
 </resources>
