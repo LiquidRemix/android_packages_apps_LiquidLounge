@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2018 LiquidRemix Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Device Brands -->
+    <string name="device_category_one_title">ANDROİD ONE</string>
+    <string name="device_category_bq_title">BQ</string>
+    <string name="device_category_coolpad_title">COOLPAD</string>
+    <string name="device_category_asus_title">ASUS</string>
+    <string name="device_category_htc_title">HTC</string>
+    <string name="device_category_huawei_title">HUAWEİ</string>
+    <string name="device_category_google_title">GOOGLE</string>
+    <string name="device_category_leeco_title">LeEco</string>
+    <string name="device_category_lenovo_title">LENOVO</string>
+    <string name="device_category_lg_title">LG</string>
+    <string name="device_category_motorola_title">MOTOROLA</string>
+    <string name="device_category_nextbit_title">NEXTBIT</string>
+    <string name="device_category_nvidia_title">NVİDİA</string>
+    <string name="device_category_oneplus_title">ONEPLUS</string>
+    <string name="device_category_oppo_title">OPPO</string>
+    <string name="device_category_samsung_title">SAMSUNG</string>
+    <string name="device_category_sony_title">SONY</string>
+    <string name="device_category_wileyfox_title">WİLEYFOX</string>
+    <string name="device_category_xiaomi_title">XIAOMI</string>
+    <string name="device_category_yu_title">YU</string>
+
+    <!-- ANDROİD ONE -->
+
+    <!-- ASUS -->
+    <string name="device_asus_X00T">Zenfone Max Pro (M1)</string>
+    <string name="device_asus_X00T_summary">X00T\nMaintainer - Rizky Benggolo (travarilo)</string>
+	
+    <!-- BQ -->
+
+    <!-- COOLPAD -->
+	
+    <!-- HTC -->
+	
+    <!-- HUAWEİ -->
+	
+    <!-- GOOGLE -->
+    <string name="device_google_Marlin">Pixel XL</string>
+    <string name="device_google_Marlin_summary">Marlin\nMaintainer - Steven Creech (Stebomurkn420)</string>
+	
+    <!-- LeEco -->
+
+    <!-- LENOVO -->
+    <string name="device_lenovo_Kuntao">P2a42</string>
+    <string name="device_lenovo_Kuntao_summary">Kuntao\nMaintainer - Saikiran (Beastmaster)</string>
+	
+    <!-- LG -->
+    <string name="device_lg_d855">G3</string>
+    <string name="device_lg_d855_summary">D855\nMaintainer - Aleksander Gencel ( hardStyl3r)</string>
+
+    <!-- MOTOROLA -->
+
+    <!-- NEXTBIT -->
+
+    <!-- NVİDİA -->
+
+    <!-- ONEPLUS -->
+    <string name="device_oneplus_Enchilada">OnePlus 6</string>
+    <string name="device_oneplus_Enchilada_summary">Enchilada\nMaintainer - Ryan Birnesser (liquid0624)</string>
+	
+    <string name="device_oneplus_oneplus3">3/3T</string>
+    <string name="device_oneplus_oneplus3_summary">Oneplus3\nMaintainer - Dhanush Krishnan (Ded_Boi)</string>
+
+    <!-- OPPO -->
+
+    <!-- SAMSUNG -->
+    <string name="device_samsung_on7xelte">J7 Prime</string>
+    <string name="device_samsung_on7xelte_summary">On7xelte\nMaintainer - Douglas Gomes (Dougl@s123)</string>
+    
+    <!-- SONY -->
+
+    <!-- WİLEYFOX -->
+
+    <!-- XIAOMI -->
+    <string name="device_xiaomi_Santoni">Redmi 4X</string>
+    <string name="device_xiaomi_Santoni_summary">Santoni\nMaintainer - Gabriel (TioBurla)</string>
+	
+    <string name="device_xiaomi_whyred">Redmi Note 5 Pro</string>
+    <string name="device_xiaomi_whyred_summary">Whyred\nMaintainer - Ayan Choudhury (Nuuuuuuuu)</string>
+
+</resources>
