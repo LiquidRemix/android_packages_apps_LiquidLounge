@@ -93,4 +93,7 @@
     <string name="device_xiaomi_whyred">Redmi Note 5 Pro</string>
     <string name="device_xiaomi_whyred_summary">Whyred\nMaintainer - Ayan Choudhury (Nuuuuuuuu)</string>
 
+    <string name="device_xiaomi_mido">Redmi Note 4x</string>
+    <string name="device_xiaomi_mido_summary">Mido\nMaintainer - Sayan Sarkar (sayan7848)</string>
+
 </resources>

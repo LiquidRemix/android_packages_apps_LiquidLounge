@@ -178,5 +178,12 @@
             android:summary="@string/device_xiaomi_whyred_summary"
             android:selectable="false" />
          
+         <Preference
+            android:id="@+id/device_xiaomi_mido"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_xiaomi_mido"
+            android:summary="@string/device_xiaomi_mido_summary"
+            android:selectable="false" />
+
     </PreferenceCategory>
 </PreferenceScreen>
