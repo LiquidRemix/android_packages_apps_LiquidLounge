@@ -60,6 +60,8 @@
     <string name="statusbar_notifications">Notifications</string>
     <string name="misc_screenshot">Screenshot</string>
     <string name="ambient_play">Music</string>
+    <string name="gestures_misc_title">Miscellaneous</string>
+    <string name="gestures_sleep_title">Sleep gestures</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -345,8 +347,6 @@
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
-    <!-- Double Tap -->
-    <string name="dtts_category_header">Double tap to sleep</string>
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Lockscreen</string>
     <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
@@ -911,7 +911,6 @@
 
     <!-- Carbon gestures -->
     <string name="carbon_gestures_title">Carbon gestures</string>
-    <string name="carbon_gestures_summary">Configure custom global gestures</string>
     <string name="carbon_gestures_fingers_title">Fingers used for gesture</string>
     <string name="carbon_gestures_right_title">Right gesture</string>
     <string name="carbon_gestures_left_title">Left gesture</string>
@@ -1083,7 +1082,6 @@
     <string name="toast_icon_summary">Display icon of activity that generates toast message</string>
 
     <!-- Pie control -->
-    <string name="pa_pie_control_summary">Edge shortcuts and navigation controls</string>
     <string name="pie_enable_title">Enable pie control</string> 
     <string name="pa_pie_control_title">Pie control</string> 
     <string name="pie_theme_mode_title">Theme</string> 
@@ -1114,7 +1112,6 @@
     <string name="edge_gestures_landscape_back_edges_title">Trigger back gesture on landscape from</string>
     <string name="edge_gestures_back_screen_percent_title">Back gesture must start below this percentage of the screen</string>
     <string name="edge_gestures_back_screen_percent_summary">Trigger below % of screen</string>
-    <string name="edge_gestures_summary">Navigate using edge gestures</string>
     <string name="edge_gestures_back_show_ui_feedback_title">Back gesture animation</string>
     <string name="edge_gestures_back_show_ui_feedback_summary">Show animated feedback on edges when back gesture is used</string>
 
@@ -1136,7 +1133,6 @@
     <string name="gesture_anywhere_position_right">Right edge</string> 
     <string name="gesture_anywhere_gestures_title">Gestures</string> 
     <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string> 
-    <string name="gesture_anywhere_summary">Draw your gestures to launch preferred activity</string>
 
     <!-- Label, button used to add a gesture --> 
     <string name="ga_button_add">Add gesture</string> 

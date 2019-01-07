@@ -72,6 +72,8 @@ public class OmniGestureSettings extends SettingsPreferenceFragment implements
                 getResources().getInteger(com.android.internal.R.integer.nav_gesture_swipe_timout));
         mSwipeTriggerTimeout.setValue(triggerTimeout);
         mSwipeTriggerTimeout.setOnPreferenceChangeListener(this);
+
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.gesture_settings_info);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
