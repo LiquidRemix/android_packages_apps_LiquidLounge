@@ -38,9 +38,7 @@
     <!-- ANDROİD ONE -->
 
     <!-- ASUS -->
-    <string name="device_asus_X00T">Zenfone Max Pro (M1)</string>
-    <string name="device_asus_X00T_summary">X00T\nMaintainer - Rizky Benggolo (travarilo)</string>
-	
+
     <!-- BQ -->
 
     <!-- COOLPAD -->
@@ -48,20 +46,19 @@
     <!-- HTC -->
 	
     <!-- HUAWEİ -->
-	
+
     <!-- GOOGLE -->
     <string name="device_google_Marlin">Pixel XL</string>
     <string name="device_google_Marlin_summary">Marlin\nMaintainer - Steven Creech (Stebomurkn420)</string>
-	
+
+    <string name="device_google_Taimen">Pixel 2 XL</string>
+    <string name="device_google_Taimen_summary">Taimen\nMaintainer - Steve Provancal (steveproski)</string>
+
     <!-- LeEco -->
 
     <!-- LENOVO -->
-    <string name="device_lenovo_Kuntao">P2a42</string>
-    <string name="device_lenovo_Kuntao_summary">Kuntao\nMaintainer - Saikiran (Beastmaster)</string>
-	
+
     <!-- LG -->
-    <string name="device_lg_d855">G3</string>
-    <string name="device_lg_d855_summary">D855\nMaintainer - Aleksander Gencel ( hardStyl3r)</string>
 
     <!-- MOTOROLA -->
 
@@ -70,30 +67,26 @@
     <!-- NVİDİA -->
 
     <!-- ONEPLUS -->
+    <string name="device_oneplus_Cheeseburger">OnePlus 5</string>
+    <string name="device_oneplus_Cheeseburger_summary">Cheeseburger\nMaintainer - Beau Echols (P5YCH0B1RD)</string>
+
+    <string name="device_oneplus_Dumpling">OnePlus 5T</string>
+    <string name="device_oneplus_Dumpling_summary">Dumpling\nMaintainer - Beau Echols (P5YCH0B1RD)</string>
+
     <string name="device_oneplus_Enchilada">OnePlus 6</string>
     <string name="device_oneplus_Enchilada_summary">Enchilada\nMaintainer - Ryan Birnesser (liquid0624)</string>
-	
-    <string name="device_oneplus_oneplus3">3/3T</string>
-    <string name="device_oneplus_oneplus3_summary">Oneplus3\nMaintainer - Dhanush Krishnan (Ded_Boi)</string>
+
+    <string name="device_oneplus_Fajita">OnePlus 6T</string>
+    <string name="device_oneplus_Fajita_summary">Fajita\nMaintainer - Ryan Birnesser (liquid0624)</string>
 
     <!-- OPPO -->
 
     <!-- SAMSUNG -->
-    <string name="device_samsung_on7xelte">J7 Prime</string>
-    <string name="device_samsung_on7xelte_summary">On7xelte\nMaintainer - Douglas Gomes (Dougl@s123)</string>
-    
+
     <!-- SONY -->
 
     <!-- WİLEYFOX -->
 
     <!-- XIAOMI -->
-    <string name="device_xiaomi_Santoni">Redmi 4X</string>
-    <string name="device_xiaomi_Santoni_summary">Santoni\nMaintainer - Gabriel (TioBurla)</string>
-	
-    <string name="device_xiaomi_whyred">Redmi Note 5 Pro</string>
-    <string name="device_xiaomi_whyred_summary">Whyred\nMaintainer - Ayan Choudhury (Nuuuuuuuu)</string>
-
-    <string name="device_xiaomi_mido">Redmi Note 4x</string>
-    <string name="device_xiaomi_mido_summary">Mido\nMaintainer - Sayan Sarkar (sayan7848)</string>
 
 </resources>

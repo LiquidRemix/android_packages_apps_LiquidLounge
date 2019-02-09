@@ -21,17 +21,10 @@
         android:title="@string/device_category_one_title">
     </PreferenceCategory> -->
 
-    <!-- ASUS -->
+    <!-- ASUS
     <PreferenceCategory
         android:title="@string/device_category_asus_title">
-
-        <Preference
-            android:id="@+id/device_asus_X00T"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_asus_X00T"
-            android:summary="@string/device_asus_X00T_summary"
-            android:selectable="false" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <!-- BQ
     <PreferenceCategory
@@ -63,6 +56,13 @@
             android:title="@string/device_google_Marlin"
             android:summary="@string/device_google_Marlin_summary"
             android:selectable="false" />
+
+        <Preference
+            android:id="@+id/device_google_Taimen"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_google_Taimen"
+            android:summary="@string/device_google_Taimen_summary"
+            android:selectable="false" />
     </PreferenceCategory>
 
     <!-- LeEco 
@@ -70,29 +70,15 @@
         android:title="@string/device_category_leeco_title">
     </PreferenceCategory> -->
 
-    <!-- LENOVO -->
+    <!-- LENOVO
     <PreferenceCategory
         android:title="@string/device_category_lenovo_title">
+    </PreferenceCategory> -->
 
-       <Preference
-            android:id="@+id/device_lenovo_Kuntao"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_lenovo_Kuntao"
-            android:summary="@string/device_lenovo_Kuntao_summary"
-            android:selectable="false" />
-    </PreferenceCategory>
-
-    <!-- LG -->
+    <!-- LG
     <PreferenceCategory
         android:title="@string/device_category_lg_title">
-
-        <Preference
-            android:id="@+id/device_lg_d855"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_lg_d855"
-            android:summary="@string/device_lg_d855_summary"
-            android:selectable="false" />
-    </PreferenceCategory> 
+    </PreferenceCategory> -->
 
     <!-- MOTOROLA 
     <PreferenceCategory
@@ -114,17 +100,31 @@
         android:title="@string/device_category_oneplus_title">
 
         <Preference
+            android:id="@+id/device_oneplus_Cheeseburger"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_oneplus_Cheeseburger"
+            android:summary="@string/device_oneplus_Cheeseburger_summary"
+            android:selectable="false" />
+ 
+        <Preference
+            android:id="@+id/device_oneplus_Dumpling"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_oneplus_Dumpling"
+            android:summary="@string/device_oneplus_Dumpling_summary"
+            android:selectable="false" />
+
+        <Preference
             android:id="@+id/device_oneplus_Enchilada"
             android:icon="@drawable/phone_tint"
             android:title="@string/device_oneplus_Enchilada"
             android:summary="@string/device_oneplus_Enchilada_summary"
             android:selectable="false" />
  
-     <Preference
-            android:id="@+id/device_oneplus_oneplus3"
+        <Preference
+            android:id="@+id/device_oneplus_Fajita"
             android:icon="@drawable/phone_tint"
-            android:title="@string/device_oneplus_oneplus3"
-            android:summary="@string/device_oneplus_oneplus3_summary"
+            android:title="@string/device_oneplus_Fajita"
+            android:summary="@string/device_oneplus_Fajita_summary"
             android:selectable="false" />
     </PreferenceCategory>
 
@@ -133,17 +133,10 @@
         android:title="@string/device_category_oppo_title">
     </PreferenceCategory> -->
 
-    <!-- SAMSUNG -->
+    <!-- SAMSUNG
     <PreferenceCategory
         android:title="@string/device_category_samsung_title">
-
-        <Preference
-            android:id="@+id/device_samsung_on7xelte"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_samsung_on7xelte"
-            android:summary="@string/device_samsung_on7xelte_summary"
-            android:selectable="false" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <!-- SONY
     <PreferenceCategory
@@ -160,30 +153,9 @@
         android:title="@string/device_category_yu_title">
     </PreferenceCategory> -->
      
-    <!-- XIAOMI -->
+    <!-- XIAOMI
     <PreferenceCategory
         android:title="@string/device_category_xiaomi_title">
+    </PreferenceCategory> -->
 
-        <Preference
-            android:id="@+id/device_xiaomi_Santoni"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_xiaomi_Santoni"
-            android:summary="@string/device_xiaomi_Santoni_summary"
-            android:selectable="false" />
-         
-         <Preference
-            android:id="@+id/device_xiaomi_whyred"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_xiaomi_whyred"
-            android:summary="@string/device_xiaomi_whyred_summary"
-            android:selectable="false" />
-         
-         <Preference
-            android:id="@+id/device_xiaomi_mido"
-            android:icon="@drawable/phone_tint"
-            android:title="@string/device_xiaomi_mido"
-            android:summary="@string/device_xiaomi_mido_summary"
-            android:selectable="false" />
-
-    </PreferenceCategory>
 </PreferenceScreen>
