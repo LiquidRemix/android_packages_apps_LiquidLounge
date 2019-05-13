@@ -33,6 +33,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference;
 import com.liquid.liquidlounge.preferences.Utils;
+import com.liquid.liquidlounge.preferences.SystemSettingListPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -52,6 +53,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     private static final String CLOCK_FONT_SIZE  = "lockclock_font_size";
     private static final String DATE_FONT_SIZE  = "lockdate_font_size";
     private static final String WEATHER_LS_CAT = "ls_weather";
+    private static final String LOCKSCREEN_CLOCK_SELECTION  = "lockscreen_clock_selection";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -61,6 +63,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     ListPreference mLockDateFonts;
     private SystemSettingSeekBarPreference mClockFontSize;
     private SystemSettingSeekBarPreference mDateFontSize;
+    SystemSettingListPreference mLockClockStyle;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -112,6 +115,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         mDateFontSize.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCKDATE_FONT_SIZE,16));
         mDateFontSize.setOnPreferenceChangeListener(this);
+
+         mLockClockStyle = (SystemSettingListPreference) findPreference(LOCKSCREEN_CLOCK_SELECTION);
+         mLockClockStyle.setValue(String.valueOf(Settings.System.getInt(
+                 getContentResolver(), Settings.System.LOCKSCREEN_CLOCK_SELECTION, 0)));
+         mLockClockStyle.setOnPreferenceChangeListener(this);
 
         // Lockscren Clock Fonts
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
@@ -177,7 +185,17 @@ public class LockScreenSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKDATE_FONT_SIZE, top*1);
             return true;
-        }
+        }else if (preference == mLockClockStyle) {
+             int val = Integer.valueOf((String) newValue);
+             Settings.System.putInt(getContentResolver(),
+                     Settings.System.LOCKSCREEN_CLOCK_SELECTION, val);
+             if (val == 7) {
+                 Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_INFO, 0);
+             } else {
+                 Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_INFO, 1);
+             }
+             return true;
+	}
         return false;
     }
 
