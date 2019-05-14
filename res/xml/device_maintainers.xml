@@ -160,9 +160,16 @@
         android:title="@string/device_category_yu_title">
     </PreferenceCategory> -->
      
-    <!-- XIAOMI
+    <!-- XIAOMI -->
     <PreferenceCategory
         android:title="@string/device_category_xiaomi_title">
-    </PreferenceCategory> -->
+         
+        <Preference
+            android:id="@+id/device_xiaomi_kenzo"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_xiaomi_kenzo"
+            android:summary="@string/device_xiaomi_kenzo_summary"
+            android:selectable="false" />
+    </PreferenceCategory> 
 
 </PreferenceScreen>
