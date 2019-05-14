@@ -90,5 +90,7 @@
     <!-- WİLEYFOX -->
 
     <!-- XIAOMI -->
+    <string name="device_xiaomi_kenzo">Redmi Note 3 Pro</string>
+    <string name="device_xiaomi_kenzo_summary">Kenzo\nMaintainer - Haresh Bhankhodiya (l0rd_vader)</string>	
 
 </resources>
