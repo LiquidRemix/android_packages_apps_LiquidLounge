@@ -87,10 +87,17 @@
             android:selectable="false" />
     </PreferenceCategory> 
 
-    <!-- MOTOROLA 
+    <!-- MOTOROLA -->
     <PreferenceCategory
         android:title="@string/device_category_motorola_title">
-    </PreferenceCategory> -->
+
+        <Preference
+        android:id="@+id/device_motorola_sanders"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_motorola_sanders"
+            android:summary="@string/device_motorola_sanders_summary"
+            android:selectable="false" />
+    </PreferenceCategory>
 
     <!-- NEXTBIT 
     <PreferenceCategory
