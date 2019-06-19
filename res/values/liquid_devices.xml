@@ -63,7 +63,8 @@
     <string name="device_lg_h930_summary">H930\nMaintainer - Javi San Jose (javisan @kherio)</string>
 
     <!-- MOTOROLA -->
-
+    <string name="device_motorola_sanders">Moto G5S Plus</string>
+    <string name="device_motorola_sanders_summary">Sanders\nMaintainer - Syed Sajid (ISyedSajid)</string>
     <!-- NEXTBIT -->
 
     <!-- NVİDİA -->
