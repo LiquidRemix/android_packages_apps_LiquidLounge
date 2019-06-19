@@ -61,7 +61,8 @@
     <!-- LG -->
 
     <!-- MOTOROLA -->
-
+    <string name="device_motorola_sanders">Moto G5S Plus</string>
+    <string name="device_motorola_sanders_summary">Sanders\nMaintainer - Syed Sajid (ISyedSajid)</string>
     <!-- NEXTBIT -->
 
     <!-- NVİDİA -->
