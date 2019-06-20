@@ -59,6 +59,8 @@
     <!-- LENOVO -->
 
     <!-- LG -->
+    <string name="device_lg_h930">LG V30</string>
+    <string name="device_lg_h930_summary">H930\nMaintainer - Javier San Jose (javisan @kherio)</string>
 
     <!-- MOTOROLA -->
 
