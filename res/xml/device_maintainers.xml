@@ -75,10 +75,17 @@
         android:title="@string/device_category_lenovo_title">
     </PreferenceCategory> -->
 
-    <!-- LG
+    <!-- LG -->
     <PreferenceCategory
         android:title="@string/device_category_lg_title">
-    </PreferenceCategory> -->
+        
+        <Preference
+        android:id="@+id/device_lg_h930"
+            android:icon="@drawable/phone_tint"
+            android:title="@string/device_lg_h930"
+            android:summary="@string/device_lg_h930_summary"
+            android:selectable="false" />
+    </PreferenceCategory> 
 
     <!-- MOTOROLA 
     <PreferenceCategory
