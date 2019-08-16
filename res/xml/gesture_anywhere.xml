@@ -45,7 +45,7 @@
     <com.liquid.liquidlounge.preferences.SystemSettingSeekBarPreference
         android:key="gesture_anywhere_trigger_width"
         android:title="@string/trigger_width_title"
-        android:defaultValue="4"
+        android:defaultValue="40"
         android:max="64"
         android:min="4"
         settings:units="px"
