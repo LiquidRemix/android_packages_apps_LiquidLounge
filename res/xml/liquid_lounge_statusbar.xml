@@ -30,4 +30,10 @@
         android:summary="@string/battery_bar_summary"
         android:fragment="com.liquid.liquidlounge.external.BatteryBar" />
 
+      <Preference
+        android:key="battery_mode"
+        android:title="@string/battery_mode_title"
+        android:summary="@string/battery_mode_summary"
+        android:fragment="com.liquid.liquidlounge.fragments.BatteryMode" />
+
 </PreferenceScreen>
